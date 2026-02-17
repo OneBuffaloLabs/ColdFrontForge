@@ -12,20 +12,20 @@ This repository is strictly a passion project area. It's the central hub for all
 
 ---
 
-## 🖨️ Where to Download & Print
+## Where to Download & Print
 
 If you're just looking to download, slice, and get your printer running right away, you can find our pre-compiled, print-ready `.stl` and `.3mf` files on these platforms:
 
 - **MakerWorld:** [@Bana0615](https://makerworld.com/en/@Bana0615)
 - **Creality Cloud:** [@Bana0615](https://www.crealitycloud.com/user/2867011039)
 
-## 🛠️ The OpenSCAD Philosophy
+## The OpenSCAD Philosophy
 
 Sharing just an `.stl` file is like sharing a baked cake without the recipe.
 
 By providing the original OpenSCAD (`.scad`) files right here in this repository, you have the power to tweak dimensions, adjust tolerances, and completely remix these designs to fit your exact hardware and needs.
 
-## 📁 How This Repo is Organized
+## How This Repo is Organized
 
 To keep things clean, every model gets its own dedicated folder. Inside a typical project folder, you'll find:
 
@@ -34,11 +34,18 @@ To keep things clean, every model gets its own dedicated folder. Inside a typica
 - `images/` — Renders and photos of the final printed object.
 - `README.md` — Specific print settings, required hardware, and assembly guides for that exact model.
 
-## 🤝 Remixes & Community
+## Remixes & Community
 
 All designs in the One Buffalo Prints repository are open-source. We highly encourage you to download, modify, and build upon these files! If you create a clever remix or add a cool new feature to one of our designs, please tag us or share your makes. We love seeing them out in the wild.
 
-## ⚖️ License
+## Contributing & Issues
+
+Because my time is split between this and larger software projects, my response time to issues will vary wildly depending on what else is on my plate. *"Eventually"* is my guiding principle for bug fixes here.
+
+- **Found an issue or need a tweak?** Feel free to open a ticket! Just keep in mind it might take a bit for me to get to it if I'm on a break from 3D modeling.
+- **Know how to fix it yourself?** Pull Requests are highly encouraged! If you spot a problem with a mesh, have a structural improvement for a bracket, or optimized an OpenSCAD script, send a PR. I am much faster at reviewing a good model and hitting "merge" than I am at starting a fix from scratch.
+
+## License
 
 All models and code in this repository are released under the **Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)** license.
 
