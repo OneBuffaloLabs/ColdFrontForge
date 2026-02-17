@@ -1,6 +1,6 @@
-# ❄️ Lake Effect Labs
+# One Buffalo Prints
 
-Welcome to the open-source 3D modeling division of **[One Buffalo Labs](https://onebuffalolabs.com)**. Just like the legendary weather systems off Lake Erie, we're dropping heavy, consistent, and totally free designs for the maker community.
+Welcome to **One Buffalo Prints**, the open-source 3D modeling division of **[One Buffalo Labs](https://onebuffalolabs.com)**. Just like the legendary weather systems off Lake Erie, we're dropping heavy, consistent, and totally free designs for the maker community.
 
 This repository is the central hub for all our customizable design files, 3D meshes, and documentation.
 
@@ -30,7 +30,7 @@ To keep things clean, every model gets its own dedicated folder. Inside a typica
 
 ## 🤝 Remixes & Community
 
-All designs in the Lake Effect Labs repository are open-source. We highly encourage you to download, modify, and build upon these files! If you create a clever remix or add a cool new feature to one of our designs, please tag us or share your makes. We love seeing them out in the wild.
+All designs in the One Buffalo Prints repository are open-source. We highly encourage you to download, modify, and build upon these files! If you create a clever remix or add a cool new feature to one of our designs, please tag us or share your makes. We love seeing them out in the wild.
 
 ## ⚖️ License
 
