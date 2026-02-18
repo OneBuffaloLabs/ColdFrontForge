@@ -3,7 +3,7 @@
 // ==========================================
 
 /* [Dimensions] */
-// Target width of the final logo in mm
+// Target width of the final logo in mm (including base border)
 target_width = 150;
 // Total thickness of the white base plate
 base_thickness = 3.0;
@@ -17,6 +17,8 @@ insert_thickness = 2.5;
 border_thickness = 2.0;
 // The white gap between the red streak and the blue body
 inner_gap = 0.6;
+// Internal gap closer (expands and shrinks the core to fuse weird holes)
+base_fill_gap = 5.0;
 
 /* [Tolerances] */
 // Gap between insert and pocket walls for friction fit
@@ -29,10 +31,14 @@ epsilon = 0.01;
 
 // ==========================================
 // --- ALIGNMENT MATH ---
-// The original SVG width from the viewBox
-svg_original_width = 2102.667;
-// Calculate exact scale factor to hit target_width without losing alignment
-scale_factor = target_width / svg_original_width;
+// The actual width of the Buffalo paths inside the SVG canvas is ~741.54
+svg_path_width = 741.54;
+
+// Subtract the border from both sides so the final base hits the target_width exactly
+logo_target_width = target_width - (border_thickness * 2);
+
+// Calculate exact scale factor
+scale_factor = logo_target_width / svg_path_width;
 // ==========================================
 
 // ==========================================
@@ -63,11 +69,17 @@ module true_blue_path() {
 // 1. The White Base (Tray)
 module white_base() {
     difference() {
-        // Step A: Main unified silhouette
+        // Step A: Main unified silhouette (with Morphological Close to fix holes)
         linear_extrude(base_thickness) {
             offset(r = border_thickness) {
-                raw_blue_path();
-                red_path();
+                // This +5 then -5 delta effectively "melts" the shapes together,
+                // filling in any thin gaps or holes before drawing the white border.
+                offset(delta = -base_fill_gap) {
+                    offset(delta = base_fill_gap) {
+                        raw_blue_path();
+                        red_path();
+                    }
+                }
             }
         }
 
@@ -97,8 +109,8 @@ module blue_inserts() {
 // Un-comment one line at a time to export to STL
 // ==========================================
 
-// white_base();
-// red_insert();
+//white_base();
+//  red_insert();
 // blue_inserts();
 
 // PREVIEW COLOR VIEW
