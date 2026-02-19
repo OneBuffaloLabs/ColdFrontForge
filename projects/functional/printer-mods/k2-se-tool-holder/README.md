@@ -31,7 +31,7 @@ A functional, side-mounted organizer designed specifically for the **Official Cr
 * **Wall Loops:** **4–5 loops**. Since this holds weight, wall thickness is more important than infill.
 * **Wall Generator:** **Arachne** is required to ensure the tool slot tolerances are crisp.
 * **Infill:** 25% Gyroid.
-* **Supports:** **REQUIRED**. Use **Tree (Organic) Supports** to support the hanging glue stick and grease cups. Tree supports are recommended as they are easy to remove and leave a cleaner finish on the undersides of the cups.
+* **Supports:** **REQUIRED**. Use **Tree (Auto) Supports** to support the hanging glue stick and grease cups.
 
 ## 🔧 Tool Compatibility
 
