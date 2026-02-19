@@ -12,13 +12,21 @@ Instead of repeating these in every folder, here are the baseline rules that app
 - **The Layer:** Optimized for `0.2mm` layer height.
 - **The Walls:** Requires the **Arachne** wall generator in your slicer (preserves tiny, sharp details like animal horns or text).
 - **The Look:** Designed to be printed with **Concentric** top surface patterns to make the filament lines follow the flow of the logo.
-- **The Squish:** _Elephant Foot Compensation_ must be set (usually between 0.15mm - 0.2mm) so the first layer doesn't bulge and ruin the tolerances.
+- **The Squish:** *Elephant Foot Compensation* must be set (usually between 0.15mm - 0.2mm) so the first layer doesn't bulge and ruin the tolerances.
 
 ## 🛠 Collection-Wide Assembly Tips
 
 - **The Surface:** Always assemble on a flat, hard, and sturdy surface.
-- **The Temperature:** Let parts cool _completely_ on the build plate before snapping them together. Warm PLA is soft and will deform if forced.
+- **The Temperature:** Let parts cool *completely* on the build plate before snapping them together. Warm PLA is soft and will deform if forced.
 - **The "Click":** Press firmly with the flat of your thumb. You should feel a satisfying tactile "click" when the insert bottoms out in the pocket.
+- **The Fail-Safe:** While designed for a friction fit, a few small drops of CA glue are recommended for a permanent bond if your printer's tolerances result in a loose fit.
+
+## 🧪 Calibration & Testing
+Before committing to a full-size logo print, use the included `clearance_tester.scad` (or the pre-rendered `.stl` in this folder) to find the perfect setting for your specific printer and filament.
+
+1. **Print the Base:** This contains three pockets labeled `0.05`, `0.10`, and `0.15`.
+2. **Print the Insert:** A standard 10mm test square.
+3. **Verify the Fit:** Use the **Arachne** wall generator for both the test and the final logos. Classic wall generators often lead to loose fits on high-accuracy machines like the Creality K2 SE.
 
 ---
 
@@ -90,6 +98,6 @@ Instead of repeating these in every folder, here are the baseline rules that app
 
 ### Legal Disclaimer
 
-_All designs in this directory are provided as **fan art** for personal, non-commercial use only. These designs are not affiliated with, authorized by, or endorsed by the National Football League (NFL) or any of its respective teams. All team names, logos, and trademarks are the property of their respective owners._
+*All designs in this directory are provided as **fan art** for personal, non-commercial use only. These designs are not affiliated with, authorized by, or endorsed by the National Football League (NFL) or any of its respective teams. All team names, logos, and trademarks are the property of their respective owners.*
 
 **For full legal information, safety warnings, and licensing restrictions, please see our root [LEGAL.md](../../../LEGAL.md).**

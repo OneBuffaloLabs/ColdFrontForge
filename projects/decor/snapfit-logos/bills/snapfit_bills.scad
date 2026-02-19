@@ -6,11 +6,11 @@
 // Target width of the final logo in mm (including base border)
 target_width = 150;
 // Total thickness of the white base plate
-base_thickness = 3.0;
+base_thickness = 6.0;
 // Depth of the recessed pockets
-pocket_depth = 2.0;
+pocket_depth = 2.5;
 // Thickness of color inserts (stuck out by 0.5mm)
-insert_thickness = 2.5;
+insert_thickness = 3.0;
 
 /* [Borders & Gaps] */
 // Thickness of the white outline around the outside
@@ -22,7 +22,7 @@ base_fill_gap = 5.0;
 
 /* [Tolerances] */
 // Gap between insert and pocket walls for friction fit
-clearance = 0.15;
+clearance = 0.10;
 
 /* [Internal] */
 master_svg = "images/bills_master.svg";
