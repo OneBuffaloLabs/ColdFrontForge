@@ -2,7 +2,6 @@
     "fileFormatVersion": "1",
     "parameterSets": {
         "width": {
-            "$fn": "64",
             "ball_radius": "40",
             "bottom_color": "black",
             "button_color": "red",

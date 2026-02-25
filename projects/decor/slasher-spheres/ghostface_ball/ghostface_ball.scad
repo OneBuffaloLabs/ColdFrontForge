@@ -30,7 +30,7 @@ mask_scale = 0.06; // Scaled to ~43x68mm. Perfect size for the top dome.
 
 // --- MANIFOLD GEOMETRY & RESOLUTION ---
 eps = 0.01;
-$fn = 120; // High res for smooth curves
+$fn = $preview ? 32 : 120;
 
 // --- Colors ---
 top_color = "white";
@@ -98,7 +98,7 @@ module top_mask() {
         cylinder(r=front_ring_outer_r + mechanical_clearance, h=front_pocket_depth + eps * 2, center=false);
 
     // Subtract the curved pocket!
-    pocket_volume(hover = 0);
+    pocket_volume(hover=0);
   }
 }
 
@@ -194,8 +194,8 @@ module pocket_volume(hover = 0) {
       intersection() {
         mask_cutter(chip_clearance); // Pocket gets the mechanical clearance!
         difference() {
-          sphere(r = ball_radius + hover + eps);
-          sphere(r = ball_radius + hover - pocket_depth);
+          sphere(r=ball_radius + hover + eps);
+          sphere(r=ball_radius + hover - pocket_depth);
         }
       }
 }
@@ -207,8 +207,8 @@ module draw_ghostface_chip(hover = 0) {
       intersection() {
         mask_cutter(0); // Chip is true-to-size
         difference() {
-          sphere(r = ball_radius + hover);
-          sphere(r = ball_radius + hover - pocket_depth);
+          sphere(r=ball_radius + hover);
+          sphere(r=ball_radius + hover - pocket_depth);
         }
       }
 }
@@ -223,8 +223,8 @@ module layout_chips_black() {
       intersection() {
         mask_cutter(0);
         difference() {
-          sphere(r = ball_radius);
-          sphere(r = ball_radius - pocket_depth);
+          sphere(r=ball_radius);
+          sphere(r=ball_radius - pocket_depth);
         }
       }
 }

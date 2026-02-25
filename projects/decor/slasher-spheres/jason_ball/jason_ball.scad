@@ -27,7 +27,7 @@ pocket_depth = 2.5;
 
 // --- MANIFOLD GEOMETRY & RESOLUTION ---
 eps = 0.01;
-$fn = 64;
+$fn = $preview ? 32 : 120;
 
 // --- Colors ---
 top_color = "white";
