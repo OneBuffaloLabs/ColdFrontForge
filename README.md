@@ -16,9 +16,9 @@ This repository is strictly a passion project area. It's the central hub for all
 
 If you're just looking to download, slice, and get your printer running right away, you can find our pre-compiled, print-ready `.stl` and `.3mf` files on these platforms:
 
-- **MakerWorld:** [@Bana0615](https://makerworld.com/en/@Bana0615)
-- **Creality Cloud:** [@Bana0615](https://www.crealitycloud.com/user/2867011039)
-- **Printables:** [@Bana0615](https://www.printables.com/@Bana0615_4259106)
+- **MakerWorld:** [@OneBuffaloPrints](https://makerworld.com/en/@Bana0615)
+- **Creality Cloud:** [@OneBuffaloPrints](https://www.crealitycloud.com/user/2867011039)
+- **Printables:** [@OneBuffaloPrints](https://www.printables.com/@OneBuffalo3D_4259106)
 
 ## The OpenSCAD Philosophy
 
