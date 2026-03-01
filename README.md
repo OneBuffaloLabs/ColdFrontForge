@@ -1,10 +1,10 @@
 <p align="center">
-  <img src="assets/banner/banner-1200x400.png" alt="One Buffalo Prints Banner">
+  <img src="assets/banner/banner-1200x400.png" alt="1BfloPrints Banner">
 </p>
 
-# One Buffalo Prints
+# 1BfloPrints
 
-Welcome to **One Buffalo Prints**, the open-source 3D modeling playground of **[One Buffalo Labs](https://onebuffalolabs.com)**.
+Welcome to **1BfloPrints**, the open-source 3D modeling playground of **[One Buffalo Labs](https://onebuffalolabs.com)**.
 
 Forget the promise of "consistent" updates—my output here is a lot like a real weather system off Lake Erie: incredibly bursty and highly unpredictable. I might drop a flurry of five new designs in a single weekend, and then go completely quiet for a month or two while my focus shifts back to software projects like [FilaMeter](https://filameter.com/).
 
@@ -46,7 +46,7 @@ Inside a typical project folder (e.g., `/projects/decor/snapfit-logos/bills/`), 
 
 ## Remixes & Community
 
-All designs in the One Buffalo Prints repository are open-source. We highly encourage you to download, modify, and build upon these files! If you create a clever remix or add a cool new feature to one of our designs, please tag us or share your makes. We love seeing them out in the wild.
+All designs in the 1BfloPrints repository are open-source. We highly encourage you to download, modify, and build upon these files! If you create a clever remix or add a cool new feature to one of our designs, please tag us or share your makes. We love seeing them out in the wild.
 
 ## Contributing & Issues
 
