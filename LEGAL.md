@@ -1,28 +1,36 @@
 # Legal Information & Disclaimers
 
-## 1. Fan Art Disclaimer
+## 1. Fan Art & IP Disclaimer
 
-Designs located within the `projects/decor/snapfit-logos/` directory (and other relevant sports-related projects) are created as **fan art**.
+Certain designs located within the `decor/` directory (and other relevant sports or pop culture projects) are created solely as **fan art** for personal enjoyment.
 
-- These designs are not official merchandise.
-- They are not affiliated with, authorized by, endorsed by, or in any way officially connected to the National Football League (NFL), the Buffalo Bills, or any other professional sports team/league mentioned.
-- All team names, logos, and trademarks are the property of their respective owners.
+- These designs are **not** official merchandise.
+- They are not affiliated with, authorized by, endorsed by, or in any way officially connected to any professional sports leagues (NFL, NHL, etc.), teams, entertainment franchises, or trademark holders.
+- All team names, logos, character likenesses, and trademarks remain the property of their respective owners.
 
-## 2. Non-Commercial Use
+## 2. Non-Commercial Open-Source License
 
-All files in this repository are released under the **Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)** license.
+All 3D models, code, and source files in this repository are released under the **Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)** license.
 
-- You may **not** use these digital files or the physical objects printed from them for commercial purposes.
-- Selling these prints at craft fairs, on Etsy, or via any other storefront is a violation of this license and may expose you to legal action from the trademark holders.
+- You may **not** sell these digital files, remix files for sale, or sell physical prints made from these files.
+- Commercial redistribution on Etsy, eBay, craft markets, or other storefronts without explicit written licensing is a violation of this license and may expose you to legal action from intellectual property holders.
 
-## 3. Assumption of Risk
+## 3. Fitness & Load-Bearing Equipment Disclaimer
 
-3D printing involves high temperatures, electrical components, and moving parts. **One Buffalo Labs** and the contributors to this repository are not responsible for:
+Designs located in `functional/` and related folders are intended solely as organization, storage, or novelty accessories (e.g., hooks, organizers, trim).
 
-- Damage to your 3D printer or hardware.
-- Physical injury resulting from the printing, assembly, or use of these models.
-- Choking hazards (note: small inserts in "SnapFit" models can become detached). **Keep away from small children and pets.**
+- **No Structural Rating:** 3D printed components have anisotropic mechanical properties (layer adhesion limitations) and are **not** rated, certified, or load-tested for structural safety, heavy weight-bearing, or overhead suspension.
+- **Do Not Use for Safety Catches:** Never use 3D printed components as safety spotter catches, primary barbell collars during heavy overhead lifts, or structural anchors.
+- You assume all risk and liability regarding the structural integrity, slicer settings, material selection, and deployment of these functional parts.
 
-## 4. Accuracy of Information
+## 4. General Assumption of Risk & Safety
 
-While we strive for precision in our OpenSCAD scripts, 3D printing results vary based on machine calibration, filament type, and environmental factors. We provide these files "as-is" without any warranty of "perfect fit" or functionality.
+3D printing involves high temperatures, electrical components, and moving machinery. **Cold Front Forge**, **One Buffalo Labs**, and project contributors are not liable for:
+
+- Damage to 3D printers, hot-ends, or surrounding workshop hardware.
+- Personal injury or property damage resulting from printing, slicing errors, assembly, post-processing, or end-use of these designs.
+- **Choking & Ingestion Hazards:** Small components, modular badges, and magnetic inserts can detach under pressure. Keep small printed parts away from young children and pets.
+
+## 5. Accuracy & "As-Is" Provision
+
+3D printing results depend heavily on machine calibration, filament shrinkage, ambient temperature, and slicer settings. All source files and meshes are provided **"as-is"** without warranties of merchantability, fitness for a particular purpose, or guaranteed mechanical tolerances.
