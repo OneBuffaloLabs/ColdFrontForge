@@ -18,11 +18,22 @@ This repository is strictly a passion project area. It's the central hub for cus
 If you're looking for pre-compiled, print-ready `.stl` and `.3mf` files, or if you'd prefer to buy a finished physical print, you can find us across the maker community:
 
 - **Etsy (Physical Prints):** [Cold Front Forge](https://coldfrontforge.etsy.com/)
-- **MakerWorld:** [@1BfloPrints](https://makerworld.com/en/@Bana0615)
-- **Printables:** [@1BfloPrints](https://www.printables.com/@1BfloPrints_4259106)
-- **Creality Cloud:** [@1BfloPrints](https://www.crealitycloud.com/user/2867011039)
-- **Thangs:** [@ColdFrontForge](https://thangs.com/) <!-- Replace with your direct profile handle/URL if available -->
-- **Thingiverse:** [@ColdFrontForge](https://www.thingiverse.com/) <!-- Replace with your direct profile handle/URL if available -->
+- **MakerWorld:** [@ColdFrontForge](https://makerworld.com/en/@ColdFrontForge)
+- **Printables:** [@CFForge](https://www.printables.com/@CFForge_4259106)
+- **Thangs:** [@ColdFrontForge](https://thangs.com/designer/ColdFrontForge)
+- **Thingiverse:** [@ColdFrontForge](https://www.thingiverse.com/coldfrontforge/designs)
+- **Creality Cloud:** [@ColdFrontForge](https://www.crealitycloud.com/user/2867011039/profile)
+
+## Connect & Follow
+
+Follow along with new model drops, behind-the-scenes print timelapses, and workshop updates:
+
+- **Bluesky:** [@coldfrontforge.com](https://bsky.app/profile/coldfrontforge.com)
+- **Instagram:** [@coldfrontforge](https://www.instagram.com/coldfrontforge/)
+- **X (Twitter):** [@ColdFrontForge](https://x.com/ColdFrontForge)
+- **Facebook:** [Cold Front Forge](https://www.facebook.com/ColdFrontForge)
+
+---
 
 ## The OpenSCAD Philosophy
 
@@ -80,6 +91,6 @@ _Note: If you are interested in commercial licensing for any of these designs, p
 
 ### Legal Disclaimer
 
-Certain designs in this repository (such as sports logos) are provided as **fan art** for personal, non-commercial use only. These designs are not affiliated with, authorized by, or endorsed by the Buffalo Bills, the NFL, or any other trademark holder.
+Certain designs in this repository (such as sports logos) are provided as **fan art** for personal, non-commercial use only. These designs are not affiliated with, authorized by, or endorsed by any professional sports franchise, league, or trademark holder.
 
 **For full legal information and safety warnings, please see [LEGAL.md](LEGAL.md).**
