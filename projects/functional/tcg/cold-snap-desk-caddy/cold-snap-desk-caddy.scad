@@ -1,5 +1,5 @@
 // =============================================================================
-// COLD SNAP DESK CADDY - REVERSED LAYOUT
+// COLD SNAP DESK CADDY
 // Layout:
 //   - Left-front bay: Sized for toploaders/sleeves with a mid-height retaining lip
 //   - Left-rear bay: Full-height slot for semi-rigids
@@ -10,8 +10,8 @@ $fn = 48;
 EPS = 0.02;
 
 // --- Primary Dimensions ---
-BOX_W = 170.0; // Expanded from 150.0 to clear both widths comfortably
-BOX_D = 92.0; // Overall depth (Y)
+BOX_W = 170.0; // Overall width (X)
+BOX_D = 104.0; // Overall depth (Y)
 BOX_H = 70.0; // Rear/side wall height (Z)
 
 WALL_T = 3.2; // Exterior perimeter wall thickness
@@ -21,13 +21,9 @@ OUTER_R = 2.5; // Exterior corner fillet radius
 
 // --- Calibrated Compartment Widths & Depths ---
 RIGHT_BAY_W = 70.0; // Sized for 67mm penny sleeves (+3.0mm clearance)
-LEFT_FRONT_D = 46.0; // Front-to-back depth for toploaders (~20-22 toploaders)
+LEFT_FRONT_D = 58.0;
 
-// Left bay width derives automatically:
-// 170 - (2 * 3.2) - 3.0 - 70.0 = 90.6mm
-// Gives +5.6mm clearance for 85mm semi-rigids, +14.6mm for 76mm toploaders
-
-// --- Front Cutout Geometry (Aligned to New Widths) ---
+// --- Front Cutout Geometry
 LEFT_LIP_H = 24.0;
 LEFT_NOTCH_W = 70.0; // Widened opening for comfortable finger grab on toploaders
 
