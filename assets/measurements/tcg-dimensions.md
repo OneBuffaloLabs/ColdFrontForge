@@ -30,7 +30,7 @@ Physical dimensions measured with a digital caliper. Use these numbers as a base
 
 ## Multi-Row Card Storage Box Specs
 
-Reference specs for modular inserts, drop-in dividers, and row spacers designed for standard multi-row corrugated cardboard storage boxes (such as Monster 5-Row 3950+ boxes):
+Reference specs for modular inserts, drop-in dividers, and row spacers designed for standard multi-row corrugated cardboard storage boxes [Example Box](https://www.walmart.com/ip/Monster-Trading-Card-Storage-Box-5-Row-Holds-3950-count-Cards-card-box-organizer-Sports-Card-Trading-Card-TCG-Magic-Mtg-Cards-Baseball-card-storage/7570263861):
 
 - **Divider Wall Thickness:** **5.0 mm** (fluted cardboard row partitions)
 - **Design Consideration:** For slip-over channel clips, row index tabs, or custom dividing walls, set internal slot widths to **5.5 mm – 6.0 mm** to easily straddle the corrugated partition without crushing the cardboard.
