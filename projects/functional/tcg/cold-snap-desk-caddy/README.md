@@ -49,6 +49,6 @@ Open the file in OpenSCAD, update the numbers at the top, press `F6` to render, 
 
 ---
 
-*Part of the [Cold Front Forge](https://github.com/OneBuffaloLabs/ColdFrontForge) open-source collection. Licensed under CC BY-NC-SA 4.0.*[cite: 2]
+*Part of the [Cold Front Forge](https://github.com/OneBuffaloLabs/ColdFrontForge) open-source collection. Licensed under CC BY-NC-SA 4.0.*
 
 *Looking for finished physical prints or custom colors? Visit our shop: [coldfrontforge.etsy.com*](https://www.google.com/search?q=https://coldfrontforge.etsy.com/)
