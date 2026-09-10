@@ -1,14 +1,14 @@
 /* [Divider Plate Dimensions] */
-plate_width = 69.0;
+plate_width = 75.0;
 plate_height = 110.0;
 plate_thickness = 2.4;
 
 /* [Cardboard Wall Saddle Hook] */
-// Hook side: -1 for left, 1 for right
-hook_side = -1; // [-1: Left, 1: Right]
+// Hook configuration: -1 for left, 1 for right, 0 for both
+hook_side = 0; // [-1: Left, 1: Right, 0: Both]
 
 // Gap matching standard corrugated divider wall thickness
-wall_gap = 5;
+wall_gap = 5.0;
 
 // Depth of the saddle bridge across the top of the cardboard (typically ~5mm)
 bridge_depth = 5.0;
@@ -28,8 +28,8 @@ bottom_cut_y = 10.0;
 
 /* [Branding Cutout] */
 enable_logo_cutout = true;
-logo_width = 40.0;
-logo_y_offset = 48.0;
+logo_width = 50.0;
+logo_y_offset = 58.0;
 logo_svg_path = "../../../../assets/logo/logo-no-text.svg";
 
 /* [Hidden] */
@@ -49,9 +49,9 @@ module plate_profile_2d() {
   );
 }
 
-module side_hook() {
-  base_x = (hook_side == -1) ? 0 : plate_width;
-  dir = (hook_side == -1) ? 1 : -1;
+module single_hook(side = -1) {
+  base_x = (side == -1) ? 0 : plate_width;
+  dir = (side == -1) ? 1 : -1;
 
   translate([base_x, plate_height, 0]) {
     // Top bridge spanning only the top ~5mm of the partition
@@ -79,6 +79,15 @@ module side_hook() {
   }
 }
 
+module side_hooks() {
+  if (hook_side == -1 || hook_side == 0) {
+    single_hook(-1);
+  }
+  if (hook_side == 1 || hook_side == 0) {
+    single_hook(1);
+  }
+}
+
 module cold_snap_wedge() {
   union() {
     difference() {
@@ -93,7 +102,7 @@ module cold_snap_wedge() {
       }
     }
 
-    side_hook();
+    side_hooks();
   }
 }
 
