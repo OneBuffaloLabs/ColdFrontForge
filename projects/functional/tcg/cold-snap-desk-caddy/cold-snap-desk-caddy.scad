@@ -32,7 +32,7 @@ RIGHT_POST_W = 8.0;   // Width of the front-right structural corner post
 
 // --- Branding & Maker's Mark ---
 ENABLE_LOGO = true;  // Toggle for rendering the SVG bottom deboss
-LOGO_PATH = "../../../../assets/logo/logo-no-text-black.svg"; // Path to brand SVG[cite: 2]
+LOGO_PATH = "../../../../assets/logo/logo-no-text-black.svg"; // Path to brand SVG
 LOGO_SCALE = 0.20;   // Adjusted scale factor for the base deboss mark
 LOGO_DEBOSS_D = 0.6; // Subtraction depth into the bottom floor plate
 
