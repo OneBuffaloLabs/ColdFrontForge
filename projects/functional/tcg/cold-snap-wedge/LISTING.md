@@ -1,4 +1,4 @@
-Cold Snap Wedge — Vertical TCG Card Stopper & Box Partition Divider
+# Cold Snap Wedge — Vertical TCG Card Stopper & Box Partition Divider
 
 The Cold Snap Wedge is a 3D-printable card stopper and row divider made for multi-row cardboard storage boxes, like standard BCW and Monster boxes.
 

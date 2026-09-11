@@ -8,7 +8,7 @@ Formatting Rules:
 4. Keep the tone grounded, functional, and concise.
 -->
 
-[Model Name] — [Short Subtitle / Primary Function]
+# [Model Name] — [Short Subtitle / Primary Function]
 
 [1-2 paragraph product summary. Explain the core problem this model solves, where it fits, and how it functions in daily use.]
 
