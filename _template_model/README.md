@@ -2,7 +2,9 @@
 
 A brief, 1-2 sentence description of what this model is, what problem it solves, or why you designed it.
 
-![Hero Image](images/hero-shot.jpg) _Replace with a cool beauty shot of your print!_
+<p align="center">
+<img src="images/hero.png" alt="Hero" width="600">
+</p>
 
 ## 📥 Download & Print Profiles
 

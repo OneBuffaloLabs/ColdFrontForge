@@ -1,46 +1,43 @@
 # Creator Communities Configuration — Cold Snap Desk Caddy
 
-Publishing metadata and site configurations for Cold Snap Desk Caddy. Use `LISTING.md` for customer-facing copy.
+Reference guide for publishing and maintaining listings across creator communities. Public-facing copy lives in `LISTING.md`.
 
 ---
 
 ## Universal Tags & Keywords
 
-`ColdFrontForge`, `ColdSnap`, `TCG`, `CardOrganization`, `ToploaderHolder`, `PennySleeves`, `TradingCards`, `DeskOrganizer`, `PokemonTCG`, `MagicTheGathering`
-
----
-
-## MakerWorld
-
-- **Primary Category:** Household > Organization & Storage
-- **Secondary Category:** Toys & Games > Tabletop Games
-- **Print Profile Plate Setup:**
-  - Plate 1: Cold Snap Desk Caddy (Oriented flat on base, 0.20mm Standard, 4 wall loops, 15% gyroid infill, no supports)
-- **Platform Tags:** `coldfrontforge`, `tcg`, `trading-cards`, `desk-caddy`, `toploader-storage`, `penny-sleeves`, `semi-rigid`, `card-prep`
-- **Listing Notes:** Markdown supported; include link to the GitHub repository for parametric OpenSCAD sources.
-
----
-
-## Printables
-
-- **Primary Category:** Hobby & Makers > Board Games
-- **Secondary Category:** Household > Organization
-- **Platform Tags:** `coldfrontforge`, `tcg`, `tradingcardgames`, `toploader`, `pennysleeves`, `cardorganizer`, `desktidying`
-- **Summary:** Keep your desk clean and grab penny sleeves, toploaders, and semi-rigids without fumbling.
-- **Listing Notes:** Markdown supported; attach `.3mf` as primary print profile and `cold-snap-desk-caddy.stl` in the Model Files tab.
+`ColdSnap`, `ColdFrontForge`, `TCG`, `DeskCaddy`, `ToploaderHolder`, `PennySleeves`, `Pokemon`, `MTG`, `CardStorage`, `Organizer`
 
 ---
 
 ## Creality Cloud
 
 - **Category:** Hobbies & DIY / Other
-- **Instruction Files:** None
+- **Instruction Files:** Optional / None required (single-piece functional print)
 - **Print Settings Name:** `0.20mm Functional Solid Profile`
 - **Print Settings Description:**
-  - Material: PLA / PLA+
+  - Material: PLA, PLA+, or PETG
   - Layer Height: 0.20mm
-  - Wall Loops: 4
-  - Infill: 15% Gyroid
-  - Supports: None
+  - Wall Loops: 3 to 4 (ensures solid walls and rigid internal dividers)
+  - Infill: 15%–20% (Gyroid)
+  - Supports: None (face flat on base)
   - Brim: None
-- **Listing Notes:** WYSIWYG editor. External links are stripped; keep GitHub repository references plain-text.
+- **Notes:** Editor uses plain text/WYSIWYG. External markdown links are stripped; reference GitHub in plain text without URLs.
+
+---
+
+## MakerWorld
+
+- **Category:** Household > Organization & Storage _(Alternative: Toys & Games > Tabletop Games)_
+- **Print Profile Plate Setup:**
+  - Plate 1: Desk Caddy (Oriented flat on base, 0.20mm, 4 walls, 15% gyroid infill, no supports)
+- **Tags:** `tcg`, `desk-caddy`, `toploader-holder`, `penny-sleeves`, `pokemon`, `mtg`, `organizer`
+- **Notes:** Supports Markdown formatting and direct links to GitHub repository.
+
+---
+
+## Printables
+
+- **Category:** Hobby & Makers > Board Games _(Alternative: Household > Organization)_
+- **Tags:** `tcg`, `deskcaddy`, `toploader`, `pennysleeves`, `pokemon`, `mtg`, `organizer`
+- **Notes:** Supports standard Markdown and multi-file downloads (.3mf + individual STLs).
