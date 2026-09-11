@@ -2,7 +2,17 @@
 
 A brief, 1-2 sentence description of what this model is, what problem it solves, or why you designed it.
 
-![Hero Image](images/hero-shot.jpg) _Replace with a cool beauty shot of your print!_
+<p align="center">
+<img src="images/hero.png" alt="Hero" width="600">
+</p>
+
+## 📥 Download & Print Profiles
+
+Pre-sliced `.3mf` files and optimized print profiles are available across creator communities:
+
+- [MakerWorld](https://makerworld.com/)
+- [Printables](https://www.printables.com/)
+- [Creality Cloud](https://www.crealitycloud.com/)
 
 ## 🖨️ Recommended Print Settings
 
@@ -41,4 +51,6 @@ _To modify, simply open the file in [OpenSCAD](https://openscad.org/), change th
 
 ---
 
-_Part of the [One Buffalo Prints](https://github.com/OneBuffaloLabs/one-buffalo-prints) open-source collection. Licensed under CC BY-NC-SA 4.0._
+_Part of the [Cold Front Forge](https://github.com/OneBuffaloLabs/ColdFrontForge) open-source collection. Licensed under CC BY-NC-SA 4.0._
+
+_Looking for finished physical prints or custom colors? Visit our shop: [coldfrontforge.etsy.com](https://coldfrontforge.etsy.com)_
