@@ -6,6 +6,14 @@ A 3D-printed card stopper and row divider designed for multi-row corrugated bulk
 <img src="images/hero-dual.png" alt="Cold Snap Wedge" width="600">
 </p>
 
+## 📥 Download & Print Profiles
+
+Pre-sliced `.3mf` files and optimized print profiles are available across creator communities:
+
+- [MakerWorld](https://makerworld.com/)
+- [Printables](https://www.printables.com/model/1839414-cold-snap-wedge)
+- [Creality Cloud](https://www.crealitycloud.com/model-detail/cold-snap-wedge)
+
 ## 🖨️ Recommended Print Settings
 
 To get the best results, especially if this is a functional part, we recommend the following settings:
