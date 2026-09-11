@@ -1,6 +1,12 @@
 $fn = 64;
 EPS = 0.02;
 
+// Model Part Selector: "single", "assembly", "body", "snowflake"
+PART            = "single";
+
+// Snowflake Style (for multi-color): "flush" or "embossed"
+LOGO_STYLE      = "flush";
+
 // Body Dimensions
 HANDLE_W        = 22.0;
 HANDLE_L        = 28.0;
@@ -17,20 +23,18 @@ LIP_BEVEL_L     = 3.0;
 EYELET_OD       = 8.0;
 EYELET_ID       = 4.2;
 
-// Snowflake Emblem
- LOGO_FILE       = "assets/snowflake.svg";
+// Snowflake Emblem Dimensions
+LOGO_FILE       = "assets/snowflake.svg";
 LOGO_DEPTH      = 0.8;
-LOGO_SCALE      = 0.20;
+LOGO_EMBOSS_H   = 0.6;
+LOGO_SCALE      = (PART == "single") ? 0.18 : 0.17;
 
 module outer_profile_2d() {
-    // Round head
     circle(d = HEAD_D);
 
-    // Rectangular handle / can-tab sleeve
     translate([-HANDLE_W/2, -HEAD_D/2 - HANDLE_L + 6.0])
         square([HANDLE_W, HANDLE_L]);
 
-    // Keyring eyelet lug at the top
     translate([0, HEAD_D/2 + EYELET_OD/2 - 1.5])
         circle(d = EYELET_OD);
 }
@@ -39,10 +43,8 @@ module tab_slot_cutter() {
     y_entry = -HEAD_D/2 - HANDLE_L + 6.0;
 
     translate([-SLOT_W/2, y_entry - EPS, (THICKNESS - SLOT_H)/2]) {
-        // Main flat pocket that slides over the soda can tab
         cube([SLOT_W, SLOT_DEPTH + EPS, SLOT_H]);
 
-        // Entry mouth lead-in chamfer
         translate([0, -EPS, -0.6])
             cube([SLOT_W, LIP_BEVEL_L, SLOT_H + 1.2]);
     }
@@ -53,22 +55,43 @@ module keyring_hole() {
         cylinder(d = EYELET_ID, h = THICKNESS + 2*EPS, $fn = 32);
 }
 
-module snowflake_relief() {
-    translate([0, 0, THICKNESS - LOGO_DEPTH + EPS])
+module snowflake_negative() {
+    translate([0, 0, THICKNESS - LOGO_DEPTH])
         linear_extrude(height = LOGO_DEPTH + EPS)
             scale([LOGO_SCALE, LOGO_SCALE])
                 import(LOGO_FILE, center = true);
 }
 
-module frost_bite() {
+module body_part() {
     difference() {
         linear_extrude(height = THICKNESS)
             outer_profile_2d();
 
         tab_slot_cutter();
         keyring_hole();
-        snowflake_relief();
+        snowflake_negative();
     }
 }
 
-frost_bite();
+module snowflake_insert() {
+    insert_height = (LOGO_STYLE == "embossed") ? (LOGO_DEPTH + LOGO_EMBOSS_H) : LOGO_DEPTH;
+
+    translate([0, 0, THICKNESS - LOGO_DEPTH])
+        linear_extrude(height = insert_height)
+            scale([LOGO_SCALE, LOGO_SCALE])
+                import(LOGO_FILE, center = true);
+}
+
+if (PART == "single") {
+    body_part();
+} else if (PART == "body") {
+    body_part();
+} else if (PART == "snowflake") {
+    snowflake_insert();
+} else {
+    color("Black")
+        body_part();
+
+    color("White")
+        snowflake_insert();
+}
