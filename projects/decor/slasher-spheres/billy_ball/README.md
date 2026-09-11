@@ -1,10 +1,12 @@
 # Slasher Spheres: Billy the Puppet Pokéball
 
+<!-- markdownlint-disable MD033 -->
 <p align="center">
   <img src="images/billy-ball-hero.png" alt="Billy the Puppet Pokéball" width="600">
 </p>
+<!-- markdownlint-enable MD033 -->
 
-A multi-part, support-free 3D model merging the classic Pokéball with the eerie features of Billy the Puppet from the *Saw* franchise. Designed entirely in OpenSCAD for high-precision assembly, featuring **recessed eye sockets**, signature **red cheek spirals**, and a **mechanical jaw-line** aesthetic consistent with the puppet's iconic design.
+A multi-part, support-free 3D model merging the classic Pokéball with the eerie features of Billy the Puppet from the _Saw_ franchise. Designed entirely in OpenSCAD for high-precision assembly, featuring **recessed eye sockets**, signature **red cheek spirals**, and a **mechanical jaw-line** aesthetic consistent with the puppet's iconic design.
 
 ## 📂 Project Structure
 

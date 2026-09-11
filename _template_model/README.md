@@ -2,9 +2,11 @@
 
 A brief, 1-2 sentence description of what this model is, what problem it solves, or why you designed it.
 
+<!-- markdownlint-disable MD033 -->
 <p align="center">
-<img src="images/hero.png" alt="Hero" width="600">
+    <img src="images/hero.png" alt="Hero" width="600">
 </p>
+<!-- markdownlint-enable MD033 -->
 
 ## 📥 Download & Print Profiles
 

@@ -2,9 +2,11 @@
 
 A 3D-printed card stopper and row divider designed for multi-row corrugated bulk storage boxes (such as standard BCW 3,200 and 5,000-count boxes, or this [Example Box](https://www.walmart.com/ip/Monster-Trading-Card-Storage-Box-5-Row-Holds-3950-count-Cards-card-box-organizer-Sports-Card-Trading-Card-TCG-Magic-Mtg-Cards-Baseball-card-storage/7570263861)). An integrated saddle hook with an internal compliant spring finger clips over cardboard partition walls (auto-adjusting between 2.0mm outer walls and 5.0mm interior dividers), locking the divider firmly in place to keep partial rows upright and prevent cards from sliding or slumping.
 
+<!-- markdownlint-disable MD033 -->
 <p align="center">
-<img src="images/hero-dual.png" alt="Cold Snap Wedge" width="600">
+    <img src="images/hero-dual.png" alt="Cold Snap Wedge" width="600">
 </p>
+<!-- markdownlint-enable MD033 -->
 
 ## 📥 Download & Print Profiles
 
