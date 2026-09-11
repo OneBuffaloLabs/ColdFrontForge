@@ -10,6 +10,9 @@ Physical dimensions measured with a digital caliper. Use these numbers as a base
 
 | Item / Supply             | Width (X) | Height (Y) | Thickness (Z) | Recommended Extra Room | Practical Notes                                                                |
 | :------------------------ | :-------- | :--------- | :------------ | :--------------------- | :----------------------------------------------------------------------------- |
+| **Standard Raw Card**     | 63.0 mm   | 88.0 mm    | ~0.35 mm      | +1.0 mm to +1.5 mm     | 2.5 × 3.5 inches. Roughly 35pt thick; baseline for unsleeved bulk.             |
+| **Jumbo Card (Newer)**    | 146.0 mm  | 203.0 mm   | ~0.4 mm       | +1.5 mm to +2.0 mm     | ~5.75 × 8 inches (modern post-Sword & Shield era promos).                      |
+| **Jumbo Card (Vintage)**  | 127.0 mm  | 178.0 mm   | ~0.4 mm       | +1.5 mm to +2.0 mm     | ~5.0 × 7 inches (older promo sets). Check era before modeling fixed frames.    |
 | **Penny Sleeves**         | 67.0 mm   | 92.0 mm    | Variable      | +1.5 mm to +2.0 mm     | Soft plastic bunches up at the edges; add finger cutouts to pull easily.       |
 | **Top Loaders (35pt)**    | 76.0 mm   | 101.0 mm   | ~2.0 mm       | +1.0 mm to +1.5 mm     | Card sits recessed inside with **9.0 mm of open clearance** above it.          |
 | **Semi-Rigid Holders**    | 85.0 mm   | 122.0 mm   | ~1.5 mm       | +1.2 mm to +1.5 mm     | Flexible grading submission holders (Cardboard Gold / Ultra PRO).              |
@@ -55,6 +58,10 @@ Ready to copy into any `.scad` script:
 // ==========================================
 // TCG RAW REFERENCE MEASUREMENTS (mm)
 // ==========================================
+CARD_RAW_DIM              = [63.0, 88.0, 0.35];
+CARD_JUMBO_MODERN_DIM     = [146.0, 203.0, 0.4];
+CARD_JUMBO_VINTAGE_DIM    = [127.0, 178.0, 0.4];
+
 PENNY_SLEEVE_DIM          = [67.0, 92.0];
 TOPLOADER_35PT_DIM        = [76.0, 101.0, 2.0];
 SEMI_RIGID_DIM            = [85.0, 122.0, 1.5];
