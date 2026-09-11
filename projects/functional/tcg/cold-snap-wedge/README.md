@@ -3,7 +3,7 @@
 A 3D-printed card stopper and row divider designed for multi-row corrugated bulk storage boxes (such as standard BCW 3,200 and 5,000-count boxes, or this [Example Box](https://www.walmart.com/ip/Monster-Trading-Card-Storage-Box-5-Row-Holds-3950-count-Cards-card-box-organizer-Sports-Card-Trading-Card-TCG-Magic-Mtg-Cards-Baseball-card-storage/7570263861)). An integrated saddle hook with an internal compliant spring finger clips over cardboard partition walls (auto-adjusting between 2.0mm outer walls and 5.0mm interior dividers), locking the divider firmly in place to keep partial rows upright and prevent cards from sliding or slumping.
 
 <p align="center">
-<img src="images/hero-both.png" alt="Cold Snap Wedge" width="600">
+<img src="images/hero-dual.png" alt="Cold Snap Wedge" width="600">
 </p>
 
 ## 🖨️ Recommended Print Settings
@@ -29,7 +29,7 @@ Because this design is parametric, you can easily adjust the dimensions to fit y
 
 - `plate_width` - Divider plate width across the row channel (Default: 75.0mm, sized for standard 76mm box rows)
 - `plate_height` - Total vertical height of the divider (Default: 110.0mm)
-- `hook_side` - Hook configuration: `-1` for Left, `1` for Right, `0` for Both (Dual hook)
+- `hook_side` - Hook configuration: `-1` for Left, `1` for Right, `0` for Dual (Dual hook)
 - `wall_gap` - Slot width straddling the cardboard partition (Default: 5.2mm)
 - `spring_reach` - Compliant finger inward reach (Default: 3.2mm, provides resting grip down to ~2.0mm outer walls)
 - `bridge_depth` - Distance the top saddle spans across the partition edge (Default: 5.0mm)

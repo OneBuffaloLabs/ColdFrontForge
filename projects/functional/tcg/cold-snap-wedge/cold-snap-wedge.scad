@@ -4,8 +4,8 @@ plate_height = 110.0;
 plate_thickness = 2.4;
 
 /* [Cardboard Wall Saddle Hook] */
-// Hook configuration: -1 for left, 1 for right, 0 for both
-hook_side = -1; // [-1: Left, 1: Right, 0: Both]
+// Hook configuration: -1 for left, 1 for right, 0 for dual
+hook_side = -1; // [-1: Left, 1: Right, 0: Dual]
 
 // Gap matching standard corrugated divider wall thickness (5.0mm partition)
 wall_gap = 5.2;
