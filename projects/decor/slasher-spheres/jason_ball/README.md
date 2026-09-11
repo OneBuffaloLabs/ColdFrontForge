@@ -1,8 +1,10 @@
 # Slasher Spheres: Jason Voorhees Pokéball
 
+<!-- markdownlint-disable MD033 -->
 <p align="center">
   <img src="images/jason-crack-pokeball-hero.png" alt="Jason Voorhees Pokéball Battle Worn" width="600">
 </p>
+<!-- markdownlint-enable MD033 -->
 
 A multi-part, support-free 3D model combining a classic Pokéball with Jason Voorhees' iconic battle-worn hockey mask. Designed entirely in OpenSCAD for high-precision assembly, featuring a **flattened base for stability**, flush-fitting inserts, and a heavy-duty rectangular internal alignment peg.
 

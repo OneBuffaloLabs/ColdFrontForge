@@ -2,9 +2,11 @@
 
 A modular, interlocking, and stackable TCG sorting bay designed to keep your desk organized during pack openings, bulk prep, and collection inventorying.
 
+<!-- markdownlint-disable MD033 -->
 <p align="center">
-<img src="images/hero-side.png" alt="Cold Snap Sorter Hero" width="600">
+  <img src="images/hero-side.png" alt="Cold Snap Sorter Hero" width="600">
 </p>
+<!-- markdownlint-enable MD033 -->
 
 ## 📥 Download & Print Profiles
 

@@ -1,10 +1,12 @@
 # Slasher Spheres: Ghostface Pokéball
 
+<!-- markdownlint-disable MD033 -->
 <p align="center">
   <img src="images/ghostface-pokeball-hero.png" alt="Ghostface Pokéball" width="600">
 </p>
+<!-- markdownlint-enable MD033 -->
 
-A multi-part, support-free 3D model merging the classic Pokéball with the haunting visage of Ghostface from the *Scream* franchise. Designed entirely in OpenSCAD for high-precision assembly, featuring **recessed eye and nose sockets** for a natural shadow effect, an integrated **rounded triangle mouth**, and a **flattened base** for shelf stability.
+A multi-part, support-free 3D model merging the classic Pokéball with the haunting visage of Ghostface from the _Scream_ franchise. Designed entirely in OpenSCAD for high-precision assembly, featuring **recessed eye and nose sockets** for a natural shadow effect, an integrated **rounded triangle mouth**, and a **flattened base** for shelf stability.
 
 ## 📂 Project Structure
 
