@@ -12,7 +12,7 @@ A 3D-printed card stopper and row divider designed for multi-row corrugated bulk
 
 Pre-sliced `.3mf` files and optimized print profiles are available across creator communities:
 
-- [MakerWorld](https://makerworld.com/)
+- [MakerWorld](https://makerworld.com/en/models/3292672-cold-snap-wedge)
 - [Printables](https://www.printables.com/model/1839414-cold-snap-wedge)
 - [Creality Cloud](https://www.crealitycloud.com/model-detail/cold-snap-wedge)
 
