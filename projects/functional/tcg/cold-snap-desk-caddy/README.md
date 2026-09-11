@@ -14,7 +14,7 @@ The **Cold Snap Desk Caddy** keeps all your essential protective supplies neatly
 
 Pre-sliced `.3mf` files and optimized print profiles are available across creator communities:
 
-- [MakerWorld](https://makerworld.com/) _(Coming soon / Example)_
+- [MakerWorld](https://makerworld.com/en/models/3292723-cold-snap-desk-caddy)
 - [Printables](https://www.printables.com/model/1839441-cold-snap-desk-caddy)
 - [Creality Cloud](https://www.crealitycloud.com/model-detail/cold-snap-desk-caddy)
 
