@@ -1,9 +1,12 @@
+# Cold Front Forge
+
+**[Shop Physical Prints on Etsy](https://coldfrontforge.etsy.com/)** | **[One Buffalo Labs](https://onebuffalolabs.com)**
+
+<!-- markdownlint-disable MD033 -->
 <p align="center">
   <img src="assets/banner/cff-banner-1200x300.webp" alt="Cold Front Forge Banner">
 </p>
-
-# Cold Front Forge
-**[Shop Physical Prints on Etsy](https://coldfrontforge.etsy.com/)** | **[One Buffalo Labs](https://onebuffalolabs.com)**
+<!-- markdownlint-enable MD033 -->
 
 Welcome to **Cold Front Forge**, the open-source additive manufacturing and 3D modeling workshop of **[One Buffalo Labs](https://onebuffalolabs.com)**.
 
@@ -51,8 +54,9 @@ To keep the root directory clean as the collection grows, all models are sorted 
 - `/projects/functional/` — Brackets, organizers, and household fixes.
 - `/projects/printer-mods/` — Upgrades and tweaks for hardware like the Creality K2 SE.
 - `/projects/toys/` — Fun prints, props, and fidgets.
+- `/projects/contests/` — Event-driven design submissions organized by platform and contest challenge.
 
-**📁 Note on Collections:** For large series of related models (like multi-part sports logos or modular trays), they are grouped into master sub-folders to keep the main directories from getting cluttered.
+**Note on Collections & Contests:** Large series of related models are grouped into master sub-folders. For design competitions, each contest has a dedicated directory tracking prompt requirements, live submission URLs, and individual entry models.
 
 Inside a typical project folder, you'll find:
 
