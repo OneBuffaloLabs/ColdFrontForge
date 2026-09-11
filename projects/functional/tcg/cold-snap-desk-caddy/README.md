@@ -4,9 +4,11 @@ Keep your card station organized and streamline your pack rips, grading submissi
 
 The **Cold Snap Desk Caddy** keeps all your essential protective supplies neatly separated and within arm’s reach on your desk mat. Built with front cutouts and a stable footprint, it lets you pinch and pull a single sleeve or case without fumbling or creasing corners.
 
+<!-- markdownlint-disable MD033 -->
 <p align="center">
-<img src="images/hero-side.png" alt="Cold Snap Desk Caddy" width="600">
+   <img src="images/hero-side.png" alt="Cold Snap Desk Caddy" width="600">
 </p>
+<!-- markdownlint-enable MD033 -->
 
 ## 📥 Download & Print Profiles
 
