@@ -1,184 +1,183 @@
-// Cold Snap Sorter — Sorter Bay & Frost Pin
+// Cold Snap Sorter — Sorter Bay & Frost Links
 // Units: millimeters
 
 /* [Part Selection] */
-PART = "both"; // [bay: Sorter Bay, pin: Frost Pin, both: Sorter Bay and Frost Pin]
+PART = "both"; // [bay: Sorter Bay, single_link: 1x2 Frost Link, quad_link: 2x2 Frost Link, links: Both Links (1x2 & 2x2), both: Sorter Bay and Both Links]
 
 /* [Global Settings] */
 $fn = 64;
 EPS = 0.02;
 
 /* [Card Cavity Dimensions] */
-CARD_W            = 70.0;   // Inner width (clears standard & deck sleeves)
-CARD_L            = 88.0;   // Inner length front-to-back
-WALL_T            = 3.2;    // Outer perimeter thickness
-BOX_H             = 40.0;   // Uniform outer box height
+CARD_W            = 70.0;   // Pocket width (clears standard & sleeved cards)
+CARD_L            = 72.0;   // Pocket length (cards overhang the back)
+WALL_T            = 5.5;    // Perimeter wall thickness
+BOX_H             = 24.0;   // Overall box height (flush top rim)
 
 /* [Internal Slanted Floor] */
-RAMP_FRONT_H      = 6.0;    // Low floor height at front
-RAMP_BACK_H       = 24.0;   // Elevated floor height at back
+RAMP_FRONT_H      = 5.0;    // Low floor height behind front wall
+RAMP_BACK_H       = 24.0;   // Flush with top rim (BOX_H) at the rear
 
-/* [Access Scoops] */
-FRONT_NOTCH_W     = 28.0;   // Front thumb cutout width
-FRONT_NOTCH_DEPTH = 12.0;   // Front thumb cutout depth
-SIDE_NOTCH_W      = 24.0;   // Side grab scoop width
-SIDE_NOTCH_DEPTH  = 12.0;   // Side grab scoop depth
+/* [Stacking / Linking Pegs & Sockets] */
+PEG_R             = 1.6;    // Peg radius
+PEG_H             = 2.2;    // Peg height
+SOCKET_TOL        = 0.35;   // Clearance for underside sockets
+PEG_INSET         = 2.8;    // Inset from outer corner
 
-/* [Frost Pin & Mortise Interface] */
-PIN_TOTAL_L       = 18.0;
-PIN_H             = 6.0;
-PIN_WAIST_W       = 5.0;
-PIN_FLAIR_W       = 8.2;
-PIN_CLEARANCE     = 0.22;
+/* [Bottom Logo Settings] */
+LOGO_FILE         = "../../../../assets/logo/logo-no-text-black.svg";
+LOGO_WIDTH        = 45.0;   // Logo width across the base
+LOGO_DEPTH        = 0.6;    // Deboss depth
 
-/* [Stacking Pegs & Sockets] */
-PEG_R             = 2.0;
-PEG_H             = 2.5;
-PEG_INSET         = 2.0;
-SOCKET_TOL        = 0.35;
+/* [Frost Link Bracket] */
+LINK_THICKNESS    = 2.4;    // Flat link plate thickness
+LINK_BORDER       = 2.8;    // Margin around sockets
 
 // --- Computed Parameters ---
 TOTAL_W = CARD_W + (2 * WALL_T);
 TOTAL_L = CARD_L + (2 * WALL_T);
 
-// 2D Profile for the Frost Pin
-module pin_profile_2d(clearance = 0.0) {
-    w_waist = max(0.5, PIN_WAIST_W - (2 * clearance));
-    w_flair = max(0.8, PIN_FLAIR_W - (2 * clearance));
-    len_half = (PIN_TOTAL_L / 2) - clearance;
+PEG_X_LEFT  = PEG_INSET;
+PEG_X_RIGHT = TOTAL_W - PEG_INSET;
+PEG_Y_FRONT = PEG_INSET;
+PEG_Y_BACK  = TOTAL_L - PEG_INSET;
 
-    polygon(points = [
-        [-len_half, -w_flair / 2],
-        [-len_half,  w_flair / 2],
-        [0,          w_waist / 2],
-        [ len_half,  w_flair / 2],
-        [ len_half, -w_flair / 2],
-        [0,         -w_waist / 2]
-    ]);
-}
-
-// Standalone Frost Pin
-module frost_pin() {
-    linear_extrude(height = PIN_H - (2 * PIN_CLEARANCE), center = true)
-        pin_profile_2d(clearance = PIN_CLEARANCE);
-}
-
-// Side Mortise Cutter
-module side_mortise() {
-    translate([0, 0, -EPS])
-        linear_extrude(height = PIN_H + (2 * EPS))
-            pin_profile_2d(clearance = 0.0);
-}
-
-// Hollow Pocket Cutter (leaves the slanted ramp intact)
-module card_pocket_cutter() {
-    hull() {
-        // Front low baseline (extended up through the top of the box)
-        translate([WALL_T, WALL_T, RAMP_FRONT_H])
-            cube([CARD_W, EPS, BOX_H]);
-
-        // Back high baseline (extended up through the top of the box)
-        translate([WALL_T, TOTAL_L - WALL_T - EPS, RAMP_BACK_H])
-            cube([CARD_W, EPS, BOX_H]);
-    }
-}
+SPAN_BETWEEN_BAYS = 2 * PEG_INSET;
 
 // Top Corner Registration Pegs
 module stacking_pegs() {
-    for (x = [PEG_INSET + WALL_T/2, TOTAL_W - PEG_INSET - WALL_T/2]) {
-        for (y = [PEG_INSET + WALL_T/2, TOTAL_L - PEG_INSET - WALL_T/2]) {
-            translate([x, y, BOX_H])
-                cylinder(r1 = PEG_R, r2 = PEG_R - 0.4, h = PEG_H);
-        }
+    for (pos = [
+        [PEG_X_LEFT,  PEG_Y_FRONT],
+        [PEG_X_RIGHT, PEG_Y_FRONT],
+        [PEG_X_LEFT,  PEG_Y_BACK],
+        [PEG_X_RIGHT, PEG_Y_BACK]
+    ]) {
+        translate([pos[0], pos[1], BOX_H - EPS])
+            cylinder(r1 = PEG_R, r2 = PEG_R - 0.25, h = PEG_H + EPS);
     }
 }
 
-// Underside Corner Sockets
+// Underside Sockets
 module stacking_sockets() {
     r_sock = PEG_R + SOCKET_TOL;
-    for (x = [PEG_INSET + WALL_T/2, TOTAL_W - PEG_INSET - WALL_T/2]) {
-        for (y = [PEG_INSET + WALL_T/2, TOTAL_L - PEG_INSET - WALL_T/2]) {
-            translate([x, y, -EPS])
-                cylinder(r1 = r_sock + 0.4, r2 = r_sock, h = PEG_H + 0.5 + EPS);
-        }
+    for (pos = [
+        [PEG_X_LEFT,  PEG_Y_FRONT],
+        [PEG_X_RIGHT, PEG_Y_FRONT],
+        [PEG_X_LEFT,  PEG_Y_BACK],
+        [PEG_X_RIGHT, PEG_Y_BACK]
+    ]) {
+        translate([pos[0], pos[1], -EPS])
+            cylinder(r = r_sock, h = PEG_H + 0.6 + EPS);
+
+        translate([pos[0], pos[1], -EPS])
+            cylinder(r1 = r_sock + 0.5, r2 = r_sock, h = 0.8 + EPS);
     }
 }
 
-// Front Thumb Scoop
-module front_scoop() {
-    translate([(TOTAL_W - FRONT_NOTCH_W) / 2, -EPS, BOX_H - FRONT_NOTCH_DEPTH])
-        hull() {
-            cube([FRONT_NOTCH_W, WALL_T + (2 * EPS), FRONT_NOTCH_DEPTH + EPS]);
-            translate([FRONT_NOTCH_W / 2, 0, 0])
-                rotate([-90, 0, 0])
-                    cylinder(d = FRONT_NOTCH_W, h = WALL_T + (2 * EPS));
-        }
+// Slanted Card Pocket
+module card_pocket_cutter() {
+    hull() {
+        translate([WALL_T, WALL_T, RAMP_FRONT_H])
+            cube([CARD_W, EPS, BOX_H]);
+
+        translate([WALL_T, TOTAL_L - WALL_T - EPS, RAMP_BACK_H])
+            cube([CARD_W, EPS, EPS]);
+    }
 }
 
-// Side Grab Scoops
-module side_scoops() {
-    y_center = TOTAL_L * 0.48;
-
-    // Left wall scoop
-    translate([-EPS, y_center - (SIDE_NOTCH_W / 2), BOX_H - SIDE_NOTCH_DEPTH])
-        hull() {
-            cube([WALL_T + (2 * EPS), SIDE_NOTCH_W, SIDE_NOTCH_DEPTH + EPS]);
-            translate([0, SIDE_NOTCH_W / 2, 0])
-                rotate([0, 90, 0])
-                    cylinder(d = SIDE_NOTCH_W, h = WALL_T + (2 * EPS));
-        }
-
-    // Right wall scoop
-    translate([TOTAL_W - WALL_T - EPS, y_center - (SIDE_NOTCH_W / 2), BOX_H - SIDE_NOTCH_DEPTH])
-        hull() {
-            cube([WALL_T + (2 * EPS), SIDE_NOTCH_W, SIDE_NOTCH_DEPTH + EPS]);
-            translate([0, SIDE_NOTCH_W / 2, 0])
-                rotate([0, 90, 0])
-                    cylinder(d = SIDE_NOTCH_W, h = WALL_T + (2 * EPS));
-        }
+// Debossed Cold Front Forge Logo on Base Plate
+module bottom_logo() {
+    translate([TOTAL_W / 2, TOTAL_L / 2, -EPS])
+        rotate([0, 0, 0])
+            linear_extrude(height = LOGO_DEPTH + EPS)
+                resize([LOGO_WIDTH, 0], auto = true)
+                    offset(0)
+                        import(LOGO_FILE, center = true);
 }
 
-// Sorter Bay Unit
+// Sorter Bay Assembly
 module sorter_bay() {
     difference() {
-        // Outer solid block + top alignment pegs
         union() {
             cube([TOTAL_W, TOTAL_L, BOX_H]);
             stacking_pegs();
         }
 
-        // Slanted pocket cavity
         card_pocket_cutter();
-
-        // Edge finger scoops
-        front_scoop();
-        side_scoops();
-
-        // Underside stacking sockets
         stacking_sockets();
-
-        // Left Mortise
-        translate([0, TOTAL_L * 0.5, 4.0])
-            rotate([0, 0, 90])
-                side_mortise();
-
-        // Right Mortise
-        translate([TOTAL_W, TOTAL_L * 0.5, 4.0])
-            rotate([0, 0, 90])
-                side_mortise();
+        bottom_logo();
     }
 }
 
-// --- Render Selection ---
+// Flat Horizontal 1x2 Frost Link Bracket (Dual-peg strap)
+module frost_single_link() {
+    r_outer = PEG_R + SOCKET_TOL + LINK_BORDER;
+    r_inner = PEG_R + SOCKET_TOL;
+
+    difference() {
+        hull() {
+            cylinder(r = r_outer, h = LINK_THICKNESS);
+            translate([SPAN_BETWEEN_BAYS, 0, 0])
+                cylinder(r = r_outer, h = LINK_THICKNESS);
+        }
+
+        translate([0, 0, -EPS])
+            cylinder(r = r_inner, h = LINK_THICKNESS + (2 * EPS));
+
+        translate([SPAN_BETWEEN_BAYS, 0, -EPS])
+            cylinder(r = r_inner, h = LINK_THICKNESS + (2 * EPS));
+    }
+}
+
+// Flat 2x2 Frost Link Bracket (Quad-corner junction lock)
+module frost_quad_link() {
+    r_outer = PEG_R + SOCKET_TOL + LINK_BORDER;
+    r_inner = PEG_R + SOCKET_TOL;
+
+    difference() {
+        hull() {
+            translate([0, 0, 0])
+                cylinder(r = r_outer, h = LINK_THICKNESS);
+            translate([SPAN_BETWEEN_BAYS, 0, 0])
+                cylinder(r = r_outer, h = LINK_THICKNESS);
+            translate([0, SPAN_BETWEEN_BAYS, 0])
+                cylinder(r = r_outer, h = LINK_THICKNESS);
+            translate([SPAN_BETWEEN_BAYS, SPAN_BETWEEN_BAYS, 0])
+                cylinder(r = r_outer, h = LINK_THICKNESS);
+        }
+
+        for (x = [0, SPAN_BETWEEN_BAYS]) {
+            for (y = [0, SPAN_BETWEEN_BAYS]) {
+                translate([x, y, -EPS])
+                    cylinder(r = r_inner, h = LINK_THICKNESS + (2 * EPS));
+            }
+        }
+    }
+}
+
+// Both Links Pair (1x2 and 2x2 grouped together)
+module frost_links_pair() {
+    frost_single_link();
+
+    translate([0, 20.0, 0])
+        frost_quad_link();
+}
+
+// --- Output Selection ---
 if (PART == "bay") {
     sorter_bay();
-} else if (PART == "pin") {
-    frost_pin();
+} else if (PART == "single_link") {
+    frost_single_link();
+} else if (PART == "quad_link") {
+    frost_quad_link();
+} else if (PART == "links") {
+    frost_links_pair();
 } else if (PART == "both") {
     sorter_bay();
 
-    // Position Frost Pin adjacent on build plate
-    translate([TOTAL_W + 12.0, TOTAL_L * 0.5, (PIN_H / 2) - PIN_CLEARANCE])
-        rotate([0, 0, 90])
-            frost_pin();
+    translate([TOTAL_W + 12.0, 16.0, 0])
+        frost_single_link();
+
+    translate([TOTAL_W + 12.0, 36.0, 0])
+        frost_quad_link();
 }
