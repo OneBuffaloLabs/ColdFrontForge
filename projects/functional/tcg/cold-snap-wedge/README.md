@@ -13,7 +13,7 @@ To get the best results, especially if this is a functional part, we recommend t
 - **Material:** PLA, PLA+, or PETG
 - **Layer Height:** 0.20mm
 - **Infill:** 15%–20% (Gyroid or Grid)
-- **Wall Loops (Perimeters):** 3
+- **Wall Loops (Perimeters):** 4-5
 - **Supports:** None required (prints flat on the front plate)
 - **Brim:** Not necessary unless you experience bed adhesion issues
 
