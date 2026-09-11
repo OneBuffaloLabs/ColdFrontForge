@@ -4,6 +4,14 @@ A brief, 1-2 sentence description of what this model is, what problem it solves,
 
 ![Hero Image](images/hero-shot.jpg) _Replace with a cool beauty shot of your print!_
 
+## 📥 Download & Print Profiles
+
+Pre-sliced `.3mf` files and optimized print profiles are available across creator communities:
+
+- [MakerWorld](https://makerworld.com/)
+- [Printables](https://www.printables.com/)
+- [Creality Cloud](https://www.crealitycloud.com/)
+
 ## 🖨️ Recommended Print Settings
 
 To get the best results, especially if this is a functional part, we recommend the following settings:
@@ -43,4 +51,4 @@ _To modify, simply open the file in [OpenSCAD](https://openscad.org/), change th
 
 _Part of the [Cold Front Forge](https://github.com/OneBuffaloLabs/ColdFrontForge) open-source collection. Licensed under CC BY-NC-SA 4.0._
 
-_Looking for finished physical prints or custom colors? Visit our shop: [coldfrontforge.etsy.com_](https://www.google.com/search?q=https://coldfrontforge.etsy.com/)
+_Looking for finished physical prints or custom colors? Visit our shop: [coldfrontforge.etsy.com](https://coldfrontforge.etsy.com)_
