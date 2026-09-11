@@ -8,6 +8,15 @@ A brief, 1-2 sentence description of what this model is, what problem it solves,
 </p>
 <!-- markdownlint-enable MD033 -->
 
+<!-- OPTIONAL: Contest Entry Block (Remove if not participating in a contest) -->
+
+## 🏆 Contest Entry
+
+- **Contest:** [Bottle & Can Opener Design Contest](https://www.crealitycloud.com/contest/Bottle-Can-Opener)
+- **Host Platform:** Creality Cloud
+- **Category:** Functional Prints / Daily Utilities
+<!-- END OPTIONAL -->
+
 ## 📥 Download & Print Profiles
 
 Pre-sliced `.3mf` files and optimized print profiles are available across creator communities:
