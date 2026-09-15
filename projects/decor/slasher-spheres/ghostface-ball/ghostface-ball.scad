@@ -180,7 +180,7 @@ module get_right_eye_2d(clearance = 0) {
     translate([right_eye_svg_x, right_eye_svg_y])
       scale([eye_scale, eye_scale])
         mirror([0, 1])
-          import("images/right_eye.svg");
+          import("assets/cad/right_eye.svg");
 }
 
 module get_left_eye_2d(clearance = 0) {
@@ -188,7 +188,7 @@ module get_left_eye_2d(clearance = 0) {
     translate([left_eye_svg_x, left_eye_svg_y])
       scale([eye_scale, eye_scale])
         mirror([0, 1])
-          import("images/left_eye.svg");
+          import("assets/cad/left_eye.svg");
 }
 
 module get_nose_2d(clearance = 0) {
@@ -196,7 +196,7 @@ module get_nose_2d(clearance = 0) {
     translate([nose_svg_x, nose_svg_y])
       scale([nose_scale, nose_scale])
         mirror([0, 1])
-          import("images/nose.svg");
+          import("assets/cad/nose.svg");
 }
 
 module draw_eyes(is_pocket = true, hover = 0) {
