@@ -6,7 +6,7 @@ The **Cold Snap Desk Caddy** keeps all your essential protective supplies neatly
 
 <!-- markdownlint-disable MD033 -->
 <p align="center">
-   <img src="images/hero-side.png" alt="Cold Snap Desk Caddy" width="600">
+   <img src="assets/media/renders/hero-side.png" alt="Cold Snap Desk Caddy" width="600">
 </p>
 <!-- markdownlint-enable MD033 -->
 
