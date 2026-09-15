@@ -1,39 +1,39 @@
 # The SnapFit Collection: Professional Sports Logos
 
-High-tolerance, multi-part 3D prints designed for a perfect friction fit. No glue, just precision plastic engineering.
+High-tolerance, multi-part 3D prints designed for a clean friction fit. No glue, just precise plastic tolerances.
 
-This collection leverages the power of OpenSCAD to convert standard vector graphics into tight, snap-together physical objects. By utilizing built-in clearances and the natural thermal expansion of 3D printed plastics, these models lock together like puzzle pieces.
+This collection uses OpenSCAD to convert vector artwork into multi-piece, snap-together physical prints. By tuning built-in clearances and accounting for filament shrinkage, each piece locks cleanly together like a puzzle without needing an AMS or mid-print pauses.
 
-## 🧬 The "SnapFit" DNA (Universal Specs)
+## 🧬 Universal Print Specs
 
-Instead of repeating these in every folder, here are the baseline rules that apply to **every** logo in this collection:
+These baseline rules apply to every model across this collection:
 
-- **The Fit:** Designed with a default `0.15mm` clearance.
-- **The Layer:** Optimized for `0.2mm` layer height.
-- **The Walls:** Requires the **Arachne** wall generator in your slicer (preserves tiny, sharp details like animal horns or text).
-- **The Look:** Designed to be printed with **Concentric** top surface patterns to make the filament lines follow the flow of the logo.
-- **The Squish:** _Elephant Foot Compensation_ must be set (usually between 0.15mm - 0.2mm) so the first layer doesn't bulge and ruin the tolerances.
+- **Clearance:** Designed with standard offsets between `0.05 mm` and `0.15 mm`.
+- **Layer Height:** Fixed at `0.20 mm`.
+- **Wall Generator:** **Arachne** is required to preserve small details like sharp tips and thin borders.
+- **Top Surface:** `Concentric` (follows the shape of the logo) or `Monotonic Line`.
+- **Elephant Foot Compensation:** Set between `0.15 mm` and `0.20 mm` so first-layer flare doesn't bind the pockets.
 
-## 🛠 Collection-Wide Assembly Tips
+## 🛠 Assembly Tips
 
-- **The Surface:** Always assemble on a flat, hard, and sturdy surface.
-- **The Temperature:** Let parts cool _completely_ on the build plate before snapping them together. Warm PLA is soft and will deform if forced.
-- **The "Click":** Press firmly with the flat of your thumb. You should feel a satisfying tactile "click" when the insert bottoms out in the pocket.
-- **The Fail-Safe:** While designed for a friction fit, a few small drops of CA glue are recommended for a permanent bond if your printer's tolerances result in a loose fit.
+- **Flat Surface:** Assemble on a flat, solid tabletop.
+- **Cooling:** Let parts cool completely before assembly. Warm plastic is flexible and will distort instead of snapping.
+- **The Fit:** Press straight down with the flat of your thumb until the piece clicks flush.
+- **Glue Backup:** If your printer runs loose on tolerances, a tiny drop of CA glue inside the pocket will lock it permanently.
 
 ## 🧪 Calibration & Testing
 
-Before committing to a full-size logo print, use the included `clearance_tester.scad` (or the pre-rendered `.stl` in this folder) to find the perfect setting for your specific printer and filament.
+Before printing a complete logo, print the [Clearance Tester](./clearance-tester/) to dial in your extrusion and slicer settings.
 
-1. **Print the Base:** This contains three pockets labeled `0.05`, `0.10`, and `0.15`.
-2. **Print the Insert:** A standard 10mm test square.
-3. **Verify the Fit:** Use the **Arachne** wall generator for both the test and the final logos. Classic wall generators often lead to loose fits on high-accuracy machines like the Creality K2 SE.
+1. **Base:** Features three test slots sized at `0.05 mm`, `0.10 mm`, and `0.15 mm`.
+2. **Insert:** Standard test block to check insertion force.
+3. **Verify:** Slice both with the **Arachne** engine to match the actual production profiles.
 
 ---
 
-## 🏈 NFL Roadmap & Status
+## 🏈 NFL Status
 
-**Key:** ✅ = Designed & Uploaded | ⏳ = In Progress | 📅 = Planned
+**Key:** ✅ Live | ⏳ In Progress | 📅 Planned
 
 ### American Football Conference (AFC)
 
@@ -99,6 +99,6 @@ Before committing to a full-size logo print, use the included `clearance_tester.
 
 ### Legal Disclaimer
 
-_All designs in this directory are provided as **fan art** for personal, non-commercial use only. These designs are not affiliated with, authorized by, or endorsed by the National Football League (NFL) or any of its respective teams. All team names, logos, and trademarks are the property of their respective owners._
+_All designs in this directory are fan art for personal, non-commercial use. They are not affiliated with, authorized by, or endorsed by the National Football League (NFL) or its teams. All team names and trademarks belong to their respective owners._
 
-**For full legal information, safety warnings, and licensing restrictions, please see our root [LEGAL.md](../../../LEGAL.md).**
+_See the root [LEGAL.md](../../../LEGAL.md) for full licensing details._
