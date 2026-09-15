@@ -1,38 +1,38 @@
-# The Slasher Sphere Collection: Horror-Themed Pokéballs
+# The Slasher Sphere Collection: Horror-Themed Display Spheres
 
-High-precision, multi-part 3D prints merging the world of Pokémon with iconic horror film slashers. Designed for seamless assembly and a premium, prop-quality feel.
+High-precision, multi-part 3D prints combining classic creature-catching sphere geometry with iconic horror film slashers. Engineered for glue-free friction assembly and clean multi-color results on single-extruder 3D printers.
 
-This collection utilizes parametric OpenSCAD engineering to transform 2D horror motifs into 3D spherical objects. By utilizing a high-precision friction-fit system, these spheres are optimized for clean, multi-color results without the need for a multi-material system (like an AMS or MMU).
+This collection uses parametric OpenSCAD design to map horror character motifs onto interlocking spherical shells. With dedicated component offsets, every mask, chevron, and eye insert snaps directly into place without needing an AMS, CFS, or mid-print layer swaps.
 
-## 🧬 The "Slasher" DNA (Universal Specs)
+## 🧬 Collection DNA & Baseline Specs
 
-To ensure consistency across the entire collection, every sphere in this project adheres to these baseline engineering rules:
+Every sphere in this collection adheres to standard engineering specifications:
 
-- **The Fit:** High-precision friction fits. Structural parts and mask chips now use a tight `0.05mm` clearance to minimize the need for glue.
-- **The Stability:** All bottom shells feature a integrated **flattened base** to ensure the props sit securely on flat surfaces without rolling.
-- **The Shells:** Standardized `80mm` diameter (40mm radius).
-- **The Seam:** **Back-seam alignment is required.** Slicers must be set to place the Z-seam at the back to keep the front face and hardware mating surfaces clean.
-- **The Walls:** Requires **3 to 4 wall perimeters** to ensure the recessed feature pockets have a solid plastic backing.
-- **The Squish:** _Elephant Foot Compensation_ is mandatory (set to `0.15mm`).
+- **Shell Geometry:** Standardized **80 mm outer diameter** (40 mm radius).
+- **Integrated Display Flat:** Bottom hemispheres feature a built-in flat footing so spheres rest stably on desks or shelves without rolling or needing a separate stand.
+- **Precision Clearances:** Mask accents and structural chips use a **0.05 mm radial clearance** for a tight friction fit.
+- **Orientation:** Hemispheres print with the equatorial flat face directly on the bed for 100% support-free exterior curves.
+- **Z-Seam Alignment:** Set slicer Z-seam to **Rear / Back** to keep visible character faces, eyes, and mating lips free of seam artifacts.
+- **Perimeters:** **3 to 4 wall loops** mandatory to give recessed chip pockets solid backings.
+- **Elephant Foot Compensation:** **0.15 mm** is critical to prevent base flare from pinching mating seams.
 
-## 🛠 Collection-Wide Assembly Tips
+## 🛠 Collection-Wide Assembly
 
-- **Internal Alignment:** Every sphere uses a standardized **Rectangular Filler Peg**. This provides massive surface area for structural stability and ensures the hemispheres never twist.
-- **Support-Free Design:** All spheres are designed to be printed with the equatorial flat faces down on the build plate. This allows the organic curves of the ball to print flawlessly without supports.
-- **The Finish:** Detail chips (eyes, chevrons, etc.) are dimensioned to sit slightly proud of the shell surface for a deliberate, high-quality look.
-- **Minimal Glue:** While the friction fit is designed to hold on its own, a tiny drop of CA glue can be used if your printer's tolerances are running loose.
+- **Anti-Twist Alignment:** Each sphere locks together using a standardized **rectangular internal alignment peg**, maximizing surface contact and preventing the top and bottom hemispheres from twisting out of alignment.
+- **Tactile Accents:** Facial chips and mask details are dimensioned to sit slightly proud of the spherical shell for clean tactile relief.
+- **Adhesive Optional:** Friction holds all components firmly under dialed-in slicer settings; a tiny drop of CA glue can be added if your machine runs slightly loose on internal perimeters.
 
 ---
 
 ## 🔪 Slasher Roadmap & Status
 
-**Key:** ✅ = Designed & Uploaded | ⏳ = In Progress | 📅 = Planned
+**Key:** ✅ Live | ⏳ In Progress | 📅 Planned
 
-### The Icons of Terror
+### Classic Slashers
 
 **Friday the 13th**
 
-- [x] ✅ **[Jason Voorhees](./jason_ball/)**
+- [x] ✅ **[Jason Voorhees](./jason-ball/)**
 
 **A Nightmare on Elm Street**
 
@@ -42,23 +42,23 @@ To ensure consistency across the entire collection, every sphere in this project
 
 - [ ] 📅 Michael Myers
 
-**Texas Chainsaw Massacre**
+**The Texas Chain Saw Massacre**
 
 - [ ] 📅 Leatherface
 
-### Modern Menaces
+### Modern Icons
 
 **Scream**
 
-- [x] ✅ [Ghostface](./ghostface_ball/)
+- [x] ✅ **[Ghostface](./ghostface-ball/)**
+
+**Saw**
+
+- [ ] ⏳ **[Billy the Puppet](./billy-ball/)**
 
 **Child's Play**
 
 - [ ] 📅 Chucky
-
-**Saw**
-
-- [ ] ⏳ [Billy the Puppet](./billy_ball/)
 
 **IT**
 
@@ -68,6 +68,6 @@ To ensure consistency across the entire collection, every sphere in this project
 
 ### Legal Disclaimer
 
-_All designs in this directory are provided as **fan art** for personal, non-commercial use only. These designs are not affiliated with, authorized by, or endorsed by the Friday the 13th franchise, Pokémon, or any other respective studios. All slasher icons and trademarks are the property of their respective owners._
+_All designs in this directory are fan art for personal, non-commercial use only. These designs are not affiliated with, authorized by, or endorsed by Nintendo, Game Freak, Warner Bros., Paramount Pictures, or any respective franchise owners. All character motifs and trademarks belong to their respective copyright holders._
 
-**For full legal information, safety warnings, and licensing restrictions, please see our root [LEGAL.md](https://www.google.com/search?q=../../../LEGAL.md).**
+_For complete licensing restrictions, please see the repository root [LEGAL.md](../../../LEGAL.md)._
