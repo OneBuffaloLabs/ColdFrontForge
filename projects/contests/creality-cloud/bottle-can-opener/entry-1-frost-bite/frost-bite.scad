@@ -5,7 +5,7 @@ EPS = 0.02;
 PART            = "body";
 
 // Snowflake Style (for multi-color): "flush" or "embossed"
-LOGO_STYLE      = "flush";
+LOGO_STYLE      = "embossed";
 
 // Body Dimensions
 HANDLE_W        = 22.0;
