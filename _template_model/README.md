@@ -4,7 +4,7 @@ A brief, 1-2 sentence description of what this model is, what problem it solves,
 
 <!-- markdownlint-disable MD033 -->
 <p align="center">
-    <img src="images/hero.png" alt="Hero" width="600">
+    <img src="assets/media/renders/hero.png" alt="[Model Name] Hero" width="600">
 </p>
 <!-- markdownlint-enable MD033 -->
 
@@ -12,14 +12,20 @@ A brief, 1-2 sentence description of what this model is, what problem it solves,
 
 ## 🏆 Contest Entry
 
-- **Contest:** [Bottle & Can Opener Design Contest](https://www.crealitycloud.com/contest/Bottle-Can-Opener)
-- **Host Platform:** Creality Cloud
-- **Category:** Functional Prints / Daily Utilities
+- **Contest:** [Contest Name](https://example.com)
+- **Host Platform:** [Creality Cloud / MakerWorld / Printables]
+- **Category:** [e.g., Functional Prints / Daily Utilities]
 <!-- END OPTIONAL -->
 
 ## 📥 Download & Print Profiles
 
-Pre-sliced `.3mf` files and optimized print profiles are available across creator communities:
+Pre-sliced `.3mf` project files and individual `.stl` files are organized in the [`models/`](./models/) directory:
+
+- **Single Color:** [`models/single/`](./models/single/) — Standard debossed single-material version.
+- **Multi-Color Flush:** [`models/multi-color-flush/`](./models/multi-color-flush/) — Inlaid flat two-tone surface profile.
+- **Multi-Color Embossed:** [`models/multi-color-embossed/`](./models/multi-color-embossed/) — Raised tactile multi-material profile.
+
+Also available on creator platforms:
 
 - [MakerWorld](https://makerworld.com/)
 - [Printables](https://www.printables.com/)
@@ -27,38 +33,52 @@ Pre-sliced `.3mf` files and optimized print profiles are available across creato
 
 ## 🖨️ Recommended Print Settings
 
-To get the best results, especially if this is a functional part, we recommend the following settings:
+### Structural Settings (All Variants)
 
-- **Material:** [e.g., PETG or ABS recommended for outdoor use]
-- **Layer Height:** [e.g., 0.2mm]
-- **Infill:** [e.g., 15% Gyroid]
-- **Wall Loops (Perimeters):** [e.g., 3-4 for extra strength]
-- **Supports:** [e.g., None required / Tree supports on build plate only]
-- **Brim:** [e.g., Not necessary unless you have warping issues]
+- **Material:** [e.g., PETG or PLA+]
+- **Layer Height:** 0.20 mm
+- **Wall Loops:** [e.g., 4 walls for load-bearing parts]
+- **Top / Bottom Shells:** 5 top, 4 bottom
+- **Infill:** [e.g., 20%–25% Gyroid]
+- **Supports:** [e.g., None required]
+- **Brim:** [e.g., None required on clean PEI]
+
+### Multi-Color Print Profiles (CFS / AMS)
+
+- **Prime Tower:** Enabled (Width: 35 mm, Brim: 5 mm)
+- **Sparse Layers:** Enable "No sparse layers (beta)" to reduce prime tower waste on single-color base layers
+- **Top Surface Pattern:** `Monotonic` or `Monotonic Line`
 
 ## 🔩 Hardware Required
 
-_If your model snaps together, just write "100% 3D Printed - No extra hardware needed!" If it needs screws, list them here:_
+_100% 3D Printed - No extra hardware needed!_
 
-- [e.g., 4x M3x12mm Socket Head Screws]
-- [e.g., 4x M3 Heat Set Inserts]
+<!-- Or list screws/inserts:
+- 4x M3x12mm Socket Head Screws
+- 4x M3 Heat Set Inserts
+-->
 
 ## 🛠️ Customizing with OpenSCAD
 
-Because this design is parametric, you can easily adjust the dimensions to fit your specific needs using the included `.scad` file.
+Because this design is parametric, you can easily adjust dimensions or tolerances to fit your needs using `[model-name].scad`.
 
-**Key Variables You Can Change:**
+**Key Variables:**
 
-- `width` - Adjusts the overall width (Default: 50mm)
-- `tolerance` - Increase this if your printer runs a bit tight (Default: 0.2mm)
+- `PART` — Model mode: `"single"`, `"assembly"`, `"body"`, or `"insert"`
+- `LOGO_STYLE` — Multi-color mode: `"flush"` or `"embossed"`
+- `[variable_1]` — [Description] (Default: `XX mm`)
 
-_To modify, simply open the file in [OpenSCAD](https://openscad.org/), change the variables at the top of the script, press `F6` to render, and `F7` to export your new STL._
+_To export multi-material STLs:_
+
+1. Set `PART = "body";`, render (`F6`), and export `[model]-body.stl`.
+2. Set `PART = "insert";`, render (`F6`), and export `[model]-insert.stl`.
+3. Load both files into your slicer as a single multi-part object.
 
 ## 🧩 Assembly Instructions
 
-1. [Step 1: e.g., Press the heat-set inserts into the base.]
-2. [Step 2: e.g., Align the top cover and secure with the M3 screws.]
-3. [Step 3: e.g., Enjoy!]
+1. [Step 1]
+2. [Step 2]
+3. [Step 3]
 
 ---
 
