@@ -2,7 +2,7 @@ $fn = 64;
 EPS = 0.02;
 
 // Model Part Selector: "single", "assembly", "body", "snowflake"
-PART            = "single";
+PART            = "body";
 
 // Snowflake Style (for multi-color): "flush" or "embossed"
 LOGO_STYLE      = "flush";
@@ -24,7 +24,7 @@ EYELET_OD       = 8.0;
 EYELET_ID       = 4.2;
 
 // Snowflake Emblem Dimensions
-LOGO_FILE       = "assets/snowflake.svg";
+LOGO_FILE       = "assets/cad/snowflake.svg";
 LOGO_DEPTH      = 0.8;
 LOGO_EMBOSS_H   = 0.6;
 LOGO_SCALE      = (PART == "single") ? 0.18 : 0.17;
