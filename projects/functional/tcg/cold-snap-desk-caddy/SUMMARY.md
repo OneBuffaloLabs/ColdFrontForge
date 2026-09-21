@@ -1,3 +1,3 @@
 # Short Summary
 
-Streamline card sorting, grading prep, and live breaks with organized bays for penny sleeves, high-capacity toploaders, semi-rigids, and stream tools across Standard, Pro, and XL editions.
+Streamline card sorting, grading, and live breaks with organized bays across Standard, Pro, and XL editions.
