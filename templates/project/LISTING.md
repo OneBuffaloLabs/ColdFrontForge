@@ -19,6 +19,8 @@ FEATURES
 • [Zero Supports / Printability]: [Orientation and support-free details].
 • Open Source: Full parametric OpenSCAD project files and source models available on GitHub under Cold Front Forge.
 
+<!-- OPTIONAL: MULTI-COLOR (AMS / CFS) SETTINGS (Remove if single-material or single variant) -->
+
 MODEL VARIANTS & FILES
 
 [Files are provided as individual STLs and pre-configured 3MF project profiles:]
@@ -28,6 +30,8 @@ MODEL VARIANTS & FILES
 • [Variant 3 / Multi-Color Embossed]: [Description, e.g., raised tactile accent print].
 
 [Note for multi-part models: If importing raw STLs instead of opening a 3MF project, select all component STL files together and load them as a single multi-part object to keep coordinates aligned.]
+
+<!-- END OPTIONAL -->
 
 RECOMMENDED PRINT SETTINGS
 

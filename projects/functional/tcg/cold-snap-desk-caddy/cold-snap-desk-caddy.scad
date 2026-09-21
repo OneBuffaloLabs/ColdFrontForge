@@ -34,7 +34,7 @@ RIGHT_POST_W = 8.0;   // Width of the front-right structural corner post
 ENABLE_LOGO = true;  // Toggle for rendering the SVG bottom deboss
 LOGO_PATH = "../../../../assets/logo/logo-no-text-black.svg"; // Path to brand SVG
 LOGO_SCALE = 0.20;   // Adjusted scale factor for the base deboss mark
-LOGO_DEBOSS_D = 0.6; // Subtraction depth into the bottom floor plate
+LOGO_DEBOSS_D = 0.8; // Subtraction depth into the bottom floor plate
 
 // --- Internal Derived Coordinates ---
 AVAIL_X = BOX_W - (2 * WALL_T) - DIVIDER_T;
