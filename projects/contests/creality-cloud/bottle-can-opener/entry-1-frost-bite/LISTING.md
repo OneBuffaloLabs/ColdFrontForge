@@ -1,42 +1,32 @@
 # Frost Bite — Can Tab Opener & Keychain
 
-Frost Bite is a compact, everyday-carry keychain tool designed to pop soda and beer can pull tabs without tearing up your fingernails. The bottom sleeve slides directly over standard beverage tabs, giving you the upward leverage needed to open cans with minimal effort.
+Frost Bite is a compact everyday carry keychain tool designed to pop beverage pull tabs without tearing up your fingernails. The bottom slot slides directly over standard soda and beer can tabs, giving you clean upward leverage with practically zero effort.
 
-Modeled from scratch in OpenSCAD, it features a slim 5 mm profile, a reinforced eyelet that fits standard split keyrings, and bridging clearances that let it print completely flat on the build plate without supports.
+I designed it from scratch in OpenSCAD with a slim 5 mm profile so it rides flat in your pocket without adding bulk. The keyring loop is reinforced to handle daily pocket carry, and the internal tab slot is tuned to bridge cleanly on standard 0.4 mm setups so you can print it flat on the bed with zero supports.
 
-FEATURES
+Files are open-source and customizable via OpenSCAD under the Cold Front Forge project.
 
-• Direct Leverage: The 24 mm deep internal sleeve slides fully over standard can tabs for clean lifting leverage without bending the tab.
-• Pocket Ready: At 5 mm thick, it rides flat on keychains or in pockets without extra bulk.
-• Zero Supports: The internal horizontal slot bridges cleanly on standard 0.4 mm setups with no support material required.
-• Multiple Styles: Includes files for a clean debossed single-color print, a flush two-tone inlay, and a raised 0.6 mm embossed logo.
-• Open Source: Full parametric code and source models are available on GitHub under Cold Front Forge.
+EDITIONS & FILES
 
-MODEL VARIANTS & PROJECT FILES
+• Single Color: Debossed snowflake emblem. Prints in a single run with standard single-extruder setups.
+• Multi-Color Flush: Inlaid two-tone snowflake that sits completely smooth with the top face.
+• Multi-Color Embossed: Two-tone snowflake raised 0.6 mm above the top surface for tactile contrast.
 
-Files are provided as pre-configured .3mf projects and individual .stl meshes:
-
-• Single Color (Plate / Profile 1): Uses a debossed snowflake emblem. Prints in one run with no filament swaps or pauses.
-• Multi-Color Flush (Plate / Profile 2): Features an inlaid two-tone snowflake sitting completely flush with the top face.
-• Multi-Color Embossed (Plate / Profile 3): Features a two-tone snowflake raised 0.6 mm above the top surface for tactile contrast.
-
-Note for multi-color slicers (Creality Print, Bambu Studio, OrcaSlicer): If you are importing raw STLs instead of opening the 3MF project, select both the body and snowflake STL files together and load them as a single multi-part object to maintain alignment.
+If you are loading raw STLs instead of opening the pre-sliced 3MF project in Creality Print, import the body and snowflake files together as a single multi-part object to keep coordinates aligned.
 
 RECOMMENDED PRINT SETTINGS
 
-• Orientation: Flat on the bed, face up (no supports needed).
-• Material: PETG or PLA+ recommended for leverage strength (standard PLA works for casual use).
+• Orientation: Flat on the build plate, face up (no supports needed).
+• Material: PETG or PLA+ recommended for strength under leverage (standard PLA works for casual use).
 • Layer Height: 0.20 mm.
-• Wall Loops: 4 perimeters (essential for reinforcement around the tab sleeve and keyring eyelet).
-• Top / Bottom Shells: 5 top, 4 bottom.
-• Infill: 25% to 30% Gyroid.
-• Brim: None required on clean PEI or smooth build sheets.
+• Walls: 4 walls (critical for mechanical strength along the tab slot and keyring eyelet).
+• Top / Bottom Shells: 5 top layers, 4 bottom layers.
+• Infill: 25%–30% Gyroid.
 
-MULTI-COLOR SETUP (AMS / CFS)
+MULTI-COLOR NOTES (AMS / CFS)
 
-• Prime Tower: Enabled (35 mm width, 5 mm brim recommended).
-• Sparse Layers: Turn on "No sparse layers (beta)" to skip tower extrusion on the first 4.2 mm while only the main body prints.
-• Top Surface Pattern: Monotonic or Monotonic Line.
-• Purge Volumes: Set dark-to-light flushing to 250–300 mm³ to prevent dark filament bleed into the snowflake.
+• Enable prime tower (35 mm width recommended).
+• Enable "No sparse layers" to avoid unnecessary priming while the base body prints.
+• Set dark-to-light flushing volumes high enough to prevent dark filament bleed into lighter snowflake accents.
 
 Designed by Cold Front Forge. Open-source under Creative Commons (CC BY-NC-SA 4.0).
