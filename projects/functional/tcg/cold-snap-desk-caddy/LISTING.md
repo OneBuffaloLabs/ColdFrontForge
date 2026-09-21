@@ -1,30 +1,23 @@
-# Cold Snap Desk Caddy — Tiered TCG Card Prep & Grading Station
+# Cold Snap Desk Caddy — Tiered TCG Card Prep & Stream Station
 
-Tired of penny sleeves sliding around and toploaders cluttering your workspace during breaks? The Cold Snap Desk Caddy keeps your primary card-handling supplies upright, sorted, and right within arm’s reach on your desk mat. Built with a low center of gravity and recessed front finger reliefs, it lets you pinch and pull a single sleeve or case smoothly without fumbling or bending edges.
+Tired of loose penny sleeves sliding around your desk mat or toploaders cluttering your workspace during breaks? The Cold Snap Desk Caddy keeps your primary card supplies upright, sorted, and ready right within arm's reach. Built with a low-profile base and recessed front cutouts, you can pinch and slide a single sleeve or case out smoothly without fumbling or bending any corners.
 
-Designed specifically for standard trading card workflows, the caddy accommodates your entire prep sequence in one compact footprint. The right-hand full-depth bay holds 100+ soft penny sleeves flat against the floor, while the left side features split compartments for ~30 standard 35pt rigid toploaders in the front and ~45 semi-rigid submission holders in the rear.
+It fits standard trading card prep workflows cleanly, holding 100+ soft penny sleeves flat against the floor alongside dedicated compartments for standard 35pt rigid toploaders and semi-rigid grading holders (like Card Savers). Choose between the compact Standard daily edition, the expanded Pro Station with built-in stream tool bays, or the high-capacity XL Stream Edition.
 
-FEATURES
+Files are open-source and customizable via OpenSCAD under the Cold Front Forge project.
 
-• Dedicated 3-Stage Organization: Separate bays for soft penny sleeves, 35pt toploaders, and semi-rigid grading holders.
-• Quick-Pull Finger Reliefs: Recessed front cutouts allow you to slide cards or sleeves out cleanly without creasing corners.
-• Stable Desk Mat Footprint: Wide, weighted base resists tipping over even when fully stocked with rigid cases.
-• Smooth Floor Transitions: Internal corner chamfers keep sleeves from catching along the bottom edges.
-• Open-Source: Full parametric OpenSCAD project files and source models available on GitHub under Cold Front Forge.
+EDITIONS & FILES
 
-3MF PRINT PROFILES
+• Standard Edition: Compact footprint (170 x 104 mm) holding penny sleeves, ~35 toploaders, and ~45 semi-rigids. Fits nearly any print bed (180 x 180 mm+).
+• Pro Station: Streamlined break station (171 x 146 mm) with a deep toploader pocket (~70+), penny sleeves, semi-rigids, and dual rear utility bays for tape, markers, and pull tabs. Prints flat on standard 220 x 215 mm+ beds.
+• XL Stream Edition: High-capacity double station (244 x 146 mm) with two flat penny sleeve bays, deep toploader storage, and wide rear tool trays. Requires a 256 x 256 mm+ bed (or 45-degree slicer rotation). Untested physical print due to current machine size limits.
 
-The included .3mf file is set up for straightforward, single-plate printing:
+RECOMMENDED PRINT SETTINGS
 
-• Plate 1: Standard Desk Caddy (Pre-oriented flat on base with tuned wall counts and zero supports required)
-
-PRINT SETTINGS
-
-• Orientation: Flat on the bottom floor plate (no supports needed)
-• Material: PLA, PLA+, or PETG (PETG recommended if sitting near warm electronics or direct sunlight)
-• Layer Height: 0.20mm
-• Wall Loops: 3–4 perimeters for rigid dividers and durable corners
-• Infill: 15% Gyroid or Grid
-• Brim: None required on a clean, level build plate
+• Orientation: Flat on the build plate (no supports needed).
+• Material: PLA, PLA+, or PETG.
+• Layer Height: 0.20 mm.
+• Walls: 3 or 4 perimeters.
+• Infill: 15% Gyroid or Grid.
 
 Designed by Cold Front Forge. Open-source under Creative Commons (CC BY-NC-SA 4.0).
