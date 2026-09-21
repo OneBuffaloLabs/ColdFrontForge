@@ -6,7 +6,7 @@ Publishing metadata and platform inputs for Cold Snap Desk Caddy. Use `LISTING.m
 
 ## Universal Tags
 
-`cold-front-forge`, `cold-snap`, `tcg`, `desk-caddy`, `toploader-holder`, `penny-sleeves`, `pokemon`, `mtg`, `card-storage`, `organizer`
+`cold-front-forge`, `cold-front-forge`, `cold-snap`, `coldsnap`, `tcg`, `desk-caddy`, `toploader-holder`, `penny-sleeves`, `pokemon`, `mtg`, `card-storage`, `organizer`
 
 ---
 

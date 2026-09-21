@@ -11,7 +11,7 @@ Publishing metadata and platform inputs for [Model Name]. Use `LISTING.md` for d
 
 ## Universal Tags
 
-`cold-front-forge`, `[product-line]`, `[primary-function]`, `[use-category]`
+`cold-front-forge`, `cold-front-forge`, `[product-line]`, `[primary-function]`, `[use-category]`
 
 ---
 
