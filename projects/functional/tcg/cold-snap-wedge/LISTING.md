@@ -1,31 +1,23 @@
 # Cold Snap Wedge — Vertical TCG Card Stopper & Box Partition Divider
 
-The Cold Snap Wedge is a 3D-printable card stopper and row divider made for multi-row cardboard storage boxes, like standard BCW and Monster boxes.
+The Cold Snap Wedge is a 3D-printable card stopper and row divider made for multi-row cardboard storage boxes, like standard BCW and Monster boxes. It clips right over the cardboard partition wall to keep partial rows upright so your cards never slide, slump, or get bent.
 
-It clips directly over the cardboard partition wall to keep partial rows upright so your cards do not slide or slump. The hook includes a built-in compliant spring finger that automatically adjusts to grip both thin 2mm outer box walls and standard 5mm interior dividers.
+The hook features a built-in flexible spring finger that automatically adjusts to grip both thin 2mm outer box walls and standard 5mm interior dividers. At 75mm wide and 110mm tall, it cleanly clears raw cards, penny sleeves, and toploaders while letting the box lid close with zero clearance issues.
 
-FEATURES
+Files are open-source and customizable via OpenSCAD under the Cold Front Forge project.
 
-• Auto-Adjusting Grip: The spring finger holds firmly on 2mm outer walls and flexes out of the way for 5mm internal dividers.
-• Three Configurations: Left, Right, and Dual hook variants to fit any row in the box.
-• Sized for Standard Boxes: 75mm wide and 110mm tall to easily clear raw cards, sleeves, and toploaders while letting the box lid close cleanly.
-• Open-Source: Full parametric OpenSCAD project files and source models available on GitHub under Cold Front Forge.
+EDITIONS & FILES
 
-3MF PRINT PROFILES
+• Plate 1 (Dual Hook): Clips over both adjacent partition walls for maximum stability in center rows.
+• Plate 2 (Right Hook): Clips over the right partition wall for edge rows.
+• Plate 3 (Left Hook): Clips over the left partition wall for edge rows.
 
-The included .3mf file is organized into three separate plates:
+RECOMMENDED PRINT SETTINGS
 
-• Plate 1: Dual Hook (clips over both adjacent walls for center rows)
-• Plate 2: Right Hook (clips over the right partition wall)
-• Plate 3: Left Hook (clips over the left partition wall)
-
-PRINT SETTINGS
-
-• Orientation: Flat on front face (no supports needed)
-• Material: PLA, PLA+, or PETG
-• Layer Height: 0.20mm
-• Wall Loops: 4 to 5 walls (important so the spring finger prints solid and keeps its flex over time)
-• Infill: 15% to 20% (Gyroid works great)
-• Brim: None
+• Orientation: Flat on the front face (no supports needed).
+• Material: PLA, PLA+, or PETG.
+• Layer Height: 0.20 mm.
+• Walls: 4 to 5 perimeters (critical so the spring finger prints 100% solid and retains its flex).
+• Infill: 15% to 20% Gyroid.
 
 Designed by Cold Front Forge. Open-source under Creative Commons (CC BY-NC-SA 4.0).
