@@ -12,8 +12,12 @@ debug_transparent_chips = false;
 pocket_depth = 2.5;
 accent_pocket_extra_depth = 0.5;
 
-eye_clearance = -0.06;
-front_ring_press_fit = 0.08;
+// Fits
+eye_clearance = -0.06; // Black eye base to shell
+red_ring_outer_clearance = 0.04; // Outer boundary of red ring
+red_ring_inner_clearance = 0.08; // Center hole of red ring around black pupil peg
+spiral_clearance = 0.05; // Relieves insertion friction on cheeks
+front_ring_press_fit = 0.12; // Slightly larger outer diameter for snug lock
 button_press_fit = 0.06;
 
 // Face Proportions
@@ -105,40 +109,37 @@ if (part_to_render == "all") {
     }
   }
 } else if (part_to_render != "chips_black" && part_to_render != "chips_red") {
-  // Top flipped 180 degrees
   if (part_to_render == "top") {
     translate([0, 0, -(ring_height / 2)])
       color(top_color) top_mask();
   }
 
-  // Bottom flipped 180 degrees (split equator flat down at Z=0)
   if (part_to_render == "bottom") {
     rotate([180, 0, 0])
       translate([0, 0, ring_height / 2])
         color(bottom_color) bottom_shell();
   }
 
-  // Equatorial band flat at Z=0
   if (part_to_render == "ring") {
     translate([0, 0, ring_height / 2])
       color(ring_color) center_ring();
   }
 
-  // Front ring laid flat on its face at Z=0
   if (part_to_render == "front_ring") {
     rotate([90, 0, 0])
       translate([0, (ball_radius - (front_ring_depth / 2)), front_ring_depth / 2])
         color(front_ring_color) front_ring();
   }
 
-  // Button flipped 180 degrees (actuator top facing +Z, base flange at Z=0)
   if (part_to_render == "button") {
-    rotate([-90, 0, 0])
-      translate([0, -(ball_radius - (front_ring_depth / 2)), front_ring_depth / 2])
-        color(button_color) center_button();
+    translate([0, 0, front_ring_depth / 2])
+      union() {
+        cylinder(r=front_ring_inner_r, h=front_ring_depth, center=true);
+        translate([0, 0, front_ring_depth / 2])
+          cylinder(r=button_inner_radius, h=2, center=false);
+      }
   }
 
-  // Rectangular alignment peg rotated 90 degrees onto its side
   if (part_to_render == "filler") {
     rotate([90, 0, 0])
       translate([0, 0, filler_length / 2])
@@ -272,8 +273,8 @@ module draw_eyes_red(hover = 0) {
       rotate([0, 0, m * eye_rotation])
         translate([0, 0, z_off]) {
           difference() {
-            scale([1.5, 1, 1]) cylinder(r=eye_red_outer - eye_clearance, h=red_ring_depth + preview_lift);
-            translate([0, 0, -eps]) scale([1.5, 1, 1]) cylinder(r=eye_red_inner + eye_clearance, h=red_ring_depth + preview_lift + 2 * eps);
+            scale([1.5, 1, 1]) cylinder(r=eye_red_outer - red_ring_outer_clearance, h=red_ring_depth + preview_lift);
+            translate([0, 0, -eps]) scale([1.5, 1, 1]) cylinder(r=eye_red_inner + red_ring_inner_clearance, h=red_ring_depth + preview_lift + 2 * eps);
           }
         }
   }
@@ -284,7 +285,7 @@ module draw_cheeks(is_pocket = true, hover = 0) {
   z_off = is_pocket ? -eps : -0.05 + accent_pocket_extra_depth;
   h_val = is_pocket ? pocket_depth + accent_pocket_extra_depth + eps : pocket_depth;
 
-  thickness = is_pocket ? spiral_thickness + (chip_clearance * 2) : spiral_thickness;
+  thickness = is_pocket ? spiral_thickness + (spiral_clearance * 2) : spiral_thickness;
 
   for (m = [1, -1]) {
     place_outward(tilt=cheek_tilt, pan=m * cheek_pan, hover=hover)
@@ -366,8 +367,8 @@ module layout_chips_red() {
   for (m = [1, -1]) {
     translate([m * 18, 25, 0])
       difference() {
-        scale([1.5, 1, 1]) cylinder(r=eye_red_outer - eye_clearance, h=red_ring_depth);
-        translate([0, 0, -eps]) scale([1.5, 1, 1]) cylinder(r=eye_red_inner + eye_clearance, h=red_ring_depth + 2 * eps);
+        scale([1.5, 1, 1]) cylinder(r=eye_red_outer - red_ring_outer_clearance, h=red_ring_depth);
+        translate([0, 0, -eps]) scale([1.5, 1, 1]) cylinder(r=eye_red_inner + red_ring_inner_clearance, h=red_ring_depth + 2 * eps);
       }
   }
 
@@ -384,8 +385,10 @@ module layout_chips_red() {
             r2 = (t2 * spiral_max_radius) + 0.5
           )
           hull() {
-            translate([r1 * cos(a1), r1 * sin(a1)]) circle(r=spiral_thickness / 2, $fn=16);
-            translate([r2 * cos(a2), r2 * sin(a2)]) circle(r=spiral_thickness / 2, $fn=16);
+            translate([r1 * cos(a1), (r1 * sin(a1))])
+              circle(r=(spiral_thickness - spiral_clearance) / 2, $fn=16);
+            translate([r2 * cos(a2), (r2 * sin(a2))])
+              circle(r=(spiral_thickness - spiral_clearance) / 2, $fn=16);
           }
         }
   }
