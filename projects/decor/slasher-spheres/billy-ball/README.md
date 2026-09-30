@@ -48,16 +48,30 @@ Also available on creator platforms:
 
 _100% 3D Printed — No screws, inserts, or adhesives needed under calibrated tolerances._
 
-## 🛠️ Customizing with OpenSCAD
+## 🛠️ Generating STLs & Customizing with OpenSCAD
 
-Adjust clearances, feature depths, or export component STLs using `billy-ball.scad`.
+### Automated Build Script
+
+To compile all individual `.stl` files directly into `models/` with production print-bed orientations:
+
+```bash
+chmod +x build_stls.sh
+./build_stls.sh
+
+```
+
+> **Requirement:** Requires OpenSCAD installed on your system (`sudo apt install openscad` or Flatpak).
+
+### Custom Parametric Tweaks
+
+Adjust clearances, feature depths, or export individual components using `billy-ball.scad`.
 
 **Key Variables:**
 
-- `part_to_render` — Target export mode (`"top"`, `"bottom"`, `"ring"`, `"front_ring"`, `"button"`, `"filler"`, `"chips_black"`, `"chips_red"`).
-- `mechanical_clearance` — Clearances for the core peg, center ring, and button housing (Default: `0.05 mm`).
-- `spiral_clearance` — Tolerance offset for circular cheek inserts (Default: `0.02 mm`).
-- `eye_pocket_depth` — Depth of the eye cavities (Default: `4.0 mm`).
+* `part_to_render` — Target export mode (`"top"`, `"bottom"`, `"ring"`, `"front_ring"`, `"button"`, `"filler"`, `"chips_black"`, `"chips_red"`).
+* `mechanical_clearance` — Clearances for the core peg, center ring, and button housing (Default: `0.05 mm`).
+* `spiral_clearance` — Tolerance offset for circular cheek inserts (Default: `0.02 mm`).
+* `eye_pocket_depth` — Depth of the eye cavities (Default: `4.0 mm`).
 
 ## 🧩 Assembly Instructions
 
@@ -65,14 +79,30 @@ Adjust clearances, feature depths, or export component STLs using `billy-ball.sc
 2. **Build Core & Shells:** Slide the rectangular filler peg into the bottom hemisphere, slide the center ring over the peg, and press the top hemisphere down until flush.
 3. **Install Front Button:** Press the red button into the black bezel ring, then press that combined assembly into the front equator socket.
 4. **Troubleshooting:**
-   - **Spiral Fit:** If the spirals feel too tight, check that the Arachne wall generator was enabled during slicing, or lightly shave any first-layer squish with a hobby knife.
-   - **Spinning Inserts:** Because the spirals are circular, a tiny dab of CA glue behind them prevents them from rotating over time.
-   - **Too Loose?** A small drop of CA glue inside the internal peg slot or button bezel guarantees permanent display stability.
+* **Spiral Fit:** If the spirals feel too tight, check that the Arachne wall generator was enabled during slicing, or lightly shave any first-layer squish with a hobby knife.
+* **Spinning Inserts:** Because the spirals are circular, a tiny dab of CA glue behind them prevents them from rotating over time.
+* **Too Loose?** A small drop of CA glue inside the internal peg slot or button bezel guarantees permanent display stability.
 
 ---
 
-_Disclaimer: This is a fan-art project provided for personal use only. It is not affiliated with, authorized by, or endorsed by the Saw franchise, Lionsgate Films, Twisted Pictures, Pokémon, or Nintendo._
+*Disclaimer: This is a fan-art project provided for personal use only. It is not affiliated with, authorized by, or endorsed by the Saw franchise, Lionsgate Films, Twisted Pictures, Pokémon, or Nintendo.*
 
-_Part of the [Cold Front Forge](https://github.com/OneBuffaloLabs/ColdFrontForge) open-source collection. Licensed under CC BY-NC-SA 4.0._
+*Part of the [Cold Front Forge](https://www.google.com/search?q=https://github.com/OneBuffaloLabs/ColdFrontForge) open-source collection. Licensed under CC BY-NC-SA 4.0.*
 
-_Looking for finished physical prints or custom colors? Visit our shop: [coldfrontforge.etsy.com](https://coldfrontforge.etsy.com)_
+*Looking for finished physical prints or custom colors? Visit our shop: [coldfrontforge.etsy.com*](https://www.google.com/search?q=https://coldfrontforge.etsy.com)
+
+---
+
+### Immediate Execution Steps
+
+1. Verify or install the CLI tool:
+```bash
+   which openscad || sudo apt install -y openscad
+```
+2. Replace `build_stls.sh` with the auto-detecting version above.
+3. Execute the batch export:
+```bash
+chmod +x build_stls.sh && ./build_stls.sh
+
+```
+4. Verify all 8 files populate cleanly in `models/`.
