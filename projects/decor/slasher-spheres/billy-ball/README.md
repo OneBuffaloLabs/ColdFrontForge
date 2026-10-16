@@ -26,9 +26,9 @@ Pre-configured print files and component meshes are organized in the [`models/`]
 
 Also available on creator platforms:
 
-- [MakerWorld](https://makerworld.com/) _(Coming Soon)_
-- [Printables](https://www.printables.com/) _(Coming Soon)_
-- [Creality Cloud](https://www.crealitycloud.com/) _(Coming Soon)_
+- [MakerWorld](https://makerworld.com/en/models/3415763-slasher-spheres-billy-the-puppet)
+- [Printables](https://www.printables.com/model/1871147-slasher-spheres-billy-the-puppet)
+- [Creality Cloud](https://www.crealitycloud.com/model-detail/slasher-spheres-billy-the-puppet)
 
 ## 🖨️ Recommended Print Settings
 
@@ -68,10 +68,10 @@ Adjust clearances, feature depths, or export individual components using `billy-
 
 **Key Variables:**
 
-* `part_to_render` — Target export mode (`"top"`, `"bottom"`, `"ring"`, `"front_ring"`, `"button"`, `"filler"`, `"chips_black"`, `"chips_red"`).
-* `mechanical_clearance` — Clearances for the core peg, center ring, and button housing (Default: `0.05 mm`).
-* `spiral_clearance` — Tolerance offset for circular cheek inserts (Default: `0.02 mm`).
-* `eye_pocket_depth` — Depth of the eye cavities (Default: `4.0 mm`).
+- `part_to_render` — Target export mode (`"top"`, `"bottom"`, `"ring"`, `"front_ring"`, `"button"`, `"filler"`, `"chips_black"`, `"chips_red"`).
+- `mechanical_clearance` — Clearances for the core peg, center ring, and button housing (Default: `0.05 mm`).
+- `spiral_clearance` — Tolerance offset for circular cheek inserts (Default: `0.02 mm`).
+- `eye_pocket_depth` — Depth of the eye cavities (Default: `4.0 mm`).
 
 ## 🧩 Assembly Instructions
 
@@ -79,30 +79,15 @@ Adjust clearances, feature depths, or export individual components using `billy-
 2. **Build Core & Shells:** Slide the rectangular filler peg into the bottom hemisphere, slide the center ring over the peg, and press the top hemisphere down until flush.
 3. **Install Front Button:** Press the red button into the black bezel ring, then press that combined assembly into the front equator socket.
 4. **Troubleshooting:**
-* **Spiral Fit:** If the spirals feel too tight, check that the Arachne wall generator was enabled during slicing, or lightly shave any first-layer squish with a hobby knife.
-* **Spinning Inserts:** Because the spirals are circular, a tiny dab of CA glue behind them prevents them from rotating over time.
-* **Too Loose?** A small drop of CA glue inside the internal peg slot or button bezel guarantees permanent display stability.
+
+- **Spiral Fit:** If the spirals feel too tight, check that the Arachne wall generator was enabled during slicing, or lightly shave any first-layer squish with a hobby knife.
+- **Spinning Inserts:** Because the spirals are circular, a tiny dab of CA glue behind them prevents them from rotating over time.
+- **Too Loose?** A small drop of CA glue inside the internal peg slot or button bezel guarantees permanent display stability.
 
 ---
 
-*Disclaimer: This is a fan-art project provided for personal use only. It is not affiliated with, authorized by, or endorsed by the Saw franchise, Lionsgate Films, Twisted Pictures, Pokémon, or Nintendo.*
+_Disclaimer: This is a fan-art project provided for personal use only. It is not affiliated with, authorized by, or endorsed by the Saw franchise, Lionsgate Films, Twisted Pictures, Pokémon, or Nintendo._
 
-*Part of the [Cold Front Forge](https://www.google.com/search?q=https://github.com/OneBuffaloLabs/ColdFrontForge) open-source collection. Licensed under CC BY-NC-SA 4.0.*
+_Part of the [Cold Front Forge](https://www.google.com/search?q=https://github.com/OneBuffaloLabs/ColdFrontForge) open-source collection. Licensed under CC BY-NC-SA 4.0._
 
-*Looking for finished physical prints or custom colors? Visit our shop: [coldfrontforge.etsy.com*](https://www.google.com/search?q=https://coldfrontforge.etsy.com)
-
----
-
-### Immediate Execution Steps
-
-1. Verify or install the CLI tool:
-```bash
-   which openscad || sudo apt install -y openscad
-```
-2. Replace `build_stls.sh` with the auto-detecting version above.
-3. Execute the batch export:
-```bash
-chmod +x build_stls.sh && ./build_stls.sh
-
-```
-4. Verify all 8 files populate cleanly in `models/`.
+_Looking for finished physical prints or custom colors? Visit our shop: [coldfrontforge.etsy.com_](https://www.google.com/search?q=https://coldfrontforge.etsy.com)
