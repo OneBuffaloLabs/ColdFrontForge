@@ -4,9 +4,8 @@ Contest entries, multi-material models, and print profiles designed for MakerWor
 
 ## Active & Past Contests
 
-_No active entries yet._
-
-- _Add new entries following the structure: `makerworld/<contest-name>/entry-<n>-<slug>/`._
+- [Halloween 2026 Design Contest](./halloween-2026/CONTEST.md) — Spooky, functional, and decorative Halloween designs.
+  - **Entry 1:** [Billy the Puppet Sphere](./halloween-2026/entry-1-billy-the-puppet/) — Friction-fit multi-part display sphere.
 
 ## Guidelines
 
