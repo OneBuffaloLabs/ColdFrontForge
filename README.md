@@ -16,6 +16,28 @@ This repository is strictly a passion project area. It's the central hub for cus
 
 ---
 
+## 🛠️ Developer Setup & Dependencies
+
+This repository uses submodules to vendor shared parametric CAD dependencies (such as **BOSL2** under `lib/BOSL2`) for cross-platform OpenSCAD builds across Windows and Linux.
+
+### Cloning with Submodules
+
+To clone the vault with all required dependencies initialized in one command:
+
+```bash
+git clone --recurse-submodules <repo-url>
+```
+
+### Post-Clone Setup
+
+If you cloned the repository normally (or if `lib/BOSL2` is empty), initialize and pull the dependencies by running:
+
+```bash
+git submodule update --init --recursive
+```
+
+---
+
 ## Where to Download or Buy
 
 If you're looking for pre-compiled, print-ready `.stl` and `.3mf` files, or if you'd prefer to buy a finished physical print, you can find us across the maker community:
