@@ -10,9 +10,6 @@ Physical dimensions measured with a digital caliper. Use these numbers as a base
 
 | Item / Supply             | Width (X) | Height (Y) | Thickness (Z) | Recommended Extra Room | Practical Notes                                                                |
 | :------------------------ | :-------- | :--------- | :------------ | :--------------------- | :----------------------------------------------------------------------------- |
-| **Standard Raw Card**     | 63.0 mm   | 88.0 mm    | ~0.35 mm      | +1.0 mm to +1.5 mm     | 2.5 × 3.5 inches. Roughly 35pt thick; baseline for unsleeved bulk.             |
-| **Jumbo Card (Newer)**    | 146.0 mm  | 203.0 mm   | ~0.4 mm       | +1.5 mm to +2.0 mm     | ~5.75 × 8 inches (modern post-Sword & Shield era promos).                      |
-| **Jumbo Card (Vintage)**  | 127.0 mm  | 178.0 mm   | ~0.4 mm       | +1.5 mm to +2.0 mm     | ~5.0 × 7 inches (older promo sets). Check era before modeling fixed frames.    |
 | **Penny Sleeves**         | 67.0 mm   | 92.0 mm    | Variable      | +1.5 mm to +2.0 mm     | Soft plastic bunches up at the edges; add finger cutouts to pull easily.       |
 | **Top Loaders (35pt)**    | 76.0 mm   | 101.0 mm   | ~2.0 mm       | +1.0 mm to +1.5 mm     | Card sits recessed inside with **9.0 mm of open clearance** above it.          |
 | **Semi-Rigid Holders**    | 85.0 mm   | 122.0 mm   | ~1.5 mm       | +1.2 mm to +1.5 mm     | Flexible grading submission holders (Cardboard Gold / Ultra PRO).              |
@@ -20,6 +17,19 @@ Physical dimensions measured with a digital caliper. Use these numbers as a base
 | **TAG Graded Slab**       | 80.0 mm   | 134.0 mm   | ~6.5 mm       | +1.0 mm to +1.5 mm     | Same width as PSA, but 2.0 mm shorter in height. Has beveled edges.            |
 | **PSA Graded Slab**       | 80.0 mm   | 136.0 mm   | ~6.5 mm       | +1.0 mm to +1.5 mm     | Taller than TAG. Use this height as your default for universal slab slots.     |
 | **Cardboard Box Divider** | Variable  | Variable   | ~5.0 mm       | +0.5 mm to +1.0 mm     | Standard cardboard wall/divider thickness for multi-row storage boxes.         |
+
+---
+
+## Sealed Booster Pack Reference (Foil Wrappers)
+
+Dimensions measured across outer foil wrappers including top/bottom heat seals and the rear fold seam. Internal bay depths reflect loose, uncompressed stacks of 15 packs where trapped air expands the stack depth.
+
+| Item / Supply                 | Width (X) | Height (Y)  | Single Pack (Z) | 15-Pack Loose Depth | Recommended Bay Clearance | Practical Notes                                                  |
+| :---------------------------- | :-------- | :---------- | :-------------- | :------------------ | :------------------------ | :--------------------------------------------------------------- |
+| **Pokémon Booster Pack**       | 67.0 mm   | 120.0 mm    | ~4.0 mm         | ~70.0 mm            | 72.0 × 72.0 × 124.0 mm    | Standard 10+1 card foil pack; top crimp features hang-hole slit. |
+| **Yu-Gi-Oh! Booster Pack**     | 63.5 mm   | 116.0 mm    | ~3.2 mm         | ~60.0 mm            | 68.0 × 65.0 × 120.0 mm    | Japanese small size (59×86mm cards); compact overall footprint.  |
+| **Disney Lorcana Pack**       | 67.5 mm   | 121.0 mm    | ~4.4 mm         | ~74.0 mm            | 72.0 × 76.0 × 124.0 mm    | 12 cards per pack; thickest standard modern pack profile.        |
+| **Universal 15-Pack Bay**     | —         | —           | —               | —                   | **72.0 × 74.0 × 124.0 mm**| Sized to clear Pokémon, MTG, Lorcana, and Yu-Gi-Oh! in one design|
 
 ---
 
@@ -33,7 +43,7 @@ Physical dimensions measured with a digital caliper. Use these numbers as a base
 
 ## Multi-Row Card Storage Box Specs
 
-Reference specs for modular inserts, drop-in dividers, and row spacers designed for standard multi-row corrugated cardboard storage boxes [Example Box](https://www.walmart.com/ip/Monster-Trading-Card-Storage-Box-5-Row-Holds-3950-count-Cards-card-box-organizer-Sports-Card-Trading-Card-TCG-Magic-Mtg-Cards-Baseball-card-storage/7570263861):
+Reference specs for modular inserts, drop-in dividers, and row spacers designed for standard multi-row corrugated cardboard storage boxes:
 
 - **Divider Wall Thickness:** **5.0 mm** (fluted cardboard row partitions)
 - **Design Consideration:** For slip-over channel clips, row index tabs, or custom dividing walls, set internal slot widths to **5.5 mm – 6.0 mm** to easily straddle the corrugated partition without crushing the cardboard.
@@ -58,10 +68,6 @@ Ready to copy into any `.scad` script:
 // ==========================================
 // TCG RAW REFERENCE MEASUREMENTS (mm)
 // ==========================================
-CARD_RAW_DIM              = [63.0, 88.0, 0.35];
-CARD_JUMBO_MODERN_DIM     = [146.0, 203.0, 0.4];
-CARD_JUMBO_VINTAGE_DIM    = [127.0, 178.0, 0.4];
-
 PENNY_SLEEVE_DIM          = [67.0, 92.0];
 TOPLOADER_35PT_DIM        = [76.0, 101.0, 2.0];
 SEMI_RIGID_DIM            = [85.0, 122.0, 1.5];
@@ -79,6 +85,21 @@ SLAB_TAG_DIM              = [80.0, 134.0, 6.5];
 
 // Pre-calculated Universal Slot (Includes 1.2mm-1.5mm clearance for PSA & TAG)
 UNIVERSAL_SLAB_SLOT       = [81.5, 136.0, 7.7];
+
+// ==========================================
+// SEALED BOOSTER PACKS (mm)
+// ==========================================
+BOOSTER_POKEMON_RAW       = [67.0, 120.0, 4.0];
+BOOSTER_YUGIOH_RAW        = [63.5, 116.0, 3.2];
+BOOSTER_LORCANA_RAW       = [67.5, 121.0, 4.4];
+
+// Stack Depth Clearances (15 Packs Loose/Staged)
+STACK_DEPTH_POKEMON_15    = 70.0;
+STACK_DEPTH_YUGIOH_15     = 60.0;
+STACK_DEPTH_LORCANA_15    = 74.0;
+
+// Universal 15-Pack Dispenser Cavity (Clears all modern standard TCGs)
+UNIVERSAL_15PACK_CAVITY   = [72.0, 74.0, 124.0];
 
 // Standard wiggle room to add to raw measurements
 DEFAULT_CLEARANCE         = 1.2;
