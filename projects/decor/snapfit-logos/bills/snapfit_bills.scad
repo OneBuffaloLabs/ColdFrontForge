@@ -106,14 +106,18 @@ module blue_inserts() {
 
 // ==========================================
 // RENDER SELECTION
-// Un-comment one line at a time to export to STL
 // ==========================================
+PART = "base"; // [assembly, base, blue, red]
+part_to_render = PART;
 
-white_base();
-// red_insert();
-// blue_inserts();
-
-// PREVIEW COLOR VIEW
-// color("white") white_base();
-// color("red") translate([0,0,base_thickness - pocket_depth + 0.1]) red_insert();
-// color("blue") translate([0,0,base_thickness - pocket_depth + 0.1]) blue_inserts();
+if (part_to_render == "blue") {
+    blue_inserts();
+} else if (part_to_render == "red") {
+    red_insert();
+} else if (part_to_render == "assembly") {
+    color("white") white_base();
+    color("red") translate([0,0,base_thickness - pocket_depth + 0.1]) red_insert();
+    color("blue") translate([0,0,base_thickness - pocket_depth + 0.1]) blue_inserts();
+} else {
+    white_base();
+}

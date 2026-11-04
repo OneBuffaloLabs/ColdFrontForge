@@ -18,11 +18,11 @@ This repository is strictly a passion project area. It's the central hub for cus
 
 ## 🛠️ Developer Setup & Dependencies
 
-This repository uses submodules to vendor shared parametric CAD dependencies (such as **BOSL2** under `lib/BOSL2`) for cross-platform OpenSCAD builds across Windows and Linux.
+This repository uses submodules to vendor shared parametric CAD dependencies (such as **BOSL2** under `lib/BOSL2`) for cross-platform OpenSCAD builds across Windows, Linux, and macOS.
 
 ### Cloning with Submodules
 
-To clone the vault with all required dependencies initialized in one command:
+To clone the workshop with all required dependencies initialized in one command:
 
 ```bash
 git clone --recurse-submodules <repo-url>
@@ -34,6 +34,30 @@ If you cloned the repository normally (or if `lib/BOSL2` is empty), initialize a
 
 ```bash
 git submodule update --init --recursive
+```
+
+### Compiling Models
+
+This repository uses GNU Make for parallelized, incremental STL generation:
+
+```bash
+# Display full target list and shortcuts
+make help
+
+# Build all project STLs across the workshop (parallelized across CPU cores)
+make all -j
+
+# Build an entire category
+make slasher-spheres   # or 'make snapfit-logos', 'make tcg', 'make printer-mods', 'make contests'
+
+# Build a specific project
+make billy             # or 'make ghostface', 'make jason', 'make bills', 'make caddy', etc.
+
+# Clean generated artifacts
+make clean
+
+# Validate OpenSCAD syntax and hard warnings across all CAD models
+make lint
 ```
 
 ---
@@ -70,21 +94,19 @@ By providing the original OpenSCAD (`.scad`) source files right here in this rep
 
 To keep the root directory clean as the collection grows, all models are sorted by category inside the `projects/` folder:
 
-- `/projects/collectibles/` — Trophies, display pieces, fan art, and league awards.
-- `/projects/tcg/` — Trading card accessories, storage solutions, and sorting tools.
-- `/projects/gym/` — Functional home gym gear, rack mounts, and barbell accessories.
-- `/projects/functional/` — Brackets, organizers, and household fixes.
-- `/projects/printer-mods/` — Upgrades and tweaks for hardware like the Creality K2 SE.
-- `/projects/toys/` — Fun prints, props, and fidgets.
-- `/projects/contests/` — Event-driven design submissions organized by platform and contest challenge.
+- `/projects/decor/` — Trophies, display pieces, fan art, Slasher Spheres, and snap-fit emblems.
+- `/projects/functional/` — Brackets, organizers, TCG accessories, and printer mods.
+- `/projects/helpers/` — Parametric helper modules and sub-assemblies (e.g., pokeball cores).
+- `/projects/contests/` — Event-driven design submissions organized by platform and challenge.
 
 **Note on Collections & Contests:** Large series of related models are grouped into master sub-folders. For design competitions, each contest has a dedicated directory tracking prompt requirements, live submission URLs, and individual entry models.
 
 Inside a typical project folder, you'll find:
 
-- `model_name.scad` — The original, customizable OpenSCAD file.
-- `model_name-part.stl` — The exported 3D meshes (often broken into parts for multi-color printing).
-- `images/` — Renders, photos of the final printed object, and any raw `.svg` vector files used by OpenSCAD to generate the geometry.
+- `[model_name].scad` — The original, customizable OpenSCAD file.
+- `Makefile` — Project-level build script for automated STL compilation.
+- `models/` — Exported 3D meshes (often broken into individual parts for multi-color printing).
+- `assets/` — Visual renders, photography, and source vector files (`.svg`).
 - `README.md` — Specific print settings, clearances, and assembly guides for that exact model.
 
 ## Remixes & Community

@@ -32,6 +32,7 @@ Use this folder architecture across all 3D printing and parametric CAD projects:
 │       └── [project-slug]-embossed.3mf
 ├── CREATOR_COMMUNITIES.md       # Target platform upload tracking and URLs
 ├── LISTING.md                   # Clean, copy-paste copy for maker platforms
+├── Makefile                     # Project-level build automation and STL export
 ├── README.md                    # GitHub repo presentation and documentation
 ├── STRUCTURE.md                 # Architecture guide (optional / reference)
 ├── SUMMARY.md                   # Under 120-character single-sentence summary

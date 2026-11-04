@@ -1,0 +1,13 @@
+# Set default behavior to normalize all text files to LF on checkout and commit
+* text=auto eol=lf
+
+# Explicitly ensure source files stay LF
+*.ts text eol=lf
+*.tsx text eol=lf
+*.js text eol=lf
+*.jsx text eol=lf
+*.json text eol=lf
+*.css text eol=lf
+*.html text eol=lf
+*.md text eol=lf
+*.scad text eol=lf

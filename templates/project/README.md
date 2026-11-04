@@ -68,11 +68,26 @@ Because this design is parametric, you can easily adjust dimensions or tolerance
 - `LOGO_STYLE` — Multi-color mode: `"flush"` or `"embossed"`
 - `[variable_1]` — [Description] (Default: `XX mm`)
 
-_To export multi-material STLs:_
+_To export multi-material STLs manually:_
 
 1. Set `PART = "body";`, render (`F6`), and export `[model]-body.stl`.
 2. Set `PART = "insert";`, render (`F6`), and export `[model]-insert.stl`.
 3. Load both files into your slicer as a single multi-part object.
+
+### Automated Builds with Make
+
+This project includes a `Makefile` to generate STLs automatically via OpenSCAD:
+
+```bash
+# Build all component STLs
+make all
+
+# Build an individual part
+make [part-name]
+
+# Clean generated meshes
+make clean
+```
 
 ## 🧩 Assembly Instructions
 
