@@ -2,6 +2,10 @@
 # Cold Front Forge - Shared OpenSCAD Build Configuration
 # =============================================================================
 
+# Export library search path for vendored BOSL2 in lib/
+COMMON_DIR := $(abspath $(dir $(lastword $(MAKEFILE_LIST))))
+export OPENSCADPATH := $(COMMON_DIR)/lib
+
 ifeq ($(OS),Windows_NT)
     # -------------------------------------------------------------------------
     # Windows Environment

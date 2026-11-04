@@ -24,7 +24,8 @@ TCG_DIR        := projects/functional/tcg
 PROJECT_CADDY  := $(TCG_DIR)/cold-snap-desk-caddy
 PROJECT_SORTER := $(TCG_DIR)/cold-snap-sorter
 PROJECT_WEDGE  := $(TCG_DIR)/cold-snap-wedge
-TCG_ALL        := $(PROJECT_CADDY) $(PROJECT_SORTER) $(PROJECT_WEDGE)
+PROJECT_EXHIBIT:= $(TCG_DIR)/cold-snap-exhibit
+TCG_ALL        := $(PROJECT_CADDY) $(PROJECT_SORTER) $(PROJECT_WEDGE) $(PROJECT_EXHIBIT)
 
 # Contest Submissions
 PROJECT_FROST   := projects/contests/creality-cloud/bottle-can-opener/entry-1-frost-bite
@@ -50,6 +51,7 @@ SCAD_SRCS := $(PROJECT_FROST)/frost-bite.scad \
              $(PROJECT_CADDY)/cold-snap-desk-caddy-xl.scad \
              $(PROJECT_SORTER)/cold-snap-sorter.scad \
              $(PROJECT_WEDGE)/cold-snap-wedge.scad \
+             $(PROJECT_EXHIBIT)/cold-snap-exhibit.scad \
              $(PROJECT_HELPERS)/core.scad \
              $(PROJECT_HELPERS)/filler.scad
 LINT_TARGETS := $(addprefix lint-,$(SCAD_SRCS))
@@ -58,7 +60,7 @@ LINT_TARGETS := $(addprefix lint-,$(SCAD_SRCS))
         slasher-spheres spheres billy billy-ball ghostface ghostface-ball jason jason-ball \
         snapfit-logos logos bills tester clearance-tester \
         printer-mods k2-se tool-holder \
-        tcg caddy desk-caddy sorter wedge \
+        tcg caddy desk-caddy sorter wedge exhibit \
         contests frost-bite
 
 all: $(PROJECTS)
@@ -84,6 +86,7 @@ k2-se tool-holder:                 $(PROJECT_K2_SE)
 caddy desk-caddy:                  $(PROJECT_CADDY)
 sorter:                            $(PROJECT_SORTER)
 wedge:                             $(PROJECT_WEDGE)
+exhibit:                           $(PROJECT_EXHIBIT)
 frost-bite:                        $(PROJECT_FROST)
 
 clean: $(PROJECTS_CLEAN)
@@ -125,4 +128,5 @@ help:
 	@echo "  make caddy           Cold Snap Desk Caddy (Standard, Pro, XL)"
 	@echo "  make sorter          Cold Snap Sorter Bay & Frost Links"
 	@echo "  make wedge           Cold Snap Wedge Card Dividers"
+	@echo "  make exhibit         Cold Snap Exhibit Pedestal & Easel"
 	@echo "  make frost-bite      Frost-Bite Bottle & Can Opener"
