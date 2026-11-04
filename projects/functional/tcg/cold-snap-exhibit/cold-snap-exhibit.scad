@@ -262,26 +262,74 @@ module card_mockup() {
     if (mockup_type == "psa_slab") {
         // Standard PSA Graded Slab: 82.5mm W x 137mm H x 8.1mm D
         translate([center_x, y_spine_root, z_slab_floor])
-            rotate([-spine_tilt, 0, 0])
-                translate([-82.5 / 2, -8.1, 0]) {
-                    color(color_slab_box) cube([82.5, 8.1, 137.0]);
-                    // Red PSA Label Bar at Top
-                    translate([3, 1.0, 114])
-                        color("Red") cube([76.5, 6.1, 20]);
-                    // Internal Card Window
-                    translate([7, 2.0, 10])
-                        color(color_card_art) cube([68.5, 4.1, 98]);
-                }
+            rotate([-spine_tilt, 0, 0]) {
+                color(color_slab_box)
+                    cuboid([82.5, 8.1, 137.0], rounding=3.0, edges="Z", anchor=BOTTOM+BACK);
+                // Red PSA Label Bar at Top
+                translate([0, -8.1 / 2, 124])
+                    color("Red") cube([76.5, 6.1, 20], center=true);
+                // Internal Card Window
+                translate([0, -8.1 / 2, 59])
+                    color(color_card_art) cube([68.5, 4.1, 98], center=true);
+            }
     } else if (mockup_type == "toploader") {
         // Standard 35pt Toploader: 76.2mm W x 101.6mm H x 2.0mm D
         translate([center_x, y_spine_root, z_toploader_floor])
-            rotate([-spine_tilt, 0, 0])
-                translate([-76.2 / 2, -2.0, 0]) {
-                    color([0.3, 0.7, 1.0, 0.35]) cube([76.2, 2.0, 101.6]);
-                    // Card sleeve inside
-                    translate([3, 0.2, 3])
-                        color(color_card_art) cube([70.2, 1.6, 95]);
+            rotate([-spine_tilt, 0, 0]) {
+                color([0.3, 0.7, 1.0, 0.35])
+                    cuboid([76.2, 2.0, 101.6], anchor=BOTTOM+BACK);
+                // Card sleeve inside
+                translate([0, -1.0, 50.5])
+                    color(color_card_art) cube([70.2, 1.6, 95], center=true);
+            }
+    } else if (mockup_type == "cold_snap") {
+        // Cold Snap Magnetic Slab: 81.5mm W x 136.0mm H x 7.6mm D (per note.md)
+        cs_w = 81.5;
+        cs_h = 136.0;
+        cs_t = 7.6;
+        tag_w = 68.0;
+        tag_h = 22.0;
+        tag_t = 2.2;
+        mag_d = 5.0;
+        mag_t = 2.0;
+        mag_spacing = 44.0; // Distance between magnet centers (±22mm)
+        tag_z_center = cs_h - tag_h / 2 - 5.0;
+
+        translate([center_x, y_spine_root, z_slab_floor])
+            rotate([-spine_tilt, 0, 0]) {
+                // 1. Crystal Slab Body (Transparent ghost shell in preview)
+                % cuboid([cs_w, cs_t, cs_h], rounding=3.5, edges="Z", anchor=BOTTOM+BACK);
+
+                // 2. Internal TCG Trading Card (Standard 2.5" x 3.5" / 63.5 x 88.9 mm)
+                translate([0, -cs_t / 2, 53.0]) {
+                    color([0.18, 0.38, 0.80, 1.0])
+                        cube([63.5, 1.4, 88.9], center=true);
+                    // Holographic / art window illustration
+                    translate([0, -0.75, 8.0])
+                        color([0.95, 0.72, 0.18, 1.0])
+                            cube([52.0, 0.2, 46.0], center=true);
                 }
+
+                // 3. Cold Snap Tag™ Modular Faceplate (68.0 x 22.0 x 2.2 mm)
+                translate([0, -cs_t + tag_t / 2, tag_z_center]) {
+                    // Tag wafer plate
+                    color([0.12, 0.12, 0.15, 1.0])
+                        cuboid([tag_w, tag_t, tag_h], rounding=0.8, edges="Z", anchor=CENTER);
+
+                    // Tag gold border & emblem typography
+                    translate([0, -tag_t / 2 - 0.2, 0])
+                        color(color_plaque)
+                            cube([tag_w - 4.0, 0.4, tag_h - 4.0], center=true);
+                }
+
+                // 4. 2x Neodymium Disc Magnets (5mm Dia x 2mm Thk pressed in 5.3mm bores)
+                for (sx = [-1, 1]) {
+                    translate([sx * mag_spacing / 2, -cs_t + tag_t + mag_t / 2, tag_z_center])
+                        rotate([90, 0, 0])
+                            color([0.90, 0.92, 0.95, 1.0])
+                                cylinder(d=mag_d, h=mag_t, center=true, $fn=32);
+                }
+            }
     }
 }
 
