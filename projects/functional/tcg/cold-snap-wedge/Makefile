@@ -19,21 +19,21 @@ right: models/right/cold-snap-wedge-right.stl models/right/cold-snap-wedge-right
 dual:  models/dual/cold-snap-wedge-dual.stl models/dual/cold-snap-wedge-dual-v2.stl
 
 models/left/cold-snap-wedge-left%.stl: $(SCAD_FILE)
-	@mkdir -p $(@D)
+	@$(call MKDIR,$(@D))
 	@echo "--> Rendering [left$*] -> $@"
 	$(OPENSCAD) $(SCAD_FLAGS) -d $(@:.stl=.deps) -o $@ -D 'hook_side=-1' $(SCAD_FILE)
 
 models/right/cold-snap-wedge-right%.stl: $(SCAD_FILE)
-	@mkdir -p $(@D)
+	@$(call MKDIR,$(@D))
 	@echo "--> Rendering [right$*] -> $@"
 	$(OPENSCAD) $(SCAD_FLAGS) -d $(@:.stl=.deps) -o $@ -D 'hook_side=1' $(SCAD_FILE)
 
 models/dual/cold-snap-wedge-dual%.stl: $(SCAD_FILE)
-	@mkdir -p $(@D)
+	@$(call MKDIR,$(@D))
 	@echo "--> Rendering [dual$*] -> $@"
 	$(OPENSCAD) $(SCAD_FLAGS) -d $(@:.stl=.deps) -o $@ -D 'hook_side=0' $(SCAD_FILE)
 
 clean:
-	rm -f $(TARGETS) models/*/*.deps
+	@$(call RM_F,$(TARGETS) models/*/*.deps)
 
 -include $(wildcard models/*/*.deps)

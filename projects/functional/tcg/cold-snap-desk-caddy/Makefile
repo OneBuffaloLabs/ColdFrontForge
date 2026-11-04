@@ -16,11 +16,11 @@ pro:      $(OUT_DIR)/cold-snap-desk-caddy-pro.stl
 xl:       $(OUT_DIR)/cold-snap-desk-caddy-xl.stl
 
 $(OUT_DIR)/%.stl: %.scad
-	@mkdir -p $(OUT_DIR)
+	@$(call MKDIR,$(OUT_DIR))
 	@echo "--> Rendering [$*] -> $@"
 	$(OPENSCAD) $(SCAD_FLAGS) -d $(@:.stl=.deps) -o $@ $<
 
 clean:
-	rm -f $(TARGETS) $(wildcard $(OUT_DIR)/*.deps)
+	@$(call RM_F,$(TARGETS) $(wildcard $(OUT_DIR)/*.deps))
 
 -include $(wildcard $(OUT_DIR)/*.deps)

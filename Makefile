@@ -31,8 +31,27 @@ PROJECT_FROST  := projects/contests/creality-cloud/bottle-can-opener/entry-1-fro
 
 # All active projects across the workshop
 PROJECTS := $(SPHERES_ALL) $(LOGOS_ALL) $(PROJECT_K2_SE) $(TCG_ALL) $(PROJECT_FROST)
+PROJECTS_CLEAN := $(addsuffix _clean,$(PROJECTS))
 
-.PHONY: all clean lint check help $(PROJECTS) \
+# CAD Source Files for Lint Verification
+SCAD_SRCS := projects/contests/creality-cloud/bottle-can-opener/entry-1-frost-bite/frost-bite.scad \
+             projects/decor/slasher-spheres/billy-ball/billy-ball.scad \
+             projects/decor/slasher-spheres/ghostface-ball/ghostface-ball.scad \
+             projects/decor/slasher-spheres/jason-ball/jason-ball.scad \
+             projects/decor/snapfit-logos/bills/snapfit_bills.scad \
+             projects/decor/snapfit-logos/clearance-tester/clearance_tester.scad \
+             projects/functional/printer-mods/k2-se-tool-holder/k2_se_tool_holder.scad \
+             projects/functional/printer-mods/k2-se-tool-holder/assets/cad/k2_se_test_plate.scad \
+             projects/functional/tcg/cold-snap-desk-caddy/cold-snap-desk-caddy.scad \
+             projects/functional/tcg/cold-snap-desk-caddy/cold-snap-desk-caddy-pro.scad \
+             projects/functional/tcg/cold-snap-desk-caddy/cold-snap-desk-caddy-xl.scad \
+             projects/functional/tcg/cold-snap-sorter/cold-snap-sorter.scad \
+             projects/functional/tcg/cold-snap-wedge/cold-snap-wedge.scad \
+             projects/helpers/pokeball/core.scad \
+             projects/helpers/pokeball/filler.scad
+LINT_TARGETS := $(addprefix lint-,$(SCAD_SRCS))
+
+.PHONY: all clean lint check help $(PROJECTS) $(PROJECTS_CLEAN) $(LINT_TARGETS) \
         slasher-spheres spheres billy billy-ball ghostface ghostface-ball jason jason-ball \
         snapfit-logos logos bills tester clearance-tester \
         printer-mods k2-se tool-holder \
@@ -64,20 +83,19 @@ sorter:                            $(PROJECT_SORTER)
 wedge:                             $(PROJECT_WEDGE)
 frost-bite:                        $(PROJECT_FROST)
 
-clean:
-	@for dir in $(PROJECTS); do \
-		echo ">>> Cleaning $$dir..."; \
-		$(MAKE) -C $$dir clean; \
-	done
+clean: $(PROJECTS_CLEAN)
+
+$(PROJECTS_CLEAN):
+	@echo ">>> Cleaning $(patsubst %_clean,%,$@)..."
+	@$(MAKE) -C $(patsubst %_clean,%,$@) clean
 
 # Validate syntax and hardwarnings across all project CAD files
-lint check:
-	@echo ">>> Running OpenSCAD lint check on CAD files..."
-	@find projects templates -name "*.scad" -not -path "*/lib/*" | while read -r file; do \
-		echo "  Checking $$file..."; \
-		$(OPENSCAD) -o - --export-format echo --hardwarnings "$$file" >/dev/null || exit 1; \
-	done
+lint check: $(LINT_TARGETS)
 	@echo ">>> All CAD files passed lint checks."
+
+$(LINT_TARGETS): lint-%:
+	@echo "  Checking $*..."
+	@$(OPENSCAD) -o - --export-format echo --hardwarnings "$*" >$(DEVNULL)
 
 help:
 	@echo "Cold Front Forge Build System"

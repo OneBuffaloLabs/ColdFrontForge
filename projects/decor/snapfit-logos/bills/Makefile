@@ -17,21 +17,21 @@ blue: $(OUT_DIR)/snapfit-bills-insert-blue.stl
 red:  $(OUT_DIR)/snapfit-bills-insert-red.stl
 
 $(OUT_DIR)/snapfit-bills-base-white.stl: $(SCAD_FILE)
-	@mkdir -p $(OUT_DIR)
+	@$(call MKDIR,$(OUT_DIR))
 	@echo "--> Rendering [base] -> $@"
 	$(OPENSCAD) $(SCAD_FLAGS) -d $(@:.stl=.deps) -o $@ -D 'PART="base"' $(SCAD_FILE)
 
 $(OUT_DIR)/snapfit-bills-insert-blue.stl: $(SCAD_FILE)
-	@mkdir -p $(OUT_DIR)
+	@$(call MKDIR,$(OUT_DIR))
 	@echo "--> Rendering [blue] -> $@"
 	$(OPENSCAD) $(SCAD_FLAGS) -d $(@:.stl=.deps) -o $@ -D 'PART="blue"' $(SCAD_FILE)
 
 $(OUT_DIR)/snapfit-bills-insert-red.stl: $(SCAD_FILE)
-	@mkdir -p $(OUT_DIR)
+	@$(call MKDIR,$(OUT_DIR))
 	@echo "--> Rendering [red] -> $@"
 	$(OPENSCAD) $(SCAD_FLAGS) -d $(@:.stl=.deps) -o $@ -D 'PART="red"' $(SCAD_FILE)
 
 clean:
-	rm -f $(TARGETS) $(wildcard $(OUT_DIR)/*.deps)
+	@$(call RM_F,$(TARGETS) $(wildcard $(OUT_DIR)/*.deps))
 
 -include $(wildcard $(OUT_DIR)/*.deps)

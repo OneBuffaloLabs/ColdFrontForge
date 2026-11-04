@@ -18,31 +18,31 @@ flush:    models/multi-color-flush/frost-bite-flush-body.stl models/multi-color-
 embossed: models/multi-color-embossed/frost-bite-embossed-body.stl models/multi-color-embossed/frost-bite-embossed-snowflake.stl
 
 models/single/frost-bite.stl: $(SCAD_FILE)
-	@mkdir -p $(@D)
+	@$(call MKDIR,$(@D))
 	@echo "--> Rendering [single] -> $@"
 	$(OPENSCAD) $(SCAD_FLAGS) -d $(@:.stl=.deps) -o $@ -D 'PART="single"' $(SCAD_FILE)
 
 models/multi-color-flush/frost-bite-flush-body.stl: $(SCAD_FILE)
-	@mkdir -p $(@D)
+	@$(call MKDIR,$(@D))
 	@echo "--> Rendering [flush body] -> $@"
 	$(OPENSCAD) $(SCAD_FLAGS) -d $(@:.stl=.deps) -o $@ -D 'PART="body"' -D 'LOGO_STYLE="flush"' $(SCAD_FILE)
 
 models/multi-color-flush/frost-bite-flush-snowflake.stl: $(SCAD_FILE)
-	@mkdir -p $(@D)
+	@$(call MKDIR,$(@D))
 	@echo "--> Rendering [flush snowflake] -> $@"
 	$(OPENSCAD) $(SCAD_FLAGS) -d $(@:.stl=.deps) -o $@ -D 'PART="snowflake"' -D 'LOGO_STYLE="flush"' $(SCAD_FILE)
 
 models/multi-color-embossed/frost-bite-embossed-body.stl: $(SCAD_FILE)
-	@mkdir -p $(@D)
+	@$(call MKDIR,$(@D))
 	@echo "--> Rendering [embossed body] -> $@"
 	$(OPENSCAD) $(SCAD_FLAGS) -d $(@:.stl=.deps) -o $@ -D 'PART="body"' -D 'LOGO_STYLE="embossed"' $(SCAD_FILE)
 
 models/multi-color-embossed/frost-bite-embossed-snowflake.stl: $(SCAD_FILE)
-	@mkdir -p $(@D)
+	@$(call MKDIR,$(@D))
 	@echo "--> Rendering [embossed snowflake] -> $@"
 	$(OPENSCAD) $(SCAD_FLAGS) -d $(@:.stl=.deps) -o $@ -D 'PART="snowflake"' -D 'LOGO_STYLE="embossed"' $(SCAD_FILE)
 
 clean:
-	rm -f $(TARGETS) models/*/*.deps
+	@$(call RM_F,$(TARGETS) models/*/*.deps)
 
 -include $(wildcard models/*/*.deps)

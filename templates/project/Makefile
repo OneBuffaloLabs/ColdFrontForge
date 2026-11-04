@@ -14,11 +14,11 @@ all: $(TARGETS)
 $(PARTS): %: $(OUT_DIR)/[product-name]-%.stl
 
 $(OUT_DIR)/[product-name]-%.stl: $(SCAD_FILE)
-	@mkdir -p $(OUT_DIR)
+	@$(call MKDIR,$(OUT_DIR))
 	@echo "--> Rendering [$*] -> $@"
 	$(OPENSCAD) $(SCAD_FLAGS) -d $(@:.stl=.deps) -o $@ -D 'part_to_render="$*"' $(SCAD_FILE)
 
 clean:
-	rm -f $(TARGETS) $(wildcard $(OUT_DIR)/*.deps)
+	@$(call RM_F,$(TARGETS) $(wildcard $(OUT_DIR)/*.deps))
 
 -include $(wildcard $(OUT_DIR)/*.deps)

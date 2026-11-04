@@ -30,21 +30,21 @@ chips_red:    $(OUT_DIR)/jason-ball-chips-red.stl
 chips_silver: $(OUT_DIR)/jason-ball-chips-silver.stl
 
 $(OUT_DIR)/jason-ball-front-ring.stl: $(SCAD_FILE)
-	@mkdir -p $(OUT_DIR)
+	@$(call MKDIR,$(OUT_DIR))
 	@echo "--> Rendering [front_ring] -> $@"
 	$(OPENSCAD) $(SCAD_FLAGS) -d $(@:.stl=.deps) -o $@ -D 'part_to_render="front_ring"' $(SCAD_FILE)
 
 $(OUT_DIR)/jason-ball-chips-%.stl: $(SCAD_FILE)
-	@mkdir -p $(OUT_DIR)
+	@$(call MKDIR,$(OUT_DIR))
 	@echo "--> Rendering [chips_$*] -> $@"
 	$(OPENSCAD) $(SCAD_FLAGS) -d $(@:.stl=.deps) -o $@ -D 'part_to_render="chips_$*"' $(SCAD_FILE)
 
 $(OUT_DIR)/jason-ball-%.stl: $(SCAD_FILE)
-	@mkdir -p $(OUT_DIR)
+	@$(call MKDIR,$(OUT_DIR))
 	@echo "--> Rendering [$*] -> $@"
 	$(OPENSCAD) $(SCAD_FLAGS) -d $(@:.stl=.deps) -o $@ -D 'part_to_render="$*"' $(SCAD_FILE)
 
 clean:
-	rm -f $(TARGETS) $(wildcard $(OUT_DIR)/*.deps)
+	@$(call RM_F,$(TARGETS) $(wildcard $(OUT_DIR)/*.deps))
 
 -include $(wildcard $(OUT_DIR)/*.deps)

@@ -20,31 +20,31 @@ single_link: models/links/cold-snap-sorter-single-link.stl
 quad_link:   models/links/cold-snap-sorter-quad-link.stl
 
 models/assembly/cold-snap-sorter.stl: $(SCAD_FILE)
-	@mkdir -p $(@D)
+	@$(call MKDIR,$(@D))
 	@echo "--> Rendering [assembly] -> $@"
 	$(OPENSCAD) $(SCAD_FLAGS) -d $(@:.stl=.deps) -o $@ -D 'PART="both"' $(SCAD_FILE)
 
 models/bay/cold-snap-sorter-bay.stl: $(SCAD_FILE)
-	@mkdir -p $(@D)
+	@$(call MKDIR,$(@D))
 	@echo "--> Rendering [bay] -> $@"
 	$(OPENSCAD) $(SCAD_FLAGS) -d $(@:.stl=.deps) -o $@ -D 'PART="bay"' $(SCAD_FILE)
 
 models/links/cold-snap-sorter-links.stl: $(SCAD_FILE)
-	@mkdir -p $(@D)
+	@$(call MKDIR,$(@D))
 	@echo "--> Rendering [links] -> $@"
 	$(OPENSCAD) $(SCAD_FLAGS) -d $(@:.stl=.deps) -o $@ -D 'PART="links"' $(SCAD_FILE)
 
 models/links/cold-snap-sorter-single-link.stl: $(SCAD_FILE)
-	@mkdir -p $(@D)
+	@$(call MKDIR,$(@D))
 	@echo "--> Rendering [single_link] -> $@"
 	$(OPENSCAD) $(SCAD_FLAGS) -d $(@:.stl=.deps) -o $@ -D 'PART="single_link"' $(SCAD_FILE)
 
 models/links/cold-snap-sorter-quad-link.stl: $(SCAD_FILE)
-	@mkdir -p $(@D)
+	@$(call MKDIR,$(@D))
 	@echo "--> Rendering [quad_link] -> $@"
 	$(OPENSCAD) $(SCAD_FLAGS) -d $(@:.stl=.deps) -o $@ -D 'PART="quad_link"' $(SCAD_FILE)
 
 clean:
-	rm -f $(TARGETS) models/*/*.deps
+	@$(call RM_F,$(TARGETS) models/*/*.deps)
 
 -include $(wildcard models/*/*.deps)

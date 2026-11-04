@@ -13,6 +13,6 @@ clearance_tester.stl: $(SCAD_FILE)
 	$(OPENSCAD) $(SCAD_FLAGS) -d $(@:.stl=.deps) -o $@ $(SCAD_FILE)
 
 clean:
-	rm -f $(TARGETS) *.deps
+	@$(call RM_F,$(TARGETS) *.deps)
 
 -include $(wildcard *.deps)
