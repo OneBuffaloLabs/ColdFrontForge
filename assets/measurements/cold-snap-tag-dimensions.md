@@ -20,8 +20,8 @@ Official mechanical dimensions, tolerances, and hardware specifications for the 
 
 ## 2. Retention Magnet Specifications (5x2 mm Neodymium)
 
-* **Hardware:** 2x Neodymium Disc Magnets ($arnothing 5.00\text{ mm} \times 2.00\text{ mm}$, Grade N35 or N52).
-* **Center-to-Center Spacing:** **36.00 mm** ($X = -18.00\text{ mm}$ and $X = +18.00\text{ mm}$, centered at $Y = 0.00\text{ mm}$).
+* **Hardware:** 2x Neodymium Disc Magnets (Ø 5.00 mm × 2.00 mm, Grade N35 or N52).
+* **Center-to-Center Spacing:** **36.00 mm** (X = -18.00 mm and X = +18.00 mm, centered at Y = 0.00 mm).
 * **Inner Edge-to-Edge Gap:** **31.00 mm**.
 * **Outer Edge-to-Edge Span:** **41.00 mm**.
 * **Perimeter Margin (Sides):** **13.50 mm** to tag left and right edges.
@@ -29,7 +29,7 @@ Official mechanical dimensions, tolerances, and hardware specifications for the 
 * **Vertical Margin (Rx 42mm):** **18.50 mm** to tag top and bottom edges.
 * **Tag Bore Diameter:** **5.15 mm** (+0.15 mm radial tolerance for snug friction push-fit with CA glue).
 * **Tag Bore Depth:** **1.80 mm** (leaves 0.40 mm / 2 solid layers of top skin).
-* **Entry Chamfer:** **0.35 mm $\times 45^\circ$** self-centering funnel and glue well.
+* **Entry Chamfer:** **0.35 mm × 45°** self-centering funnel and glue well.
 
 ---
 
@@ -39,13 +39,13 @@ When designing a socket on an accessory (display stand, slab, pedestal, or wall 
 
 | Pocket Dimension | Measurement | Description |
 | :--- | :--- | :--- |
-| **Pocket Width ($X$)** | **68.50 mm** | Nominal 68.0 mm $+ 0.25\text{ mm}$ slip clearance per side. |
-| **Pocket Height ($Y$)** | **22.50 mm** (Std) / **42.50 mm** (Rx) | Nominal $+ 0.25\text{ mm}$ slip clearance per side. |
-| **Pocket Depth ($Z$)** | **2.20 mm** (Flush) / **1.00 mm** (Proud) | 2.20 mm seats base wafer flush with body surface. |
-| **Corner Radius ($R$)**| **1.75 mm** | Nominal 1.50 mm $+ 0.25\text{ mm}$ slip clearance. |
-| **Socket Magnet Bore** | **$\varnothing 5.15\text{ mm} \times 2.00\text{ mm}$** | Sits 2.0 mm magnet flush with pocket floor. |
+| **Pocket Width (X)** | **68.50 mm** | Nominal 68.0 mm + 0.25 mm slip clearance per side. |
+| **Pocket Height (Y)** | **22.50 mm** (Std) / **42.50 mm** (Rx) | Nominal + 0.25 mm slip clearance per side. |
+| **Pocket Depth (Z)** | **2.20 mm** (Flush) / **1.00 mm** (Proud) | 2.20 mm seats base wafer flush with body surface. |
+| **Corner Radius (R)**| **1.75 mm** | Nominal 1.50 mm + 0.25 mm slip clearance. |
+| **Socket Magnet Bore** | **Ø 5.15 mm × 2.00 mm** | Sits 2.0 mm magnet flush with pocket floor. |
 | **Magnet Spacing** | **36.00 mm** center-to-center | Aligns with tag magnets. |
-| **Rear Ejection Hole** | **$\varnothing 2.00\text{ mm}$** pass-through | For maintenance and easy magnet extraction. |
+| **Rear Ejection Hole** | **Ø 2.00 mm** pass-through | For maintenance and easy magnet extraction. |
 
 ---
 
