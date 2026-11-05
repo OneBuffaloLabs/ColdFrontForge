@@ -33,6 +33,11 @@ PROJECT_FROST   := projects/contests/creality-cloud/bottle-can-opener/entry-1-fr
 # Helpers
 PROJECT_HELPERS := projects/helpers/pokeball
 
+# Vault Cache Synchronization (Configurable list of items from private Vault)
+VAULT_DIR        ?= ../ColdFrontForge-Vault
+VAULT_CACHE_DIR  ?= .vault-cache
+VAULT_SYNC_ITEMS ?= commercial/tcg/cold-snap-tag
+
 # All active projects across the workshop
 PROJECTS := $(SPHERES_ALL) $(LOGOS_ALL) $(PROJECT_K2_SE) $(TCG_ALL) $(PROJECT_FROST)
 PROJECTS_CLEAN := $(addsuffix _clean,$(PROJECTS))
@@ -56,7 +61,7 @@ SCAD_SRCS := $(PROJECT_FROST)/frost-bite.scad \
              $(PROJECT_HELPERS)/filler.scad
 LINT_TARGETS := $(addprefix lint-,$(SCAD_SRCS))
 
-.PHONY: all clean lint check help $(PROJECTS) $(PROJECTS_CLEAN) $(LINT_TARGETS) \
+.PHONY: all clean lint check sync-vault help $(PROJECTS) $(PROJECTS_CLEAN) $(LINT_TARGETS) \
         slasher-spheres spheres billy billy-ball ghostface ghostface-ball jason jason-ball \
         snapfit-logos logos bills tester clearance-tester \
         printer-mods k2-se tool-holder \
@@ -103,6 +108,15 @@ $(LINT_TARGETS): lint-%:
 	@echo "  Checking $*..."
 	@$(OPENSCAD) -o - --export-format echo --hardwarnings "$*" >$(DEVNULL)
 
+# Synchronize private commercial assets from Vault into local .vault-cache/
+sync-vault:
+	@echo ">>> Synchronizing Vault assets to $(VAULT_CACHE_DIR)..."
+	@$(call MKDIR,$(VAULT_CACHE_DIR))
+	$(foreach item,$(VAULT_SYNC_ITEMS),\
+		@echo "  Syncing $(item)..."$(_NL)\
+		@$(call SYNC_DIR,$(VAULT_DIR)/$(item),$(VAULT_CACHE_DIR)/$(item))$(_NL))
+	@echo ">>> Vault synchronization complete."
+
 help:
 	@echo "Cold Front Forge Build System"
 	@echo ""
@@ -110,6 +124,7 @@ help:
 	@echo "  make all             Build all project STLs (parallelizable with -j)"
 	@echo "  make clean           Remove all compiled STLs and dependency graphs"
 	@echo "  make lint            Syntax and warning verification on all .scad models"
+	@echo "  make sync-vault      Pull commercial assets from Vault into .vault-cache/"
 	@echo ""
 	@echo "Categories:"
 	@echo "  make slasher-spheres Build all Slasher Sphere Pokéball models"
