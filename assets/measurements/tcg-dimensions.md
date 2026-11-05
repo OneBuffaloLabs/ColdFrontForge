@@ -101,6 +101,16 @@ STACK_DEPTH_LORCANA_15    = 74.0;
 // Universal 15-Pack Dispenser Cavity (Clears all modern standard TCGs)
 UNIVERSAL_15PACK_CAVITY   = [72.0, 74.0, 124.0];
 
+// Cold Snap Script (Pill Bottle Dispenser Specs)
+SCRIPT_CAVITY_DIM         = [74.0, 74.0, 125.0];
+SCRIPT_BODY_OUTER         = [82.0, 82.0, 128.0];
+SCRIPT_NECK_OUTER         = [78.0, 78.0, 18.0];
+SCRIPT_CAP_OUTER          = [86.0, 86.0, 21.5];
+SCRIPT_CAP_CLEARANCE      = 0.25;
+SCRIPT_LABEL_EXTENDED     = [68.0, 42.0, 2.2];
+SCRIPT_LABEL_STANDARD     = [68.0, 22.0, 2.2];
+SCRIPT_LABEL_MAG_SPACING  = 36.0;
+
 // Standard wiggle room to add to raw measurements
 DEFAULT_CLEARANCE         = 1.2;
 ```
