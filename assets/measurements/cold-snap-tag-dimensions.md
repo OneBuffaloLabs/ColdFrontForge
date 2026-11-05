@@ -14,7 +14,7 @@ Official mechanical dimensions, tolerances, and hardware specifications for the 
 | Form Factor | Width ($X$) | Height ($Y$) | Wafer ($Z$) | Text Emboss ($Z$) | Total ($Z$) | Corner Radius ($R$) | Border Width |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | **Standard Tag (Slab)** | **68.00 mm** | **22.00 mm** | 2.20 mm | +0.80 mm | 3.00 mm | 1.50 mm | 0.90 mm |
-| **Extended Rx (Script)**| **68.00 mm** | **42.00 mm** | 2.20 mm | +0.80 mm | 3.00 mm | 1.50 mm | 0.90 mm |
+| **Extended Rx (Dispenser)**| **68.00 mm** | **42.00 mm** | 2.20 mm | +0.80 mm | 3.00 mm | 1.50 mm | 0.90 mm |
 
 ---
 
@@ -49,7 +49,19 @@ When designing a socket on an accessory (display stand, slab, pedestal, or wall 
 
 ---
 
-## 4. OpenSCAD Reference Variables
+## 4. Typography & Micro-Lettering Constraints
+
+Standard 0.4mm FDM nozzle physical extrusion limit:
+
+* **Hard Minimum Font Size:** **3.70 mm** (Any smaller and closed character counters in 'e', 'a', 'o', 'B', 'P' fuse solid).
+* **Emboss Height:** **0.80 mm** proud of wafer floor (4 layers at 0.20mm base or 5 layers at 0.16mm modifier).
+* **Standard Letter Spacing:** **1.10 – 1.15** for optimal character perimeter separation.
+* **Standard Font:** `Varela Round` (monoline geometric geometry prevents thin serif blowouts).
+* **Slicer Engine Requirement:** **Arachne Perimeter Generator** + **0.16 mm Layer Height Modifier** above Z = 2.20 mm.
+
+---
+
+## 5. OpenSCAD Reference Variables
 
 Ready to copy into any `.scad` model:
 
@@ -64,6 +76,7 @@ TAG_WAFER_THICKNESS      = 2.20;
 TAG_EMBOSS_HEIGHT        = 0.80;
 TAG_CORNER_RADIUS        = 1.50;
 TAG_BORDER_WIDTH         = 0.90;
+TAG_MIN_TEXT_SIZE        = 3.70; // Minimum legible font size on 0.4mm nozzle
 
 // Magnet Hardpoints (5x2mm Neodymium Disc)
 TAG_MAG_DIAMETER         = 5.0;

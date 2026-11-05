@@ -101,15 +101,25 @@ STACK_DEPTH_LORCANA_15    = 74.0;
 // Universal 15-Pack Dispenser Cavity (Clears all modern standard TCGs)
 UNIVERSAL_15PACK_CAVITY   = [72.0, 74.0, 124.0];
 
-// Cold Snap Script (Pill Bottle Dispenser Specs)
-SCRIPT_CAVITY_DIM         = [74.0, 74.0, 125.0];
-SCRIPT_BODY_OUTER         = [82.0, 82.0, 128.0];
-SCRIPT_NECK_OUTER         = [78.0, 78.0, 18.0];
-SCRIPT_CAP_OUTER          = [86.0, 86.0, 21.5];
-SCRIPT_CAP_CLEARANCE      = 0.25;
-SCRIPT_LABEL_EXTENDED     = [68.0, 42.0, 2.2];
-SCRIPT_LABEL_STANDARD     = [68.0, 22.0, 2.2];
-SCRIPT_LABEL_MAG_SPACING  = 36.0;
+// Cold Snap Rx (Pill Bottle Dispenser Specs)
+RX_CAVITY_DIM             = [74.0, 74.0, 125.0];
+RX_BODY_OUTER             = [82.0, 82.0, 128.0];
+RX_NECK_OUTER             = [78.0, 78.0, 18.0];
+RX_CAP_OUTER              = [86.0, 86.0, 21.5];
+RX_CAP_CLEARANCE          = 0.25;
+RX_LABEL_EXTENDED         = [68.0, 42.0, 2.2];
+RX_LABEL_STANDARD         = [68.0, 22.0, 2.2];
+RX_LABEL_MAG_SPACING      = 36.0;
+
+// Backward-compatible Script aliases
+SCRIPT_CAVITY_DIM         = RX_CAVITY_DIM;
+SCRIPT_BODY_OUTER         = RX_BODY_OUTER;
+SCRIPT_NECK_OUTER         = RX_NECK_OUTER;
+SCRIPT_CAP_OUTER          = RX_CAP_OUTER;
+SCRIPT_CAP_CLEARANCE      = RX_CAP_CLEARANCE;
+SCRIPT_LABEL_EXTENDED     = RX_LABEL_EXTENDED;
+SCRIPT_LABEL_STANDARD     = RX_LABEL_STANDARD;
+SCRIPT_LABEL_MAG_SPACING  = RX_LABEL_MAG_SPACING;
 
 // Standard wiggle room to add to raw measurements
 DEFAULT_CLEARANCE         = 1.2;
