@@ -1,5 +1,10 @@
 # Cold Snap Sorter
 
+![Status](https://img.shields.io/badge/Status-Testing-orange)
+![Lifecycle](https://img.shields.io/badge/Lifecycle-Stage_2-orange)
+
+> **Release Status:** Stage 2 (Testing) — Prototyping & tolerance testing.
+
 A modular, interlocking, and stackable TCG sorting bay designed to keep your desk organized during pack openings, bulk prep, and collection inventorying.
 
 <!-- markdownlint-disable MD033 -->

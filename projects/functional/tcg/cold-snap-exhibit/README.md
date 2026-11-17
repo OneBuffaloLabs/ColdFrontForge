@@ -1,5 +1,10 @@
 # Cold Snap Exhibit — Architectural Pedestal Plinth & A-Frame Easel
 
+![Status](https://img.shields.io/badge/Status-Testing-orange)
+![Lifecycle](https://img.shields.io/badge/Lifecycle-Stage_2-orange)
+
+> **Release Status:** Stage 2 (Testing) — Prototyping & tolerance testing.
+
 A museum-grade tabletop card plinth and easel engineered to showcase high-value trading cards—including PSA graded slabs, Cold Snap Slabs, and standard 35pt toploaders—with classical architectural presence, an optimal 78° viewing angle, and 100% support-free FDM printing.
 
 <!-- markdownlint-disable MD033 -->

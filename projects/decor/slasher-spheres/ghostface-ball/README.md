@@ -1,5 +1,10 @@
 # Slasher Spheres: Ghostface Sphere
 
+![Status](https://img.shields.io/badge/Status-Released-green)
+![Lifecycle](https://img.shields.io/badge/Lifecycle-Stage_4-green)
+
+> **Release Status:** Stage 4 (Released) — Verified & ready for community printing.
+
 A multi-part, support-free display sphere merging classic creature-catching geometry with the haunting visage of Ghostface from the _Scream_ franchise. Engineered in OpenSCAD for glue-free friction assembly, featuring deep recessed eye and nose sockets for natural shadow depth, an integrated mouth pocket, and a flattened base for shelf stability.
 
 <!-- markdownlint-disable MD033 -->

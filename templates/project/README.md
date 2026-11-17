@@ -1,5 +1,10 @@
 # [Model Name]
 
+![Status](https://img.shields.io/badge/Status-Draft-yellow)
+![Lifecycle](https://img.shields.io/badge/Lifecycle-Stage_1-yellow)
+
+> **Release Status:** Stage 1 (Draft) — Concept / WIP CAD.
+
 A brief, 1-2 sentence description of what this model is, what problem it solves, or why you designed it.
 
 <!-- markdownlint-disable MD033 -->
@@ -35,7 +40,7 @@ Also available on creator platforms:
 
 ### Structural Settings (All Variants)
 
-- **Material:** [e.g., PETG or PLA+]
+- **Primary Material:** PLA+
 - **Layer Height:** 0.20 mm
 - **Wall Loops:** [e.g., 4 walls for load-bearing parts]
 - **Top / Bottom Shells:** 5 top, 4 bottom

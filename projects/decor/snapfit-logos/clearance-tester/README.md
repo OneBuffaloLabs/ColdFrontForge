@@ -1,5 +1,10 @@
 # SnapFit Clearance Tester
 
+![Status](https://img.shields.io/badge/Status-Released-green)
+![Lifecycle](https://img.shields.io/badge/Lifecycle-Stage_4-green)
+
+> **Release Status:** Stage 4 (Released) — Verified & ready for community printing.
+
 A quick calibration print to test fitment tolerances before committing to a full-sized multi-part logo print. It features three test pockets (0.05 mm, 0.10 mm, and 0.15 mm) alongside a matching test plug to dial in your slicer settings and filament shrinkage.
 
 ## 📥 Files

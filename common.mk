@@ -16,8 +16,17 @@ ifeq ($(OS),Windows_NT)
     # -------------------------------------------------------------------------
     # Windows Environment (Git Bash / MSYS sh vs. Native CMD)
     # -------------------------------------------------------------------------
-    ifneq (,$(findstring sh,$(SHELL)))
+    ifneq (,$(or $(MSYSTEM),$(findstring /,$(SHELL))))
         # Git Bash / sh on Windows
+        PYTHON ?= $(strip $(shell \
+            if command -v python3 >/dev/null 2>&1; then \
+                echo "python3"; \
+            elif command -v python >/dev/null 2>&1; then \
+                echo "python"; \
+            else \
+                echo "none"; \
+            fi))
+
         OPENSCAD ?= $(strip $(shell \
             if [ -f "C:/Program Files/OpenSCAD (Nightly)/openscad.com" ]; then \
                 echo '"C:/Program Files/OpenSCAD (Nightly)/openscad.com"'; \
@@ -37,18 +46,18 @@ ifeq ($(OS),Windows_NT)
         DEVNULL  = /dev/null
     else
         # Native cmd.exe on Windows
-        OPENSCAD ?= $(strip $(shell cmd.exe /c "\
-            if exist \"C:\Program Files\OpenSCAD (Nightly)\openscad.com\" (\
-                echo \"C:\Program Files\OpenSCAD (Nightly)\openscad.com\"\
-            ) else if exist \"C:\Program Files\OpenSCAD\openscad.com\" (\
-                echo \"C:\Program Files\OpenSCAD\openscad.com\"\
-            ) else if exist \"%LOCALAPPDATA%\Programs\OpenSCAD (Nightly)\openscad.com\" (\
-                echo \"%LOCALAPPDATA%\Programs\OpenSCAD (Nightly)\openscad.com\"\
-            ) else if exist \"%LOCALAPPDATA%\Programs\OpenSCAD\openscad.com\" (\
-                echo \"%LOCALAPPDATA%\Programs\OpenSCAD\openscad.com\"\
-            ) else (\
-                where openscad.com 2>nul || where openscad 2>nul || echo none\
-            )"))
+        PYTHON ?= $(strip $(shell cmd.exe /c "\
+            python3 --version >nul 2>&1 && echo python3 || (\
+            python --version >nul 2>&1 && echo python || echo none)"))
+
+        OPENSCAD ?= $(strip $(or \
+            $(shell cmd.exe /c if exist "C:\Program Files\OpenSCAD (Nightly)\openscad.com" echo "C:\Program Files\OpenSCAD (Nightly)\openscad.com"),\
+            $(shell cmd.exe /c if exist "C:\Program Files\OpenSCAD\openscad.com" echo "C:\Program Files\OpenSCAD\openscad.com"),\
+            $(shell cmd.exe /c if exist "%LOCALAPPDATA%\Programs\OpenSCAD (Nightly)\openscad.com" echo "%LOCALAPPDATA%\Programs\OpenSCAD (Nightly)\openscad.com"),\
+            $(shell cmd.exe /c if exist "%LOCALAPPDATA%\Programs\OpenSCAD\openscad.com" echo "%LOCALAPPDATA%\Programs\OpenSCAD\openscad.com"),\
+            $(shell cmd.exe /c for /f "delims=" %%i in ('where openscad.com 2^>nul') do @echo "%%i" ^& exit /b 0),\
+            $(shell cmd.exe /c for /f "delims=" %%i in ('where openscad 2^>nul') do @echo "%%i" ^& exit /b 0),\
+            none))
 
         MKDIR    = if not exist "$(subst /,\,$(1))" mkdir "$(subst /,\,$(1))"
         RM_F     = $(if $(strip $(1)),-del /Q /F $(subst /,\,$(1)) 2>nul || (exit 0))
@@ -59,6 +68,15 @@ else
     # -------------------------------------------------------------------------
     # POSIX / Linux / macOS Environment
     # -------------------------------------------------------------------------
+    PYTHON ?= $(strip $(shell \
+        if command -v python3 >/dev/null 2>&1; then \
+            echo "python3"; \
+        elif command -v python >/dev/null 2>&1; then \
+            echo "python"; \
+        else \
+            echo "none"; \
+        fi))
+
     # OpenSCAD Binary Auto-Detection (CLI vs. Flatpak)
     OPENSCAD ?= $(strip $(shell \
         if command -v openscad >/dev/null 2>&1; then \

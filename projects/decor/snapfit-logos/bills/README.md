@@ -1,5 +1,10 @@
 # Snap-Fit Buffalo Bills Emblem
 
+![Status](https://img.shields.io/badge/Status-Released-green)
+![Lifecycle](https://img.shields.io/badge/Lifecycle-Stage_4-green)
+
+> **Release Status:** Stage 4 (Released) — Verified & ready for community printing.
+
 A multi-part, glue-free friction-fit display emblem designed for clean multi-color printing on standard single-extruder 3D printers without requiring an AMS or mid-print filament swaps.
 
 <!-- markdownlint-disable MD033 -->

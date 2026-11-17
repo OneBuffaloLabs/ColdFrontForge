@@ -61,7 +61,7 @@ SCAD_SRCS := $(PROJECT_FROST)/frost-bite.scad \
              $(PROJECT_HELPERS)/filler.scad
 LINT_TARGETS := $(addprefix lint-,$(SCAD_SRCS))
 
-.PHONY: all clean lint check sync-vault help $(PROJECTS) $(PROJECTS_CLEAN) $(LINT_TARGETS) \
+.PHONY: all clean lint check status set-status set-stage sync-vault help $(PROJECTS) $(PROJECTS_CLEAN) $(LINT_TARGETS) \
         slasher-spheres spheres billy billy-ball ghostface ghostface-ball jason jason-ball \
         snapfit-logos logos bills tester clearance-tester \
         printer-mods k2-se tool-holder \
@@ -108,6 +108,13 @@ $(LINT_TARGETS): lint-%:
 	@echo "  Checking $*..."
 	@$(OPENSCAD) -o - --export-format echo --hardwarnings "$*" >$(DEVNULL)
 
+# Project Status Dashboard & Lifecycle Management
+status:
+	@$(PYTHON) scripts/repo_status.py
+
+set-status set-stage:
+	@$(PYTHON) scripts/repo_status.py --project "$(project)" --stage "$(stage)"
+
 # Synchronize private commercial assets from Vault into local .vault-cache/
 sync-vault:
 	@echo ">>> Synchronizing Vault assets to $(VAULT_CACHE_DIR)..."
@@ -118,30 +125,33 @@ sync-vault:
 	@echo ">>> Vault synchronization complete."
 
 help:
-	@echo "Cold Front Forge Build System"
-	@echo ""
-	@echo "Targets:"
-	@echo "  make all             Build all project STLs (parallelizable with -j)"
-	@echo "  make clean           Remove all compiled STLs and dependency graphs"
-	@echo "  make lint            Syntax and warning verification on all .scad models"
-	@echo "  make sync-vault      Pull commercial assets from Vault into .vault-cache/"
-	@echo ""
-	@echo "Categories:"
-	@echo "  make slasher-spheres Build all Slasher Sphere Pokéball models"
-	@echo "  make snapfit-logos   Build all Snap-Fit display emblems"
-	@echo "  make printer-mods    Build 3D printer hardware upgrades"
-	@echo "  make tcg             Build all TCG organization accessories"
-	@echo "  make contests        Build contest entry models"
-	@echo ""
-	@echo "Individual Project Targets:"
-	@echo "  make billy           Billy the Puppet Slasher Sphere"
-	@echo "  make ghostface       Ghostface Slasher Sphere"
-	@echo "  make jason           Jason Voorhees Slasher Sphere"
-	@echo "  make bills           Snap-Fit Buffalo Bills Logo"
-	@echo "  make tester          Snap-Fit Clearance Tester"
-	@echo "  make tool-holder     Creality K2 SE Enclosure Tool Holder"
-	@echo "  make caddy           Cold Snap Desk Caddy (Standard, Pro, XL)"
-	@echo "  make sorter          Cold Snap Sorter Bay & Frost Links"
-	@echo "  make wedge           Cold Snap Wedge Card Dividers"
-	@echo "  make exhibit         Cold Snap Exhibit Pedestal & Easel"
-	@echo "  make frost-bite      Frost-Bite Bottle & Can Opener"
+	$(info Cold Front Forge Build System)
+	$(info )
+	$(info Targets:)
+	$(info   make all                               Build all project STLs (parallelizable with -j))
+	$(info   make clean                             Remove all compiled STLs and dependency graphs)
+	$(info   make lint                              Syntax and warning verification on all .scad models)
+	$(info   make status                            Show project status dashboard)
+	$(info   make set-status project=X stage=Y      Update project lifecycle stage (1-5 or name))
+	$(info   make sync-vault                        Pull commercial assets from Vault into .vault-cache/)
+	$(info )
+	$(info Categories:)
+	$(info   make slasher-spheres                   Build all Slasher Sphere Pokéball models)
+	$(info   make snapfit-logos                     Build all Snap-Fit display emblems)
+	$(info   make printer-mods                      Build 3D printer hardware upgrades)
+	$(info   make tcg                               Build all TCG organization accessories)
+	$(info   make contests                          Build contest entry models)
+	$(info )
+	$(info Individual Project Targets:)
+	$(info   make billy                             Billy the Puppet Slasher Sphere)
+	$(info   make ghostface                         Ghostface Slasher Sphere)
+	$(info   make jason                             Jason Voorhees Slasher Sphere)
+	$(info   make bills                             Snap-Fit Buffalo Bills Logo)
+	$(info   make tester                            Snap-Fit Clearance Tester)
+	$(info   make tool-holder                       Creality K2 SE Enclosure Tool Holder)
+	$(info   make caddy                             Cold Snap Desk Caddy (Standard, Pro, XL))
+	$(info   make sorter                            Cold Snap Sorter Bay & Frost Links)
+	$(info   make wedge                             Cold Snap Wedge Card Dividers)
+	$(info   make exhibit                           Cold Snap Exhibit Pedestal & Easel)
+	$(info   make frost-bite                        Frost-Bite Bottle & Can Opener)
+	@cd .

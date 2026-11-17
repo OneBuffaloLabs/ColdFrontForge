@@ -1,6 +1,7 @@
-# OpenSCAD Backup Files
+# OpenSCAD Backup & Build Dependency Files
 *~
 *.bak
+*.deps
 
 # Slicer Output (Never commit G-code, it's specific to your printer!)
 *.gcode
