@@ -11,7 +11,9 @@ include <../../../../lib/BOSL2/std.scad>
 
 /* [Preview / Rendering] */
 render_mode = "all"; // [all, base, wing, celery]
-$fn = $preview ? 32 : 90;
+// Orientation in XY plane (horizontal aligns long axis with X for Ctrl+4 Top View)
+display_orientation = "horizontal"; // [horizontal, vertical]
+$fn = $preview ? 32 : 120;
 
 /* [Core Dimensions] */
 // Target overall height of the wing + celery artwork (mm)
@@ -112,11 +114,11 @@ module magnet_pockets_cutter() {
     if (magnet_config == "dual_5x2") {
         for (pos = [dual_upper_pos, dual_lower_pos]) {
             translate([pos.x * scale_factor, pos.y * scale_factor, -EPS])
-                cyl(d = dual_magnet_d, h = dual_magnet_h + EPS, anchor = BOTTOM, $fn = 36);
+                cyl(d = dual_magnet_d, h = dual_magnet_h + EPS, anchor = BOTTOM, $fn = 64);
         }
     } else if (magnet_config == "single_10x2") {
         translate([single_center_pos.x * scale_factor, single_center_pos.y * scale_factor, -EPS])
-            cyl(d = single_magnet_d, h = single_magnet_h + EPS, anchor = BOTTOM, $fn = 48);
+            cyl(d = single_magnet_d, h = single_magnet_h + EPS, anchor = BOTTOM, $fn = 64);
     }
 }
 
@@ -165,19 +167,23 @@ module celery_insert() {
 // Render / Print-Bed Assembly
 // =============================================================================
 
-if (render_mode == "all") {
-    color("White")
+orient_z = (display_orientation == "horizontal") ? 90 : 0;
+
+rotate([0, 0, orient_z]) {
+    if (render_mode == "all") {
+        color("White")
+            base_tray();
+        color("OrangeRed")
+            translate([0, 0, pocket_floor_z])
+                wing_insert();
+        color("ForestGreen")
+            translate([0, 0, pocket_floor_z])
+                celery_insert();
+    } else if (render_mode == "base") {
         base_tray();
-    color("OrangeRed")
-        translate([0, 0, pocket_floor_z])
-            wing_insert();
-    color("ForestGreen")
-        translate([0, 0, pocket_floor_z])
-            celery_insert();
-} else if (render_mode == "base") {
-    base_tray();
-} else if (render_mode == "wing") {
-    wing_insert();
-} else if (render_mode == "celery") {
-    celery_insert();
+    } else if (render_mode == "wing") {
+        wing_insert();
+    } else if (render_mode == "celery") {
+        celery_insert();
+    }
 }
