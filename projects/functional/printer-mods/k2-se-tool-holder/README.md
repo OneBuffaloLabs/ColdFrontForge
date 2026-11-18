@@ -1,5 +1,10 @@
 # K2 SE Tool Kit Holder (Official Enclosure Edition)
 
+![Status](https://img.shields.io/badge/Status-Released-green)
+![Lifecycle](https://img.shields.io/badge/Lifecycle-Stage_4-green)
+
+> **Release Status:** Stage 4 (Released) — Verified & ready for community printing.
+
 <!-- markdownlint-disable MD033 -->
 <p align="center">
     <img src="assets/media/renders/k2-se-tool-holder-hero.png" alt="K2 SE Tool Kit Holder" width="600">

@@ -58,7 +58,33 @@ make clean
 
 # Validate OpenSCAD syntax and hard warnings across all CAD models
 make lint
+
+# View project lifecycle status dashboard
+make status
+
+# Update a project's lifecycle stage (1=Draft, 2=Testing, 3=Validation, 4=Released, 5=Archived)
+make set-status project=billy stage=4
 ```
+
+---
+
+## 📊 Project Matrix
+
+_Managed via `make status` and `make set-status` (`scripts/repo_status.py`)._
+
+| Project | Status | Stage | Platform / Target | Primary Material |
+| :--- | :--- | :--- | :--- | :--- |
+| [Billy the Puppet Sphere](projects/decor/slasher-spheres/billy-ball) | ![Status](https://img.shields.io/badge/Status-Released-green) | Stage 4 | Universal FDM | PLA+ |
+| [Ghostface Sphere](projects/decor/slasher-spheres/ghostface-ball) | ![Status](https://img.shields.io/badge/Status-Released-green) | Stage 4 | Universal FDM | PLA+ |
+| [Jason Voorhees Sphere](projects/decor/slasher-spheres/jason-ball) | ![Status](https://img.shields.io/badge/Status-Released-green) | Stage 4 | Universal FDM | PLA+ |
+| [Snap-Fit Buffalo Bills Emblem](projects/decor/snapfit-logos/bills) | ![Status](https://img.shields.io/badge/Status-Released-green) | Stage 4 | Universal FDM | PLA+ |
+| [SnapFit Clearance Tester](projects/decor/snapfit-logos/clearance-tester) | ![Status](https://img.shields.io/badge/Status-Released-green) | Stage 4 | Universal FDM | PLA+ |
+| [K2 SE Tool Kit Holder](projects/functional/printer-mods/k2-se-tool-holder) | ![Status](https://img.shields.io/badge/Status-Released-green) | Stage 4 | Creality K2 SE / K1 SE Enclosure | PETG / PLA+ |
+| [Cold Snap Desk Caddy](projects/functional/tcg/cold-snap-desk-caddy) | ![Status](https://img.shields.io/badge/Status-Released-green) | Stage 4 | Universal FDM (180mm+ / 256mm+ XL) | PLA+ |
+| [Cold Snap Sorter](projects/functional/tcg/cold-snap-sorter) | ![Status](https://img.shields.io/badge/Status-Testing-orange) | Stage 2 | Universal FDM | PLA+ |
+| [Cold Snap Wedge](projects/functional/tcg/cold-snap-wedge) | ![Status](https://img.shields.io/badge/Status-Released-green) | Stage 4 | Universal FDM | PLA+ |
+| [Cold Snap Exhibit](projects/functional/tcg/cold-snap-exhibit) | ![Status](https://img.shields.io/badge/Status-Testing-orange) | Stage 2 | Universal FDM | PLA+ |
+| [Frost Bite Can Tab Opener](projects/contests/creality-cloud/bottle-can-opener/entry-1-frost-bite) | ![Status](https://img.shields.io/badge/Status-Released-green) | Stage 4 | Universal FDM | PETG / PLA+ |
 
 ---
 

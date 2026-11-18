@@ -1,6 +1,7 @@
-# OpenSCAD Backup Files
+# OpenSCAD Backup & Build Dependency Files
 *~
 *.bak
+*.deps
 
 # Slicer Output (Never commit G-code, it's specific to your printer!)
 *.gcode
@@ -12,3 +13,7 @@ node_modules/
 .DS_Store
 Thumbs.db
 desktop.ini
+
+AGENTS.md
+.obl/
+.vault-cache/

@@ -1,5 +1,10 @@
 # Cold Snap Desk Caddy
 
+![Status](https://img.shields.io/badge/Status-Released-green)
+![Lifecycle](https://img.shields.io/badge/Lifecycle-Stage_4-green)
+
+> **Release Status:** Stage 4 (Released) — Verified & ready for community printing.
+
 Keep your card station organized and streamline your pack rips, grading submissions, and sales prep.
 
 The **Cold Snap Desk Caddy** keeps all your essential protective supplies neatly separated and within arm’s reach on your desk mat. Built with front cutouts and a stable footprint, it lets you pinch and pull a single sleeve or case without fumbling or creasing corners.

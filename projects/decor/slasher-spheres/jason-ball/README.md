@@ -1,5 +1,10 @@
 # Slasher Spheres: Jason Voorhees Sphere
 
+![Status](https://img.shields.io/badge/Status-Released-green)
+![Lifecycle](https://img.shields.io/badge/Lifecycle-Stage_4-green)
+
+> **Release Status:** Stage 4 (Released) — Verified & ready for community printing.
+
 A multi-part, support-free display sphere merging classic creature-catching geometry with Jason Voorhees' battle-worn hockey mask. Engineered in OpenSCAD for glue-free friction assembly, featuring an integrated flat display base, precision chip inserts, and an anti-twist rectangular core peg.
 
 <!-- markdownlint-disable MD033 -->

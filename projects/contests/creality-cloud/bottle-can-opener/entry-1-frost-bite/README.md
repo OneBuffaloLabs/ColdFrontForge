@@ -1,5 +1,10 @@
 # Frost Bite - Can Tab Opener & Keychain
 
+![Status](https://img.shields.io/badge/Status-Released-green)
+![Lifecycle](https://img.shields.io/badge/Lifecycle-Stage_4-green)
+
+> **Release Status:** Stage 4 (Released) — Verified & ready for community printing.
+
 A compact, parametric can tab opener and keychain engineered to slide over soda and beverage tabs for easy, leverage-assisted opening without fingernail strain. Designed with a clean flat profile for single-color debossed printing or two-tone multi-color flush/embossed variants.
 
 <!-- markdownlint-disable MD033 -->

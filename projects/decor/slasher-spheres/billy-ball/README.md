@@ -1,5 +1,10 @@
 # Slasher Spheres: Billy the Puppet Sphere
 
+![Status](https://img.shields.io/badge/Status-Released-green)
+![Lifecycle](https://img.shields.io/badge/Lifecycle-Stage_4-green)
+
+> **Release Status:** Stage 4 (Released) — Verified & ready for community printing.
+
 A multi-part, support-free display sphere merging classic creature-catching geometry with the eerie, mechanical look of Billy the Puppet from the _Saw_ franchise. Engineered in OpenSCAD for glue-free friction assembly, featuring recessed eye sockets, signature cheek spiral inlays, an integrated chin/jawline base, and a flattened footing for shelf stability.
 
 <!-- markdownlint-disable MD033 -->
