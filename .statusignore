@@ -1,0 +1,3 @@
+# Paths (relative to repo root) excluded from `make status` and the root README Project Matrix.
+# Use this for calibration/test pieces and internal helper utilities rather than standalone releases.
+projects/decor/snapfit-logos/clearance-tester
