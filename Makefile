@@ -16,6 +16,11 @@ PROJECT_BILLS  := $(LOGOS_DIR)/bills
 PROJECT_TESTER := $(LOGOS_DIR)/clearance-tester
 LOGOS_ALL      := $(PROJECT_BILLS) $(PROJECT_TESTER)
 
+# Magnets
+MAGNETS_DIR          := projects/decor/magnets
+PROJECT_BUFFALO_WING := $(MAGNETS_DIR)/buffalo-wing-magnet
+MAGNETS_ALL          := $(PROJECT_BUFFALO_WING)
+
 # Printer Mods
 PROJECT_K2_SE  := projects/functional/printer-mods/k2-se-tool-holder
 
@@ -39,7 +44,7 @@ VAULT_CACHE_DIR  ?= .vault-cache
 VAULT_SYNC_ITEMS ?= commercial/tcg/cold-snap-tag
 
 # All active projects across the workshop
-PROJECTS := $(SPHERES_ALL) $(LOGOS_ALL) $(PROJECT_K2_SE) $(TCG_ALL) $(PROJECT_FROST)
+PROJECTS := $(SPHERES_ALL) $(LOGOS_ALL) $(MAGNETS_ALL) $(PROJECT_K2_SE) $(TCG_ALL) $(PROJECT_FROST)
 PROJECTS_CLEAN := $(addsuffix _clean,$(PROJECTS))
 
 # CAD Source Files for Lint Verification
@@ -49,6 +54,7 @@ SCAD_SRCS := $(PROJECT_FROST)/frost-bite.scad \
              $(PROJECT_JASON)/jason-ball.scad \
              $(PROJECT_BILLS)/snapfit_bills.scad \
              $(PROJECT_TESTER)/clearance_tester.scad \
+             $(PROJECT_BUFFALO_WING)/buffalo-wing-magnet.scad \
              $(PROJECT_K2_SE)/k2_se_tool_holder.scad \
              $(PROJECT_K2_SE)/assets/cad/k2_se_test_plate.scad \
              $(PROJECT_CADDY)/cold-snap-desk-caddy.scad \
@@ -64,6 +70,7 @@ LINT_TARGETS := $(addprefix lint-,$(SCAD_SRCS))
 .PHONY: all clean lint check status set-status set-stage sync-vault help $(PROJECTS) $(PROJECTS_CLEAN) $(LINT_TARGETS) \
         slasher-spheres spheres billy billy-ball ghostface ghostface-ball jason jason-ball \
         snapfit-logos logos bills tester clearance-tester \
+        magnets buffalo-wing buffalo-wing-magnet \
         printer-mods k2-se tool-holder \
         tcg caddy desk-caddy sorter wedge exhibit \
         contests frost-bite
@@ -77,6 +84,7 @@ $(PROJECTS):
 # Category Shortcuts
 slasher-spheres spheres: $(SPHERES_ALL)
 snapfit-logos logos:     $(LOGOS_ALL)
+magnets:                 $(MAGNETS_ALL)
 tcg:                     $(TCG_ALL)
 printer-mods:            $(PROJECT_K2_SE)
 contests:                $(PROJECT_FROST)
@@ -87,6 +95,7 @@ ghostface ghostface-ball:          $(PROJECT_GHOST)
 jason jason-ball:                  $(PROJECT_JASON)
 bills:                             $(PROJECT_BILLS)
 tester clearance-tester:           $(PROJECT_TESTER)
+buffalo-wing buffalo-wing-magnet:  $(PROJECT_BUFFALO_WING)
 k2-se tool-holder:                 $(PROJECT_K2_SE)
 caddy desk-caddy:                  $(PROJECT_CADDY)
 sorter:                            $(PROJECT_SORTER)
