@@ -4,16 +4,32 @@ include $(firstword $(COMMON_MK))
 SCAD_FILE ?= buffalo-wing-magnet.scad
 OUT_DIR   ?= models/v1
 
-TARGETS   := $(OUT_DIR)/buffalo-wing-magnet.stl
+TARGETS   := $(OUT_DIR)/buffalo-wing-magnet-base-white.stl \
+             $(OUT_DIR)/buffalo-wing-magnet-wing-orange.stl \
+             $(OUT_DIR)/buffalo-wing-magnet-celery-green.stl
 
-.PHONY: all clean
+.PHONY: all clean base wing celery
 
 all: $(TARGETS)
 
-$(OUT_DIR)/buffalo-wing-magnet.stl: $(SCAD_FILE)
+base:   $(OUT_DIR)/buffalo-wing-magnet-base-white.stl
+wing:   $(OUT_DIR)/buffalo-wing-magnet-wing-orange.stl
+celery: $(OUT_DIR)/buffalo-wing-magnet-celery-green.stl
+
+$(OUT_DIR)/buffalo-wing-magnet-base-white.stl: $(SCAD_FILE)
 	@$(call MKDIR,$(OUT_DIR))
-	@echo "--> Rendering [all] -> $@"
-	$(OPENSCAD) $(SCAD_FLAGS) -d $(@:.stl=.deps) -o $@ -D 'PART="all"' $(SCAD_FILE)
+	@echo "--> Rendering [base] -> $@"
+	$(OPENSCAD) $(SCAD_FLAGS) -d $(@:.stl=.deps) -o $@ -D 'render_mode="base"' $(SCAD_FILE)
+
+$(OUT_DIR)/buffalo-wing-magnet-wing-orange.stl: $(SCAD_FILE)
+	@$(call MKDIR,$(OUT_DIR))
+	@echo "--> Rendering [wing] -> $@"
+	$(OPENSCAD) $(SCAD_FLAGS) -d $(@:.stl=.deps) -o $@ -D 'render_mode="wing"' $(SCAD_FILE)
+
+$(OUT_DIR)/buffalo-wing-magnet-celery-green.stl: $(SCAD_FILE)
+	@$(call MKDIR,$(OUT_DIR))
+	@echo "--> Rendering [celery] -> $@"
+	$(OPENSCAD) $(SCAD_FLAGS) -d $(@:.stl=.deps) -o $@ -D 'render_mode="celery"' $(SCAD_FILE)
 
 clean:
 	@$(call RM_F,$(TARGETS) $(wildcard $(OUT_DIR)/*.deps))
