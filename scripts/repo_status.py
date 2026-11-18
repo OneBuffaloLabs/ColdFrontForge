@@ -57,7 +57,6 @@ PROJECT_ALIASES: dict[str, str] = {
     "billy": "billy-ball",
     "ghostface": "ghostface-ball",
     "jason": "jason-ball",
-    "tester": "clearance-tester",
     "k2-se": "k2-se-tool-holder",
     "tool-holder": "k2-se-tool-holder",
     "caddy": "cold-snap-desk-caddy",
@@ -110,8 +109,22 @@ def colorize(text: str, color: str, use_color: bool) -> str:
     return f"{ANSI_COLORS[color]}{text}{ANSI_COLORS['reset']}"
 
 
+def load_status_ignore(root: Path = REPO_ROOT) -> set[str]:
+    """Load excluded project relative paths from .statusignore, if present."""
+    ignore_file = root / ".statusignore"
+    if not ignore_file.is_file():
+        return set()
+    ignored: set[str] = set()
+    for raw_line in ignore_file.read_text(encoding="utf-8").splitlines():
+        line = raw_line.split("#", 1)[0].strip().strip("/")
+        if line:
+            ignored.add(line.replace("\\", "/"))
+    return ignored
+
+
 def discover_projects(root: Path = REPO_ROOT) -> list[Path]:
     """Find all project directories containing both a Makefile and README.md."""
+    ignored_paths = load_status_ignore(root)
     projects: list[Path] = []
     for current_root, dirs, files in os.walk(root):
         dirs[:] = sorted(
@@ -119,6 +132,10 @@ def discover_projects(root: Path = REPO_ROOT) -> list[Path]:
         )
         current_path = Path(current_root)
         if current_path == root:
+            continue
+        rel_path = current_path.relative_to(root).as_posix()
+        if rel_path in ignored_paths:
+            dirs[:] = []
             continue
         if "Makefile" in files and "README.md" in files:
             projects.append(current_path)

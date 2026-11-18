@@ -78,7 +78,6 @@ _Managed via `make status` and `make set-status` (`scripts/repo_status.py`)._
 | [Ghostface Sphere](projects/decor/slasher-spheres/ghostface-ball) | ![Status](https://img.shields.io/badge/Status-Released-green) | Stage 4 | Universal FDM | PLA+ |
 | [Jason Voorhees Sphere](projects/decor/slasher-spheres/jason-ball) | ![Status](https://img.shields.io/badge/Status-Released-green) | Stage 4 | Universal FDM | PLA+ |
 | [Snap-Fit Buffalo Bills Emblem](projects/decor/snapfit-logos/bills) | ![Status](https://img.shields.io/badge/Status-Released-green) | Stage 4 | Universal FDM | PLA+ |
-| [SnapFit Clearance Tester](projects/decor/snapfit-logos/clearance-tester) | ![Status](https://img.shields.io/badge/Status-Released-green) | Stage 4 | Universal FDM | PLA+ |
 | [K2 SE Tool Kit Holder](projects/functional/printer-mods/k2-se-tool-holder) | ![Status](https://img.shields.io/badge/Status-Released-green) | Stage 4 | Creality K2 SE / K1 SE Enclosure | PETG / PLA+ |
 | [Cold Snap Desk Caddy](projects/functional/tcg/cold-snap-desk-caddy) | ![Status](https://img.shields.io/badge/Status-Released-green) | Stage 4 | Universal FDM (180mm+ / 256mm+ XL) | PLA+ |
 | [Cold Snap Sorter](projects/functional/tcg/cold-snap-sorter) | ![Status](https://img.shields.io/badge/Status-Testing-orange) | Stage 2 | Universal FDM | PLA+ |
