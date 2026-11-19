@@ -64,6 +64,7 @@ SCAD_SRCS := $(PROJECT_FROST)/src/frost-bite.scad \
              $(PROJECT_SNAPNOTE)/src/snapnote_stencil_base.scad \
              $(PROJECT_SNAPNOTE)/src/snapnote_caddy.scad \
              $(PROJECT_SNAPNOTE)/src/patterns/pattern_checklists.scad \
+             $(PROJECT_SNAPNOTE)/src/patterns/pattern_productivity.scad \
              $(PROJECT_CADDY)/src/cold-snap-desk-caddy.scad \
              $(PROJECT_CADDY)/src/cold-snap-desk-caddy-pro.scad \
              $(PROJECT_CADDY)/src/cold-snap-desk-caddy-xl.scad \

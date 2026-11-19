@@ -22,6 +22,9 @@ Individual `.stl` files are organized in the [`models/`](./models/) directory:
 - **Checklist Stencil:** [`models/snapnote-check.stl`](./models/snapnote-check.stl) — 6 ruled lines with 4.0 mm filleted checkboxes (`CHECK`).
 - **Bullet List Stencil:** [`models/snapnote-bullet.stl`](./models/snapnote-bullet.stl) — 6 ruled lines with 3.6 mm circular bullets (`BULLET`).
 - **Ruled Lines Stencil:** [`models/snapnote-lines.stl`](./models/snapnote-lines.stl) — 7 evenly spaced ruled lines (`LINES`).
+- **Eisenhower 2x2 Matrix:** [`models/snapnote-2x2.stl`](./models/snapnote-2x2.stl) — Four equal quadrants with perimeter margins (`2X2`).
+- **7-Day Habit Tracker:** [`models/snapnote-habit.stl`](./models/snapnote-habit.stl) — Monday–Sunday columns with 5 tracking rows (`HABIT`).
+- **Top 3 Focus Stencil:** [`models/snapnote-top3.stl`](./models/snapnote-top3.stl) — 3 numbered priority rows with secondary note lines (`TOP3`).
 
 ## 🖨️ Recommended Print Settings
 
