@@ -1,7 +1,7 @@
 /* BILLY THE PUPPET (SAW) POKÉBALL */
 
-include <../../../helpers/pokeball/filler.scad>;
-include <../../../helpers/pokeball/core.scad>;
+include <../../../../helpers/pokeball/filler.scad>;
+include <../../../../helpers/pokeball/core.scad>;
 
 // === RENDER SETTINGS ===
 part_to_render = "all"; // [all, top, bottom, ring, front_ring, button, filler, chips_black, chips_red]

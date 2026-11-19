@@ -1,7 +1,7 @@
 COMMON_MK ?= $(wildcard ../common.mk ../../common.mk ../../../common.mk ../../../../common.mk ../../../../../common.mk)
 include $(firstword $(COMMON_MK))
 
-HOLDER_SCAD ?= k2_se_tool_holder.scad
+HOLDER_SCAD ?= src/k2-se-tool-holder.scad
 PLATE_SCAD  ?= assets/cad/k2_se_test_plate.scad
 
 TARGETS     := models/tool-holder/k2_se_tool_holder.stl \

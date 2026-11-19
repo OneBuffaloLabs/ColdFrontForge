@@ -27,7 +27,7 @@ clearance = 0.10;
 red_clearance = 0.05;
 
 /* [Internal] */
-master_svg = "images/bills_master.svg";
+master_svg = "../images/bills_master.svg";
 $fn = 64;
 epsilon = 0.01;
 

@@ -9,7 +9,7 @@ A quick calibration print to test fitment tolerances before committing to a full
 
 ## 📥 Files
 
-- `clearance-tester.scad` — Parametric OpenSCAD source file.
+- `src/clearance_tester.scad` — Parametric OpenSCAD source file.
 - `clearance-tester.stl` — Print-ready mesh including the 3-pocket base and test block.
 
 ## 🖨️ Recommended Print Settings

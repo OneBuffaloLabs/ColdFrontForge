@@ -55,7 +55,7 @@ _100% 3D Printed — No screws, inserts, or glue required under calibrated toler
 
 ## 🛠️ Customizing with OpenSCAD
 
-Adjust tolerances, depths, or render specific parts using `ghostface-ball.scad`. Vector assets are referenced directly from `assets/cad/ghostface.svg`.
+Adjust tolerances, depths, or render specific parts using `src/ghostface-ball.scad`. Vector assets are referenced directly from `assets/cad/ghostface.svg`.
 
 **Key Variables:**
 

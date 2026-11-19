@@ -43,7 +43,7 @@ _Optional:_ 4x 8 mm adhesive silicone bumper feet for the underside caddy pocket
 
 ## 🛠️ Customizing with OpenSCAD
 
-Because this design is parametric, you can easily adjust pad dimensions, clearances, slot widths, or pattern layouts using [`snapnote.scad`](./snapnote.scad) and the modular source files in [`src/`](./src/).
+Because this design is parametric, you can easily adjust pad dimensions, clearances, slot widths, or pattern layouts using [`src/snapnote.scad`](./src/snapnote.scad) and the modular source files in [`src/`](./src/).
 
 **Key Variables:**
 

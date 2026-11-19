@@ -22,7 +22,7 @@ Live Model Page: [Creality Cloud](https://www.crealitycloud.com/model-detail/cre
 - `models/` — Exported print-ready STLs and production 3MF project profiles:
   - `models/tool-holder/` — Main rack mesh and production profile.
   - `models/test-plate/` — Calibration plate for hole spacing checks.
-- `k2-se-tool-holder.scad` — Core parametric OpenSCAD source file.
+- `src/k2-se-tool-holder.scad` — Core parametric OpenSCAD source file.
 - `README.md` — Technical documentation and hardware guide.
 - `LISTING.md` — Platform-agnostic listing copy for creator communities.
 - `CREATOR_COMMUNITIES.md` — Platform tags, categories, and publication metadata.

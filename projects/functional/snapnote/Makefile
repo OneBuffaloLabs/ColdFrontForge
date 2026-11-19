@@ -1,7 +1,7 @@
 COMMON_MK ?= $(wildcard ../common.mk ../../common.mk ../../../common.mk ../../../../common.mk ../../../../../common.mk)
 include $(firstword $(COMMON_MK))
 
-SCAD_FILE ?= snapnote.scad
+SCAD_FILE ?= src/snapnote.scad
 OUT_DIR   ?= models
 
 PARTS     ?= caddy base check bullet lines

@@ -128,7 +128,7 @@ To keep the root directory clean as the collection grows, all models are sorted 
 
 Inside a typical project folder, you'll find:
 
-- `[model_name].scad` — The original, customizable OpenSCAD file.
+- `src/[model_name].scad` — The original, customizable OpenSCAD file.
 - `Makefile` — Project-level build script for automated STL compilation.
 - `models/` — Exported 3D meshes (often broken into individual parts for multi-color printing).
 - `assets/` — Visual renders, photography, and source vector files (`.svg`).

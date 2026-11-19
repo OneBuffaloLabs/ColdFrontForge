@@ -40,7 +40,7 @@ bottom_cut_y = 10.0;
 enable_logo_cutout = true;
 logo_width = 50.0;
 logo_y_offset = 58.0;
-logo_svg_path = "../../../../assets/logo/logo-no-text.svg";
+logo_svg_path = "../../../../../assets/logo/logo-no-text.svg";
 
 /* [Hidden] */
 EPS = 0.02;

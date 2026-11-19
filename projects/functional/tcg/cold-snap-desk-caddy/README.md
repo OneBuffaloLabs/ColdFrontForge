@@ -19,9 +19,9 @@ The **Cold Snap Desk Caddy** keeps all your essential protective supplies neatly
 
 The caddy comes in three versions to match your workflow and print volume:
 
-- **Standard Edition (`cold-snap-desk-caddy.scad`):** Compact 3-stage daily caddy (`170.0mm W x 104.0mm D x 70.0mm H`). Fits penny sleeves, ~35 toploaders, and ~45 semi-rigids. Compatible with nearly all beds (180x180mm+).
-- **Pro Station (`cold-snap-desk-caddy-pro.scad`):** Expanded live-breaker station (`171.4mm W x 146.0mm D x 70.0mm H`). Deepened toploader pocket (~70+ capacity), flat penny sleeve bay, semi-rigid bay, and dual rear utility compartments for painter's tape, pull tabs, and Sharpies. Sized to print flat on standard 220x215mm+ beds without rotation.
-- **XL Stream Edition (`cold-snap-desk-caddy-xl.scad`):** High-capacity double breaker caddy (`244.4mm W x 146.0mm D x 70.0mm H`). Features massive toploader storage, semi-rigid bay, dual side-by-side flat penny sleeve bays, and dual wide rear tool trays.
+- **Standard Edition (`src/cold-snap-desk-caddy.scad`):** Compact 3-stage daily caddy (`170.0mm W x 104.0mm D x 70.0mm H`). Fits penny sleeves, ~35 toploaders, and ~45 semi-rigids. Compatible with nearly all beds (180x180mm+).
+- **Pro Station (`src/cold-snap-desk-caddy-pro.scad`):** Expanded live-breaker station (`171.4mm W x 146.0mm D x 70.0mm H`). Deepened toploader pocket (~70+ capacity), flat penny sleeve bay, semi-rigid bay, and dual rear utility compartments for painter's tape, pull tabs, and Sharpies. Sized to print flat on standard 220x215mm+ beds without rotation.
+- **XL Stream Edition (`src/cold-snap-desk-caddy-xl.scad`):** High-capacity double breaker caddy (`244.4mm W x 146.0mm D x 70.0mm H`). Features massive toploader storage, semi-rigid bay, dual side-by-side flat penny sleeve bays, and dual wide rear tool trays.
   - **Print Bed Notice:** This edition requires a build plate of at least **256 mm × 256 mm** to print squarely flat (or a minimum diagonal of **285 mm** if rotated 45° in your slicer). _Note: The XL model files and parametric scripts are included, but this variant has not been physically test-printed yet due to print bed size limitations on our current machine._
 
 ## 📥 Download & Print Profiles

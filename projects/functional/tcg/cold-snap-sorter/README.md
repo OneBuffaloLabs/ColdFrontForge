@@ -38,7 +38,7 @@ Optimized for fast, economical batch printing:
 
 ## 🛠️ Customizing with OpenSCAD
 
-The Cold Snap Sorter is fully parametric. Open `cold-snap-sorter.scad` in [OpenSCAD](https://openscad.org/) to adjust key dimensions for your card protectors or print setup.
+The Cold Snap Sorter is fully parametric. Open `src/cold-snap-sorter.scad` in [OpenSCAD](https://openscad.org/) to adjust key dimensions for your card protectors or print setup.
 
 **Key Variables You Can Change:**
 
@@ -51,7 +51,7 @@ The Cold Snap Sorter is fully parametric. Open `cold-snap-sorter.scad` in [OpenS
 - `PEG_R` — Stacking and linking peg radius (Default: `1.6mm`)
 - `SOCKET_TOL` — Radial clearance for underside sockets and link brackets (Default: `0.35mm`)
 
-_To modify: open `cold-snap-sorter.scad`, update parameters at the top, hit `F5` to preview, `F6` to render, and `File -> Export -> STL`._
+_To modify: open `src/cold-snap-sorter.scad`, update parameters at the top, hit `F5` to preview, `F6` to render, and `File -> Export -> STL`._
 
 ## 🧩 Assembly Instructions
 

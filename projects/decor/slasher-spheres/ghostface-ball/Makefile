@@ -1,7 +1,7 @@
 COMMON_MK ?= $(wildcard ../common.mk ../../common.mk ../../../common.mk ../../../../common.mk ../../../../../common.mk)
 include $(firstword $(COMMON_MK))
 
-SCAD_FILE ?= ghostface-ball.scad
+SCAD_FILE ?= src/ghostface-ball.scad
 OUT_DIR   ?= models
 
 TARGETS   := $(OUT_DIR)/ghostface-ball-top.stl \

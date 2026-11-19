@@ -1,7 +1,7 @@
 COMMON_MK ?= $(wildcard ../common.mk ../../common.mk ../../../common.mk ../../../../common.mk ../../../../../common.mk)
 include $(firstword $(COMMON_MK))
 
-SCAD_FILE ?= cold-snap-exhibit.scad
+SCAD_FILE ?= src/cold-snap-exhibit.scad
 OUT_DIR   ?= models
 
 TARGETS   := $(OUT_DIR)/cold-snap-exhibit.stl \

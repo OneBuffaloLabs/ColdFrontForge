@@ -1,7 +1,7 @@
 COMMON_MK ?= $(wildcard ../common.mk ../../common.mk ../../../common.mk ../../../../common.mk ../../../../../common.mk)
 include $(firstword $(COMMON_MK))
 
-SCAD_FILE ?= clearance_tester.scad
+SCAD_FILE ?= src/clearance_tester.scad
 TARGETS   := clearance_tester.stl
 
 .PHONY: all clean

@@ -9,11 +9,11 @@
 //   - lines  : Ruled lines stencil (7 evenly spaced writing channels)
 // =============================================================================
 
-include <../../../lib/BOSL2/std.scad>
+include <../../../../lib/BOSL2/std.scad>
 
-use <src/snapnote_stencil_base.scad>
-use <src/snapnote_caddy.scad>
-use <src/patterns/pattern_checklists.scad>
+use <snapnote_stencil_base.scad>
+use <snapnote_caddy.scad>
+use <patterns/pattern_checklists.scad>
 
 /* [Part Selection] */
 // Select which SnapNote component to render
