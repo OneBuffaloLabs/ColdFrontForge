@@ -79,6 +79,7 @@ _Managed via `make status` and `make set-status` (`scripts/repo_status.py`)._
 | [Jason Voorhees Sphere](projects/decor/slasher-spheres/jason-ball) | ![Status](https://img.shields.io/badge/Status-Released-green) | Stage 4 | Universal FDM | PLA+ |
 | [Snap-Fit Buffalo Bills Emblem](projects/decor/snapfit-logos/bills) | ![Status](https://img.shields.io/badge/Status-Released-green) | Stage 4 | Universal FDM | PLA+ |
 | [K2 SE Tool Kit Holder](projects/functional/printer-mods/k2-se-tool-holder) | ![Status](https://img.shields.io/badge/Status-Released-green) | Stage 4 | Creality K2 SE / K1 SE Enclosure | PETG / PLA+ |
+| [SnapNote 3x3 Stencil System](projects/functional/snapnote) | ![Status](https://img.shields.io/badge/Status-Draft-yellow) | Stage 1 | Universal FDM | PLA+ |
 | [Cold Snap Desk Caddy](projects/functional/tcg/cold-snap-desk-caddy) | ![Status](https://img.shields.io/badge/Status-Released-green) | Stage 4 | Universal FDM (180mm+ / 256mm+ XL) | PLA+ |
 | [Cold Snap Sorter](projects/functional/tcg/cold-snap-sorter) | ![Status](https://img.shields.io/badge/Status-Testing-orange) | Stage 2 | Universal FDM | PLA+ |
 | [Cold Snap Wedge](projects/functional/tcg/cold-snap-wedge) | ![Status](https://img.shields.io/badge/Status-Released-green) | Stage 4 | Universal FDM | PLA+ |
@@ -120,7 +121,7 @@ By providing the original OpenSCAD (`.scad`) source files right here in this rep
 To keep the root directory clean as the collection grows, all models are sorted by category inside the `projects/` folder:
 
 - `/projects/decor/` — Trophies, display pieces, fan art, Slasher Spheres, and snap-fit emblems.
-- `/projects/functional/` — Brackets, organizers, TCG accessories, and printer mods.
+- `/projects/functional/` — Brackets, organizers, TCG accessories, printer mods, and [SnapNote](projects/functional/snapnote/).
 - `/projects/helpers/` — Parametric helper modules and sub-assemblies (e.g., pokeball cores).
 - `/projects/contests/` — Event-driven design submissions organized by platform and challenge.
 
