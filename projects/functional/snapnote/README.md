@@ -19,12 +19,18 @@ Individual `.stl` files are organized in the [`models/`](./models/) directory:
 
 - **Desk Caddy:** [`models/snapnote-caddy.stl`](./models/snapnote-caddy.stl) — All-in-one 3x3 pad tray, 5-slot angled stencil rack, and dual pen wells.
 - **Stencil Base Blank:** [`models/snapnote-base.stl`](./models/snapnote-base.stl) — Blank 3x3 registration stencil (`BASE`).
-- **Checklist Stencil:** [`models/snapnote-check.stl`](./models/snapnote-check.stl) — 6 ruled lines with 4.0 mm filleted checkboxes (`CHECK`).
-- **Bullet List Stencil:** [`models/snapnote-bullet.stl`](./models/snapnote-bullet.stl) — 6 ruled lines with 3.6 mm circular bullets (`BULLET`).
-- **Ruled Lines Stencil:** [`models/snapnote-lines.stl`](./models/snapnote-lines.stl) — 7 evenly spaced ruled lines (`LINES`).
-- **Eisenhower 2x2 Matrix:** [`models/snapnote-2x2.stl`](./models/snapnote-2x2.stl) — Four equal quadrants with perimeter margins (`2X2`).
-- **7-Day Habit Tracker:** [`models/snapnote-habit.stl`](./models/snapnote-habit.stl) — Monday–Sunday columns with 5 tracking rows (`HABIT`).
-- **Top 3 Focus Stencil:** [`models/snapnote-top3.stl`](./models/snapnote-top3.stl) — 3 numbered priority rows with secondary note lines (`TOP3`).
+- **Checklists Pack (`models/checklists/`):**
+  - [`snapnote-check.stl`](./models/checklists/snapnote-check.stl) — 6 ruled lines with 4.0 mm filleted checkboxes (`CHECK`).
+  - [`snapnote-bullet.stl`](./models/checklists/snapnote-bullet.stl) — 6 ruled lines with 3.6 mm circular bullets (`BULLET`).
+  - [`snapnote-lines.stl`](./models/checklists/snapnote-lines.stl) — 7 evenly spaced ruled lines (`LINES`).
+- **Productivity Pack (`models/productivity/`):**
+  - [`snapnote-2x2.stl`](./models/productivity/snapnote-2x2.stl) — Four equal quadrants with perimeter margins (`2X2`).
+  - [`snapnote-habit.stl`](./models/productivity/snapnote-habit.stl) — Monday–Sunday columns with 5 tracking rows (`HABIT`).
+  - [`snapnote-top3.stl`](./models/productivity/snapnote-top3.stl) — 3 numbered priority rows with secondary note lines (`TOP3`).
+- **Drafting Pack (`models/drafting/`):**
+  - [`snapnote-dots.stl`](./models/drafting/snapnote-dots.stl) — 5.0 mm spaced dot-grid matrix over 70 mm × 70 mm (`DOTS`).
+  - [`snapnote-panels.stl`](./models/drafting/snapnote-panels.stl) — 2x2 storyboard comic panels with 2.0 mm dividers (`PANELS`).
+  - [`snapnote-iso.stl`](./models/drafting/snapnote-iso.stl) — Isometric 30°/90° wireframe guideline template (`ISO`).
 
 ## 🖨️ Recommended Print Settings
 

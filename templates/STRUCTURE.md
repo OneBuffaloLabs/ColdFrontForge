@@ -53,6 +53,6 @@ src/
     └── pattern_[group].scad
 ```
 
-- **Single Entry Point:** `Makefile` targets `src/[project-slug].scad` and passes `-D 'part_to_render="<part>"'` to export each STL into `models/`.
+- **Single Entry Point:** `Makefile` targets `src/[project-slug].scad` and passes `-D 'part_to_render="<part>"'` to export each STL into `models/` (or `models/<pack>/` subfolders for large pattern suites).
 - **Modular Imports:** Use `use <...>` from the entry point so helper and pattern files provide modules without emitting duplicate top-level geometry.
 - **Keep `src/` Flat Until Needed:** Only introduce subfolders (e.g., `patterns/`, `components/`) when grouping 3 or more related variant files.

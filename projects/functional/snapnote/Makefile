@@ -4,21 +4,59 @@ include $(firstword $(COMMON_MK))
 SCAD_FILE ?= src/snapnote.scad
 OUT_DIR   ?= models
 
-PARTS     ?= caddy base check bullet lines 2x2 habit top3
-TARGETS   ?= $(foreach p,$(PARTS),$(OUT_DIR)/snapnote-$(p).stl)
+CORE_PARTS         := caddy base
+CHECKLIST_PARTS    := check bullet lines
+PRODUCTIVITY_PARTS := 2x2 habit top3
+DRAFTING_PARTS     := dots panels iso
+PARTS              := $(CORE_PARTS) $(CHECKLIST_PARTS) $(PRODUCTIVITY_PARTS) $(DRAFTING_PARTS)
 
-.PHONY: all clean $(PARTS)
+CORE_TARGETS         := $(foreach p,$(CORE_PARTS),$(OUT_DIR)/snapnote-$(p).stl)
+CHECKLIST_TARGETS    := $(foreach p,$(CHECKLIST_PARTS),$(OUT_DIR)/checklists/snapnote-$(p).stl)
+PRODUCTIVITY_TARGETS := $(foreach p,$(PRODUCTIVITY_PARTS),$(OUT_DIR)/productivity/snapnote-$(p).stl)
+DRAFTING_TARGETS     := $(foreach p,$(DRAFTING_PARTS),$(OUT_DIR)/drafting/snapnote-$(p).stl)
+TARGETS              := $(CORE_TARGETS) $(CHECKLIST_TARGETS) $(PRODUCTIVITY_TARGETS) $(DRAFTING_TARGETS)
+
+SCAD_DEPS := $(SCAD_FILE) \
+             src/snapnote_stencil_base.scad \
+             src/snapnote_caddy.scad \
+             src/patterns/pattern_checklists.scad \
+             src/patterns/pattern_productivity.scad \
+             src/patterns/pattern_drafting.scad
+
+.PHONY: all clean checklists productivity drafting $(PARTS)
 
 all: $(TARGETS)
 
-$(PARTS): %: $(OUT_DIR)/snapnote-%.stl
+checklists: $(CHECKLIST_TARGETS)
+productivity: $(PRODUCTIVITY_TARGETS)
+drafting: $(DRAFTING_TARGETS)
 
-$(OUT_DIR)/snapnote-%.stl: $(SCAD_FILE) src/snapnote_stencil_base.scad src/snapnote_caddy.scad src/patterns/pattern_checklists.scad src/patterns/pattern_productivity.scad
-	@$(call MKDIR,$(OUT_DIR))
+$(CORE_PARTS): %: $(OUT_DIR)/snapnote-%.stl
+$(CHECKLIST_PARTS): %: $(OUT_DIR)/checklists/snapnote-%.stl
+$(PRODUCTIVITY_PARTS): %: $(OUT_DIR)/productivity/snapnote-%.stl
+$(DRAFTING_PARTS): %: $(OUT_DIR)/drafting/snapnote-%.stl
+
+$(OUT_DIR)/snapnote-%.stl: $(SCAD_DEPS)
+	@$(call MKDIR,$(@D))
 	@echo "--> Rendering [$*] -> $@"
 	$(OPENSCAD) $(SCAD_FLAGS) -d $(@:.stl=.deps) -o $@ -D 'part_to_render="$*"' $(SCAD_FILE)
 
-clean:
-	@$(call RM_F,$(TARGETS) $(wildcard $(OUT_DIR)/*.deps))
+$(OUT_DIR)/checklists/snapnote-%.stl: $(SCAD_DEPS)
+	@$(call MKDIR,$(@D))
+	@echo "--> Rendering [checklists/$*] -> $@"
+	$(OPENSCAD) $(SCAD_FLAGS) -d $(@:.stl=.deps) -o $@ -D 'part_to_render="$*"' $(SCAD_FILE)
 
--include $(wildcard $(OUT_DIR)/*.deps)
+$(OUT_DIR)/productivity/snapnote-%.stl: $(SCAD_DEPS)
+	@$(call MKDIR,$(@D))
+	@echo "--> Rendering [productivity/$*] -> $@"
+	$(OPENSCAD) $(SCAD_FLAGS) -d $(@:.stl=.deps) -o $@ -D 'part_to_render="$*"' $(SCAD_FILE)
+
+$(OUT_DIR)/drafting/snapnote-%.stl: $(SCAD_DEPS)
+	@$(call MKDIR,$(@D))
+	@echo "--> Rendering [drafting/$*] -> $@"
+	$(OPENSCAD) $(SCAD_FLAGS) -d $(@:.stl=.deps) -o $@ -D 'part_to_render="$*"' $(SCAD_FILE)
+
+clean:
+	@$(call RM_F,$(TARGETS) $(wildcard $(OUT_DIR)/*.deps) $(wildcard $(OUT_DIR)/*/*.deps))
+
+-include $(wildcard $(OUT_DIR)/*.deps $(OUT_DIR)/*/*.deps)

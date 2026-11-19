@@ -15,10 +15,11 @@ use <snapnote_stencil_base.scad>
 use <snapnote_caddy.scad>
 use <patterns/pattern_checklists.scad>
 use <patterns/pattern_productivity.scad>
+use <patterns/pattern_drafting.scad>
 
 /* [Part Selection] */
 // Select which SnapNote component to render
-part_to_render = "caddy"; // [caddy: Desk Caddy, base: Stencil Base Blank, check: Checklist Stencil, bullet: Bullet List Stencil, lines: Ruled Lines Stencil, 2x2: Eisenhower 2x2 Matrix, habit: 7-Day Habit Tracker, top3: Top 3 Focus Stencil]
+part_to_render = "caddy"; // [caddy: Desk Caddy, base: Stencil Base Blank, check: Checklist Stencil, bullet: Bullet List Stencil, lines: Ruled Lines Stencil, 2x2: Eisenhower 2x2 Matrix, habit: 7-Day Habit Tracker, top3: Top 3 Focus Stencil, dots: 5mm Dot Grid, panels: 2x2 Storyboard Panels, iso: Isometric Wireframe]
 // Stencil print orientation ("print" flips onto Z=0; "design" shows pad fitment)
 render_mode = "print"; // [print: Print Bed (Flipped), design: Design Space (On Pad)]
 $fn = $preview ? 32 : 64;
@@ -45,6 +46,15 @@ if (part_to_render == "caddy") {
 } else if (part_to_render == "top3") {
     snapnote_stencil_assembly(mode = render_mode, t_label = "TOP3")
         top3_cutters();
+} else if (part_to_render == "dots") {
+    snapnote_stencil_assembly(mode = render_mode, t_label = "DOTS")
+        dots_cutters();
+} else if (part_to_render == "panels") {
+    snapnote_stencil_assembly(mode = render_mode, t_label = "PANELS")
+        panels_cutters();
+} else if (part_to_render == "iso") {
+    snapnote_stencil_assembly(mode = render_mode, t_label = "ISO")
+        iso_cutters();
 } else {
     assert(false, str("Unknown part_to_render: ", part_to_render));
 }
