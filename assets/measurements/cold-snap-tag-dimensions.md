@@ -13,8 +13,8 @@ Official mechanical dimensions, tolerances, and hardware specifications for the 
 
 | Form Factor | Width ($X$) | Height ($Y$) | Wafer ($Z$) | Text Emboss ($Z$) | Total ($Z$) | Corner Radius ($R$) | Border Width |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **Standard Tag (Slab)** | **68.00 mm** | **22.00 mm** | 2.20 mm | +0.80 mm | 3.00 mm | 1.50 mm | 0.90 mm |
-| **Extended Rx (Dispenser)**| **68.00 mm** | **42.00 mm** | 2.20 mm | +0.80 mm | 3.00 mm | 1.50 mm | 0.90 mm |
+| **Standard Tag (Slab)** | **68.00 mm** | **22.00 mm** | 2.80 mm | +0.80 mm | 3.60 mm | 1.50 mm | 0.90 mm |
+| **Extended Rx (Dispenser)**| **68.00 mm** | **42.00 mm** | 2.80 mm | +0.80 mm | 3.60 mm | 1.50 mm | 0.90 mm |
 
 ---
 
@@ -31,7 +31,7 @@ Official mechanical dimensions, tolerances, and hardware specifications for the 
 * **Perimeter Margin (Sides):** **13.50 mm** to tag left and right edges.
 * **Vertical Margin (Standard 22mm):** **8.50 mm** to tag top and bottom edges.
 * **Vertical Margin (Rx 42mm):** **18.50 mm** to tag top and bottom edges.
-* **Tag Bore Depth:** **1.80 mm** (leaves 0.40 mm / 2 solid layers of top skin).
+* **Tag Bore Depth:** **1.80 mm** (leaves 1.00 mm / 5 solid layers of top skin).
 * **Entry Chamfer:** **0.35 mm × 45°** self-centering funnel and glue well.
 
 ---
@@ -44,7 +44,7 @@ When designing a socket on an accessory (display stand, slab, pedestal, or wall 
 | :--- | :--- | :--- |
 | **Pocket Width (X)** | **68.50 mm** | Nominal 68.0 mm + 0.25 mm slip clearance per side. |
 | **Pocket Height (Y)** | **22.50 mm** (Std) / **42.50 mm** (Rx) | Nominal + 0.25 mm slip clearance per side. |
-| **Pocket Depth (Z)** | **2.20 mm** (Flush) / **1.00 mm** (Proud) | 2.20 mm seats base wafer flush with body surface. |
+| **Pocket Depth (Z)** | **2.80 mm** (Flush) / **1.00 mm** (Proud) | 2.80 mm seats base wafer flush with body surface. |
 | **Corner Radius (R)**| **1.75 mm** | Nominal 1.50 mm + 0.25 mm slip clearance. |
 | **Socket Magnet Bore** | **Ø 5.30 mm × 2.00 mm** | Sits 2.0 mm magnet flush with pocket floor. |
 | **Magnet Spacing** | **36.00 mm** center-to-center | Aligns with tag magnets. |
@@ -60,7 +60,7 @@ Standard 0.4mm FDM nozzle physical extrusion limit:
 * **Emboss Height:** **0.80 mm** proud of wafer floor (4 layers at 0.20mm base or 5 layers at 0.16mm modifier).
 * **Standard Letter Spacing:** **1.10 – 1.15** for optimal character perimeter separation.
 * **Standard Font:** `Varela Round` (monoline geometric geometry prevents thin serif blowouts).
-* **Slicer Engine Requirement:** **Arachne Perimeter Generator** + **0.16 mm Layer Height Modifier** above Z = 2.20 mm.
+* **Slicer Engine Requirement:** **Arachne Perimeter Generator** + **0.16 mm Layer Height Modifier** above Z = 2.80 mm.
 
 ---
 
@@ -75,7 +75,7 @@ Ready to copy into any `.scad` model:
 TAG_WIDTH                = 68.0;
 TAG_HEIGHT_STANDARD      = 22.0;
 TAG_HEIGHT_RX            = 42.0;
-TAG_WAFER_THICKNESS      = 2.20;
+TAG_WAFER_THICKNESS      = 2.80;
 TAG_EMBOSS_HEIGHT        = 0.80;
 TAG_CORNER_RADIUS        = 1.50;
 TAG_BORDER_WIDTH         = 0.90;
@@ -96,6 +96,6 @@ TAG_POCKET_CLEARANCE     = 0.25; // Per side
 TAG_POCKET_W             = TAG_WIDTH + (2 * TAG_POCKET_CLEARANCE);         // 68.5 mm
 TAG_POCKET_H_STD         = TAG_HEIGHT_STANDARD + (2 * TAG_POCKET_CLEARANCE);// 22.5 mm
 TAG_POCKET_H_RX          = TAG_HEIGHT_RX + (2 * TAG_POCKET_CLEARANCE);      // 42.5 mm
-TAG_POCKET_DEPTH_FLUSH   = TAG_WAFER_THICKNESS;                            // 2.20 mm
+TAG_POCKET_DEPTH_FLUSH   = TAG_WAFER_THICKNESS;                            // 2.80 mm
 TAG_POCKET_CORNER_R      = TAG_CORNER_RADIUS + TAG_POCKET_CLEARANCE;       // 1.75 mm
 ```
