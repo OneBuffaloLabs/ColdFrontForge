@@ -1,7 +1,7 @@
 COMMON_MK ?= $(wildcard ../common.mk ../../common.mk ../../../common.mk ../../../../common.mk ../../../../../common.mk)
 include $(firstword $(COMMON_MK))
 
-SCAD_FILE ?= buffalo-wing-magnet.scad
+SCAD_FILE ?= src/buffalo-wing-magnet.scad
 OUT_DIR   ?= models/v1
 
 TARGETS   := $(OUT_DIR)/buffalo-wing-magnet-base-white.stl \

@@ -1,7 +1,7 @@
 COMMON_MK ?= $(wildcard ../common.mk ../../common.mk ../../../common.mk ../../../../common.mk ../../../../../common.mk)
 include $(firstword $(COMMON_MK))
 
-SCAD_FILE ?= [product-name].scad
+SCAD_FILE ?= src/[product-name].scad
 OUT_DIR   ?= models
 
 PARTS     ?= main accent plate

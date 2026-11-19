@@ -1,7 +1,7 @@
 COMMON_MK ?= $(wildcard ../common.mk ../../common.mk ../../../common.mk ../../../../common.mk ../../../../../common.mk)
 include $(firstword $(COMMON_MK))
 
-SCAD_FILE ?= cold-snap-sorter.scad
+SCAD_FILE ?= src/cold-snap-sorter.scad
 
 TARGETS   := models/assembly/cold-snap-sorter.stl \
              models/bay/cold-snap-sorter-bay.stl \

@@ -1,7 +1,7 @@
 COMMON_MK ?= $(wildcard ../common.mk ../../common.mk ../../../common.mk ../../../../common.mk ../../../../../common.mk)
 include $(firstword $(COMMON_MK))
 
-SCAD_FILE ?= snapfit_bills.scad
+SCAD_FILE ?= src/snapfit_bills.scad
 OUT_DIR   ?= models/v2
 
 TARGETS   := $(OUT_DIR)/snapfit-bills-base-white.stl \

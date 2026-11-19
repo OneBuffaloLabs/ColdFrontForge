@@ -37,7 +37,7 @@ Pre-configured component meshes are located in [`models/v1/`](./models/v1/):
 
 ## 🛠️ Customizing with OpenSCAD
 
-Open [buffalo-wing-magnet.scad](./buffalo-wing-magnet.scad) in OpenSCAD or build via `make buffalo-wing-magnet`:
+Open [src/buffalo-wing-magnet.scad](./src/buffalo-wing-magnet.scad) in OpenSCAD or build via `make buffalo-wing-magnet`:
 
 - `render_mode` — `"all"`, `"base"`, `"wing"`, or `"celery"`
 - `display_orientation` — `"horizontal"` (default, aligns with `Ctrl+4` Top View) or `"vertical"`

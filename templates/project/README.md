@@ -65,7 +65,7 @@ _100% 3D Printed - No extra hardware needed!_
 
 ## 🛠️ Customizing with OpenSCAD
 
-Because this design is parametric, you can easily adjust dimensions or tolerances to fit your needs using `[model-name].scad`.
+Because this design is parametric, you can easily adjust dimensions or tolerances to fit your needs using `src/[model-name].scad`.
 
 **Key Variables:**
 

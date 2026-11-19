@@ -30,11 +30,29 @@ Use this folder architecture across all 3D printing and parametric CAD projects:
 │       ├── [project-slug]-embossed-body.stl
 │       ├── [project-slug]-embossed-insert.stl
 │       └── [project-slug]-embossed.3mf
+├── src/
+│   └── [project-slug].scad      # Primary parametric OpenSCAD source code
 ├── CREATOR_COMMUNITIES.md       # Target platform upload tracking and URLs
 ├── LISTING.md                   # Clean, copy-paste copy for maker platforms
 ├── Makefile                     # Project-level build automation and STL export
 ├── README.md                    # GitHub repo presentation and documentation
 ├── STRUCTURE.md                 # Architecture guide (optional / reference)
-├── SUMMARY.md                   # Under 120-character single-sentence summary
-└── [project-slug].scad          # Primary parametric OpenSCAD source code
+└── SUMMARY.md                   # Under 120-character single-sentence summary
 ```
+
+## Multi-Module Projects (`src/`)
+
+For larger project suites with shared base libraries, companion parts, or families of pattern variants (such as `snapnote`), organize `src/` as follows:
+
+```text
+src/
+├── [project-slug].scad          # Unified entry point & part_to_render dispatcher
+├── [project-slug]_base.scad     # Shared base geometry and reusable modules
+├── [companion-part].scad        # Standalone companion assembly (e.g., caddy, dock)
+└── patterns/                    # Optional subfolder for 3+ grouped variant modules
+    └── pattern_[group].scad
+```
+
+- **Single Entry Point:** `Makefile` targets `src/[project-slug].scad` and passes `-D 'part_to_render="<part>"'` to export each STL into `models/` (or `models/<pack>/` subfolders for large pattern suites).
+- **Modular Imports:** Use `use <...>` from the entry point so helper and pattern files provide modules without emitting duplicate top-level geometry.
+- **Keep `src/` Flat Until Needed:** Only introduce subfolders (e.g., `patterns/`, `components/`) when grouping 3 or more related variant files.

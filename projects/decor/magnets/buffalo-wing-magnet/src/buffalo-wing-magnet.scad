@@ -7,7 +7,7 @@
 // =============================================================================
 
 // Include vendored BOSL2 library from repository root
-include <../../../../lib/BOSL2/std.scad>
+include <../../../../../lib/BOSL2/std.scad>
 
 /* [Preview / Rendering] */
 render_mode = "all"; // [all, base, wing, celery]
@@ -57,8 +57,8 @@ dual_lower_pos = [-0.5, -14.0];
 single_center_pos = [-0.5, -6.0];
 
 /* [Internal Constants] */
-wing_svg = "assets/wing_body.svg";
-celery_svg = "assets/celery_streak.svg";
+wing_svg = "../assets/wing_body.svg";
+celery_svg = "../assets/celery_streak.svg";
 svg_ref_width = 31.951;
 svg_ref_height = 75.0;
 scale_factor = target_height / svg_ref_height;

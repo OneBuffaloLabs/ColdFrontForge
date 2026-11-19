@@ -24,6 +24,9 @@ MAGNETS_ALL          := $(PROJECT_BUFFALO_WING)
 # Printer Mods
 PROJECT_K2_SE  := projects/functional/printer-mods/k2-se-tool-holder
 
+# Functional Desk & Organization
+PROJECT_SNAPNOTE := projects/functional/snapnote
+
 # TCG Tools & Storage
 TCG_DIR        := projects/functional/tcg
 PROJECT_CADDY  := $(TCG_DIR)/cold-snap-desk-caddy
@@ -44,25 +47,32 @@ VAULT_CACHE_DIR  ?= .vault-cache
 VAULT_SYNC_ITEMS ?= commercial/tcg/cold-snap-tag
 
 # All active projects across the workshop
-PROJECTS := $(SPHERES_ALL) $(LOGOS_ALL) $(MAGNETS_ALL) $(PROJECT_K2_SE) $(TCG_ALL) $(PROJECT_FROST)
+PROJECTS := $(SPHERES_ALL) $(LOGOS_ALL) $(MAGNETS_ALL) $(PROJECT_K2_SE) $(PROJECT_SNAPNOTE) $(TCG_ALL) $(PROJECT_FROST)
 PROJECTS_CLEAN := $(addsuffix _clean,$(PROJECTS))
 
 # CAD Source Files for Lint Verification
-SCAD_SRCS := $(PROJECT_FROST)/frost-bite.scad \
-             $(PROJECT_BILLY)/billy-ball.scad \
-             $(PROJECT_GHOST)/ghostface-ball.scad \
-             $(PROJECT_JASON)/jason-ball.scad \
-             $(PROJECT_BILLS)/snapfit_bills.scad \
-             $(PROJECT_TESTER)/clearance_tester.scad \
-             $(PROJECT_BUFFALO_WING)/buffalo-wing-magnet.scad \
-             $(PROJECT_K2_SE)/k2_se_tool_holder.scad \
+SCAD_SRCS := $(PROJECT_FROST)/src/frost-bite.scad \
+             $(PROJECT_BILLY)/src/billy-ball.scad \
+             $(PROJECT_GHOST)/src/ghostface-ball.scad \
+             $(PROJECT_JASON)/src/jason-ball.scad \
+             $(PROJECT_BILLS)/src/snapfit_bills.scad \
+             $(PROJECT_TESTER)/src/clearance_tester.scad \
+             $(PROJECT_BUFFALO_WING)/src/buffalo-wing-magnet.scad \
+             $(PROJECT_K2_SE)/src/k2-se-tool-holder.scad \
              $(PROJECT_K2_SE)/assets/cad/k2_se_test_plate.scad \
-             $(PROJECT_CADDY)/cold-snap-desk-caddy.scad \
-             $(PROJECT_CADDY)/cold-snap-desk-caddy-pro.scad \
-             $(PROJECT_CADDY)/cold-snap-desk-caddy-xl.scad \
-             $(PROJECT_SORTER)/cold-snap-sorter.scad \
-             $(PROJECT_WEDGE)/cold-snap-wedge.scad \
-             $(PROJECT_EXHIBIT)/cold-snap-exhibit.scad \
+             $(PROJECT_SNAPNOTE)/src/snapnote.scad \
+             $(PROJECT_SNAPNOTE)/src/snapnote_stencil_base.scad \
+             $(PROJECT_SNAPNOTE)/src/snapnote_caddy.scad \
+             $(PROJECT_SNAPNOTE)/src/patterns/pattern_checklists.scad \
+             $(PROJECT_SNAPNOTE)/src/patterns/pattern_productivity.scad \
+             $(PROJECT_SNAPNOTE)/src/patterns/pattern_drafting.scad \
+             $(PROJECT_SNAPNOTE)/src/patterns/pattern_games.scad \
+             $(PROJECT_CADDY)/src/cold-snap-desk-caddy.scad \
+             $(PROJECT_CADDY)/src/cold-snap-desk-caddy-pro.scad \
+             $(PROJECT_CADDY)/src/cold-snap-desk-caddy-xl.scad \
+             $(PROJECT_SORTER)/src/cold-snap-sorter.scad \
+             $(PROJECT_WEDGE)/src/cold-snap-wedge.scad \
+             $(PROJECT_EXHIBIT)/src/cold-snap-exhibit.scad \
              $(PROJECT_HELPERS)/core.scad \
              $(PROJECT_HELPERS)/filler.scad
 LINT_TARGETS := $(addprefix lint-,$(SCAD_SRCS))
@@ -72,6 +82,7 @@ LINT_TARGETS := $(addprefix lint-,$(SCAD_SRCS))
         snapfit-logos logos bills tester clearance-tester \
         magnets buffalo-wing buffalo-wing-magnet \
         printer-mods k2-se tool-holder \
+        snapnote \
         tcg caddy desk-caddy sorter wedge exhibit \
         contests frost-bite
 
@@ -97,6 +108,7 @@ bills:                             $(PROJECT_BILLS)
 tester clearance-tester:           $(PROJECT_TESTER)
 buffalo-wing buffalo-wing-magnet:  $(PROJECT_BUFFALO_WING)
 k2-se tool-holder:                 $(PROJECT_K2_SE)
+snapnote:                          $(PROJECT_SNAPNOTE)
 caddy desk-caddy:                  $(PROJECT_CADDY)
 sorter:                            $(PROJECT_SORTER)
 wedge:                             $(PROJECT_WEDGE)

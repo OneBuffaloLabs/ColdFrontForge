@@ -1,7 +1,7 @@
 COMMON_MK ?= $(wildcard ../common.mk ../../common.mk ../../../common.mk ../../../../common.mk ../../../../../common.mk)
 include $(firstword $(COMMON_MK))
 
-SCAD_FILE ?= cold-snap-wedge.scad
+SCAD_FILE ?= src/cold-snap-wedge.scad
 
 TARGETS   := models/left/cold-snap-wedge-left.stl \
              models/right/cold-snap-wedge-right.stl \

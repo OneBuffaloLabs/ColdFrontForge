@@ -1,7 +1,7 @@
 COMMON_MK ?= $(wildcard ../common.mk ../../common.mk ../../../common.mk ../../../../common.mk ../../../../../common.mk)
 include $(firstword $(COMMON_MK))
 
-SCAD_FILE ?= jason-ball.scad
+SCAD_FILE ?= src/jason-ball.scad
 OUT_DIR   ?= models
 
 TARGETS   := $(OUT_DIR)/jason-ball-top.stl \
