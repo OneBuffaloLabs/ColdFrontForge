@@ -31,6 +31,9 @@ Individual `.stl` files are organized in the [`models/`](./models/) directory:
   - [`snapnote-dots.stl`](./models/drafting/snapnote-dots.stl) — 5.0 mm spaced dot-grid matrix over 70 mm × 70 mm (`DOTS`).
   - [`snapnote-panels.stl`](./models/drafting/snapnote-panels.stl) — 2x2 storyboard comic panels with 2.0 mm dividers (`PANELS`).
   - [`snapnote-iso.stl`](./models/drafting/snapnote-iso.stl) — Isometric 30°/90° wireframe guideline template (`ISO`).
+- **Games Pack (`models/games/`):**
+  - [`snapnote-xo.stl`](./models/games/snapnote-xo.stl) — Classic 3x3 Tic-Tac-Toe grid with bridged intersections (`XO`).
+  - [`snapnote-dotbox.stl`](./models/games/snapnote-dotbox.stl) — 5x5 Dots & Boxes matrix (`DOTBOX`).
 
 ## 🖨️ Recommended Print Settings
 
