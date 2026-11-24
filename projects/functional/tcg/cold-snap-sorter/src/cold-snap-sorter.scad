@@ -25,7 +25,7 @@ SOCKET_TOL        = 0.35;   // Clearance for underside sockets
 PEG_INSET         = 2.8;    // Inset from outer corner
 
 /* [Bottom Logo Settings] */
-LOGO_FILE         = "../../../../assets/logo/logo-no-text-black.svg";
+LOGO_FILE         = "../../../../../assets/logo/logo-no-text-black.svg";
 LOGO_WIDTH        = 45.0;   // Logo width across the base
 LOGO_DEPTH        = 0.6;    // Deboss depth
 

@@ -56,7 +56,7 @@ _100% 3D Printed — No screws, inserts, or adhesives needed under calibrated to
 
 ## 🛠️ Customizing with OpenSCAD
 
-Adjust tolerances or export custom configurations using `jason-ball.scad`. Saved Customizer parameter profiles are stored alongside the script in `jason-ball.json`.
+Adjust tolerances or export custom configurations using `src/jason-ball.scad`. Saved Customizer parameter profiles are stored alongside the script in `jason-ball.json`.
 
 **Key Variables:**
 

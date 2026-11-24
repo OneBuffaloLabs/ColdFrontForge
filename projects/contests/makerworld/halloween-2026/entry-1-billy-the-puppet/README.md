@@ -3,7 +3,7 @@
 - **Contest:** [MakerWorld Halloween 2026 Design Contest](https://makerworld.com/en/contests/166?name=Halloween+2026+Design+Contest&orderBy=newUploads#tab-Rules)
 - **Model URL:** [Model Link](https://makerworld.com/en/models/3415763-slasher-spheres-billy-the-puppet)
 - **Canonical Project Source:** [Slasher Spheres: Billy Ball](../../../../decor/slasher-spheres/billy-ball/)
-- **Parametric Model:** [`billy-ball.scad`](../../../../decor/slasher-spheres/billy-ball/billy-ball.scad)
+- **Parametric Model:** [`src/billy-ball.scad`](../../../../decor/slasher-spheres/billy-ball/src/billy-ball.scad)
 - **STL Directory:** [`models/`](../../../../decor/slasher-spheres/billy-ball/models/)
 
 ## Submission Metadata

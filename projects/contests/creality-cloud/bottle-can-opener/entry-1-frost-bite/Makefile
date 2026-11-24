@@ -1,7 +1,7 @@
 COMMON_MK ?= $(wildcard ../common.mk ../../common.mk ../../../common.mk ../../../../common.mk ../../../../../common.mk)
 include $(firstword $(COMMON_MK))
 
-SCAD_FILE ?= frost-bite.scad
+SCAD_FILE ?= src/frost-bite.scad
 
 TARGETS   := models/single/frost-bite.stl \
              models/multi-color-flush/frost-bite-flush-body.stl \

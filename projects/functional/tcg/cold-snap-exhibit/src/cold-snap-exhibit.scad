@@ -3,7 +3,7 @@
 // Multi-Slab & Toploader Tabletop Display
 
 // Include vendored BOSL2 library from repository root
-include <../../../../lib/BOSL2/std.scad>
+include <../../../../../lib/BOSL2/std.scad>
 
 /* [Render Selection] */
 // Part to generate for slicer export or preview

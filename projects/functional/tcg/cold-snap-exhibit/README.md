@@ -51,7 +51,7 @@ Pre-rendered `.stl` files are organized in the [`models/`](./models/) directory:
 
 ## 🛠️ Customizing with OpenSCAD
 
-Because this design is parametric, you can adjust dimensions, angles, or clearances using [`cold-snap-exhibit.scad`](./cold-snap-exhibit.scad):
+Because this design is parametric, you can adjust dimensions, angles, or clearances using [`src/cold-snap-exhibit.scad`](./src/cold-snap-exhibit.scad):
 
 **Key Variables:**
 - `part_to_render` — Output target: `"all"`, `"pedestal"`, `"plaque"`, or `"preview"`.

@@ -49,7 +49,7 @@ _100% 3D Printed — No extra hardware or glue needed!_
 
 ## 🛠️ Customizing with OpenSCAD
 
-Because this design is parametric, you can adjust tolerances or render specific parts using `snapfit-bills.scad`.
+Because this design is parametric, you can adjust tolerances or render specific parts using `src/snapfit_bills.scad`.
 
 **Key Variables:**
 

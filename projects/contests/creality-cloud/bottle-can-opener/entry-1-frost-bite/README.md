@@ -64,7 +64,7 @@ When printing the Flush or Embossed variants:
 
 ## 🛠️ Customizing with OpenSCAD
 
-Frost Bite is fully parametric. You can adjust fit tolerances, external dimensions, and export dedicated parts using `frost-bite.scad`.
+Frost Bite is fully parametric. You can adjust fit tolerances, external dimensions, and export dedicated parts using `src/frost-bite.scad`.
 
 **Key Variables:**
 

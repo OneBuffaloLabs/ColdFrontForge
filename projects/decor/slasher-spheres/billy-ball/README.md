@@ -69,7 +69,7 @@ chmod +x build_stls.sh
 
 ### Custom Parametric Tweaks
 
-Adjust clearances, feature depths, or export individual components using `billy-ball.scad`.
+Adjust clearances, feature depths, or export individual components using `src/billy-ball.scad`.
 
 **Key Variables:**
 
