@@ -60,8 +60,8 @@ Advancing a product from one stage to the next requires satisfying all checklist
 | Product | Internal SKU | Current Stage | Primary Platform / Material | Hardware Standard |
 | :--- | :--- | :---: | :--- | :--- |
 | **Cold Snap Tag** | `CFF-TCG-TAG` | 🔵 **Validation** | Creality K2 SE / PLA+ (Dual-Color) | 5x2mm Disc (3-Rib Crush) |
-| **Cold Snap Showcase** | `CFF-TCG-SHOW` | 🟠 **Testing** | Creality K2 SE / PLA+ | M3 Screws & Heat-Sets |
-| **Cold Snap Slab** | `CFF-TCG-SLAB` | 🔵 **Validation** | Creality K2 SE / PLA+ | 5x2mm Disc (3-Rib Crush) |
+| **Cold Snap Showcase** | `CFF-TCG-SHOW` | 🟢 **Production Ready** | Creality K2 SE / PLA+ | M3 Screws & Heat-Sets |
+| **Cold Snap Slab** | `CFF-TCG-SLAB` | 🟢 **Production Ready** | Creality K2 SE / PLA+ | 5x2mm Disc (3-Rib Crush) |
 | **Cold Snap Rx** | `CFF-TCG-RX` | 🟢 **Production Ready** | Creality K2 SE / PLA+ | 5x2mm Disc (3-Rib Crush) |
 
 ---
